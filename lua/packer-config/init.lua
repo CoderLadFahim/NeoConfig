@@ -69,5 +69,6 @@ packer.startup(function(use)
 	use "EdenEast/nightfox.nvim"
 	use "sainnhe/sonokai"
 	use 'folke/tokyonight.nvim'
+	use "ellisonleao/gruvbox.nvim"
 	use "ggandor/leap.nvim"
 end)

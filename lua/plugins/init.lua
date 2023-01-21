@@ -16,3 +16,4 @@ require('plugins.plugin-configs.alpha');
 require('plugins.plugin-configs.guess-indent');
 require('plugins.plugin-configs.leapnvim');
 require('plugins.plugin-configs.bufferline')
+require('plugins.plugin-configs.gruvbox')
