@@ -5,7 +5,6 @@ require('plugins.plugin-configs.telescope');
 require('plugins.plugin-configs.toggleterm');
 require('plugins.plugin-configs.auto-pairs');
 require('plugins.plugin-configs.gitsigns');
--- require('plugins.plugin-configs.neoscroll');
 require('plugins.plugin-configs.cmp');
 require('plugins.plugin-configs.treesitter');
 require('plugins.plugin-configs.mason');

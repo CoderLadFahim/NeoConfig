@@ -34,7 +34,6 @@ packer.startup(function(use)
     	 config = function() require("nvim-autopairs").setup {} end
 	}
 	use { 'lewis6991/gitsigns.nvim' }
-	-- use 'karb94/neoscroll.nvim'
 	use {
     	 'goolord/alpha-nvim',
     	 config = function ()
