@@ -6,7 +6,7 @@ end
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = 'duskfox',
+    theme = 'carbonfox',
     disabled_filetypes = {
       statusline = {},
       winbar = {},

@@ -24,6 +24,7 @@ packer.startup(function(use)
   	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use "terrortylor/nvim-comment"
+	use 'JoosepAlviste/nvim-ts-context-commentstring'
 	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   	  	  require("toggleterm").setup()
 		end
@@ -60,7 +61,7 @@ packer.startup(function(use)
 
 	use 'neovim/nvim-lspconfig'
 	use "williamboman/mason.nvim"
-	-- use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 	use('jose-elias-alvarez/null-ls.nvim')
 	use('MunifTanjim/prettier.nvim')
    use "lukas-reineke/indent-blankline.nvim"
@@ -68,9 +69,5 @@ packer.startup(function(use)
 	use "EdenEast/nightfox.nvim"
 	use "sainnhe/sonokai"
 	use 'folke/tokyonight.nvim'
-	use {
-  	  'nmac427/guess-indent.nvim',
-  	  -- config = function() require('guess-indent').setup {} end,
-	}
 	use "ggandor/leap.nvim"
 end)
