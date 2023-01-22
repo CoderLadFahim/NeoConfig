@@ -5,6 +5,7 @@ keymap('n', '<leader>w', ':w<CR>', opts)
 keymap('n', '<leader>q', ':q!', opts)
 keymap('n', '<leader>src', ':luafile %', opts)
 keymap('n', '<leader>v', '<C-v>', opts)
+keymap('n', '<leader>fv', ':file<cr>', opts)
 
 -- Better tab controls
 keymap('n', '<leader>tn', ':tabedit<cr>', opts)
