@@ -12,7 +12,6 @@ require('plugins.plugin-configs.null-ls');
 require('plugins.plugin-configs.prettier');
 require('plugins.plugin-configs.indent-blankline');
 require('plugins.plugin-configs.alpha');
-require('plugins.plugin-configs.guess-indent');
 require('plugins.plugin-configs.leapnvim');
 require('plugins.plugin-configs.bufferline')
 require('plugins.plugin-configs.gruvbox')

@@ -65,9 +65,9 @@ packer.startup(function(use)
 	use('MunifTanjim/prettier.nvim')
    use "lukas-reineke/indent-blankline.nvim"
    use "tpope/vim-fugitive"
-	use "EdenEast/nightfox.nvim"
-	use "sainnhe/sonokai"
-	use 'folke/tokyonight.nvim'
+	-- use "EdenEast/nightfox.nvim"
+	-- use "sainnhe/sonokai"
+	-- use 'folke/tokyonight.nvim'
 	use "ellisonleao/gruvbox.nvim"
 	use "ggandor/leap.nvim"
 end)

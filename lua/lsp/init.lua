@@ -37,11 +37,13 @@ end
 local lsp_flags = { debounce_text_changes = 150 }
 local lsp_options = { on_attach = on_attach, flags = lsp_flags }
 local volar_options = {{
-    init_options = {
-        typescript = {
-            tsdk = "/usr/bin/tsc",
-        },
-    },
+init_options = {
+ 	 	 typescript = {
+   		tsdk = '/path/to/.npm/lib/node_modules/typescript/lib'
+   		-- Alternative location if installed as root:
+   		-- tsdk = '/usr/local/lib/node_modules/typescript/lib'
+ 	 	 }
+  	 },
     on_attach = on_attach,
     flags = lsp_flags,
     settings = {

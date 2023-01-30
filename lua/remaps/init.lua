@@ -14,7 +14,7 @@ keymap('n', '<leader>taq', ':tabonly!<cr>', opts)
 keymap('n', '}', ':BufferLineCycleNext<cr>', opts)
 keymap('n', '{', ':BufferLineCyclePrev<cr>', opts)
 keymap('n', '<leader>bp', ':BufferLinePick<cr>', opts)
-keymap('n', '<leader>bx', ':bdelete! <cr>', opts)
+keymap('n', '<leader>bq', ':b#|bd# <cr>', opts)
 
 keymap('n', '<leader>fr', ':%s/', opts)
 
