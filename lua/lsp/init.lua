@@ -36,25 +36,20 @@ end
 
 local lsp_flags = { debounce_text_changes = 150 }
 local lsp_options = { on_attach = on_attach, flags = lsp_flags }
-local volar_options = {{
-init_options = {
- 	 	 typescript = {
-   		tsdk = '/path/to/.npm/lib/node_modules/typescript/lib'
-   		-- Alternative location if installed as root:
-   		-- tsdk = '/usr/local/lib/node_modules/typescript/lib'
- 	 	 }
-  	 },
-    on_attach = on_attach,
-    flags = lsp_flags,
-    settings = {
-        volar = { autoCompleteRefs = true },
-    },
-}}
+local volar_options = {
+  init_options = {
+    typescript = {
+      tsdk = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
+    }
+  },
+  on_attach = on_attach,
+  flags = lsp_flags
+}
 
 neovim_lsp['pyright'].setup(lsp_options)
 neovim_lsp['intelephense'].setup(lsp_options)
 neovim_lsp['tsserver'].setup(lsp_options)
-neovim_lsp['volar'].setup(lsp_options)
+neovim_lsp['volar'].setup(volar_options)
 
 neovim_lsp['tailwindcss'].setup({});
 neovim_lsp['html'].setup({});
