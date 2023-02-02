@@ -52,7 +52,7 @@ keymap('n', "<leader>tk", "<cmd>lua ARTISAN_TOGGLE()<CR>", opts)
 -- git mappings
 keymap('n', "<leader>ga.", ":G add .", opts)
 keymap('n', "<leader>gs", ":G status", opts)
-keymap('n', "<leader>glo ", ":G log --oneline", opts)
+keymap('n', "<leader>glo", ":G log --oneline ", opts)
 keymap('n', "<leader>gcm", ':G commit -m ""', opts)
 keymap('n', "<leader>gcam", ':G commit --amend -m ""', opts)
 keymap('n', "<leader>gcan", ':G commit --amend --no-edit', opts)
