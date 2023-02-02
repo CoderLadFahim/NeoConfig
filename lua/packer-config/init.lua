@@ -5,7 +5,6 @@ end
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- use 'rafi/awesome-vim-colorschemes'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lua/plenary.nvim'
   use 'MunifTanjim/nui.nvim'
