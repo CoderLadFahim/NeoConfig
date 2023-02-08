@@ -65,6 +65,5 @@ packer.startup(function(use)
    use "lukas-reineke/indent-blankline.nvim"
    use "tpope/vim-fugitive"
 	use "ellisonleao/gruvbox.nvim"
-	use 'navarasu/onedark.nvim'
 	use "ggandor/leap.nvim"
 end)

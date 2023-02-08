@@ -6,14 +6,14 @@ require('plugins');
 require('lsp');
 
 function set_colorscheme()
-	local colorscheme_command = 'colo onedark';
+	local colorscheme_command = 'colo gruvbox';
 	local transparent_cmd_1 = 'highlight Normal guibg=none';
 	local transparent_cmd_2 = 'highlight NonText guibg=none';
 
 	vim.cmd(colorscheme_command)
 	vim.cmd(colorscheme_command)
-	vim.cmd(transparent_cmd_1)
-	vim.cmd(transparent_cmd_2)
+	-- vim.cmd(transparent_cmd_1)
+	-- vim.cmd(transparent_cmd_2)
 end
 
 set_colorscheme();
