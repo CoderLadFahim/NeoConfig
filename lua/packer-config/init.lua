@@ -66,4 +66,16 @@ packer.startup(function(use)
    use "tpope/vim-fugitive"
 	use "ellisonleao/gruvbox.nvim"
 	use "ggandor/leap.nvim"
+	use({
+  	  "utilyre/barbecue.nvim",
+  	  tag = "*",
+  	  requires = {
+    	 "SmiteshP/nvim-navic",
+    	 "nvim-tree/nvim-web-devicons", -- optional dependency
+  	  },
+  	  after = "nvim-web-devicons", -- keep this if you're using NvChad
+  	  config = function()
+    	 require("barbecue").setup()
+  	  end,
+	})
 end)
