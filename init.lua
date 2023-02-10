@@ -12,8 +12,8 @@ function SET_COLORSCHEME()
 
 	vim.cmd(colorscheme_command)
 	vim.cmd(colorscheme_command)
-	vim.cmd(transparent_cmd_1)
-	vim.cmd(transparent_cmd_2)
+	-- vim.cmd(transparent_cmd_1)
+	-- vim.cmd(transparent_cmd_2)
 end
 
 SET_COLORSCHEME();
