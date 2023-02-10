@@ -53,4 +53,6 @@ neovim_lsp['volar'].setup(volar_options)
 
 neovim_lsp['tailwindcss'].setup({});
 neovim_lsp['html'].setup({});
-neovim_lsp['emmet_ls'].setup({})
+neovim_lsp['emmet_ls'].setup({
+	filetypes = { 'php' }
+})
