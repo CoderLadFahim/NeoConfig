@@ -38,8 +38,8 @@ vim.api.nvim_set_keymap('n', '<leader>tf', ':NvimTreeFindFile<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>fc', ':NvimTreeCollapse<CR>', opts)
 
 -- Telescope mappings
-vim.api.nvim_set_keymap('n', "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
-vim.api.nvim_set_keymap('n', "<leader>fg", "<cmd>Telescope git_files<CR>", opts)
+vim.api.nvim_set_keymap('n', "<leader>ff", "<cmd>Telescope git_files<CR>", opts)
+vim.api.nvim_set_keymap('n', "<leader>FF", "<cmd>Telescope find_files<CR>", opts)
 vim.api.nvim_set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>", opts)
 
 -- Toggleterm mappings

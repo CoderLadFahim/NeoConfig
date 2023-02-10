@@ -46,13 +46,35 @@ local volar_options = {
   flags = lsp_flags
 }
 
-neovim_lsp['pyright'].setup(lsp_options)
 neovim_lsp['intelephense'].setup(lsp_options)
 neovim_lsp['tsserver'].setup(lsp_options)
 neovim_lsp['volar'].setup(volar_options)
 
 neovim_lsp['tailwindcss'].setup({});
-neovim_lsp['html'].setup({});
 neovim_lsp['emmet_ls'].setup({
 	filetypes = { 'php' }
 })
+
+neovim_lsp['sumneko_lua'].setup({
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+})
+
