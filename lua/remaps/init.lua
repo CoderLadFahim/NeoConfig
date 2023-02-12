@@ -14,8 +14,8 @@ vim.api.nvim_set_keymap('n', '}', ':BufferLineCycleNext<cr>', opts)
 vim.api.nvim_set_keymap('n', '{', ':BufferLineCyclePrev<cr>', opts)
 vim.api.nvim_set_keymap('n', '<leader>bp', ':BufferLinePick<cr>', opts)
 vim.api.nvim_set_keymap('n', '<leader>bq', ':b#|bd#', opts)
-vim.api.nvim_set_keymap('n', '<leader>bxr', ':BufferLineCloseRight', opts)
-vim.api.nvim_set_keymap('n', '<leader>bxl', ':BufferLineCloseLeft', opts)
+vim.api.nvim_set_keymap('n', '<leader>br', ':BufferLineCloseRight', opts)
+vim.api.nvim_set_keymap('n', '<leader>bl', ':BufferLineCloseLeft', opts)
 
 vim.api.nvim_set_keymap('n', '<leader>fr', ':%s/', opts)
 
