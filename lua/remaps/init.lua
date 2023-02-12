@@ -19,11 +19,6 @@ vim.api.nvim_set_keymap('n', '<leader>bl', ':BufferLineCloseLeft', opts)
 
 vim.api.nvim_set_keymap('n', '<leader>fr', ':%s/', opts)
 
--- Packer controls
-vim.api.nvim_set_keymap('n', '<leader>pc', '<cmd>PackerClean<cr>', opts)
-vim.api.nvim_set_keymap('n', '<leader>pc', '<cmd>PackerInstall<cr>', opts)
-vim.api.nvim_set_keymap('n', '<leader>ps', '<cmd>PackerSync<cr>', opts)
-
 vim.api.nvim_set_keymap('n', "<leader>hh","<C-w>h", opts)
 vim.api.nvim_set_keymap('n', "<leader>jj","<C-w>j", opts)
 vim.api.nvim_set_keymap('n', "<leader>kk","<C-w>k", opts)
@@ -63,3 +58,14 @@ vim.api.nvim_set_keymap('n', "<C-d>", "<C-d>zz", opts)
 vim.api.nvim_set_keymap('n', "<C-u>", "<C-u>zz", opts)
 vim.api.nvim_set_keymap('n', "<C-f>", "<C-f>zz", opts)
 vim.api.nvim_set_keymap('n', "<C-b>", "<C-b>zz", opts)
+
+-- moving visual blocks
+vim.api.nvim_set_keymap('v', "J", ":m '>+1<CR>gv=gv", opts)
+vim.api.nvim_set_keymap('v', "K", ":m '<-2<CR>gv=gv", opts)
+
+-- Keeping the search term in the middle of the screen
+vim.api.nvim_set_keymap('n', "n", "nzzzv", opts)
+vim.api.nvim_set_keymap('n', "N", "Nzzzv", opts)
+
+-- keeping the yanked content in the register after pasting over
+vim.api.nvim_set_keymap('v', "p", "\"_dP", opts)
