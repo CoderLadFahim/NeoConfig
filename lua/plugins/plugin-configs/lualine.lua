@@ -6,7 +6,7 @@ end
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = 'gruvbox',
+    theme = 'moonbow',
     disabled_filetypes = {
       statusline = {},
       winbar = {},
