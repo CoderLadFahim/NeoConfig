@@ -4,23 +4,23 @@ if not packer_status_ok then
 end
 
 packer.startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-lua/plenary.nvim'
-  use 'MunifTanjim/nui.nvim'
-  use 'lewis6991/impatient.nvim'
-  use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = false} }
-  use({
-  	  "kylechui/nvim-surround",
-  	  config = function()
-  	  	  require("nvim-surround").setup({
-  	  	  tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-     })
-     end
-  })
+  	use 'wbthomason/packer.nvim'
+  	use 'nvim-tree/nvim-web-devicons'
+  	use 'nvim-lua/plenary.nvim'
+  	use 'MunifTanjim/nui.nvim'
+  	use 'lewis6991/impatient.nvim'
+  	use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = false} }
+  	use({
+  	  	"kylechui/nvim-surround",
+  	  	config = function()
+  	  	  	require("nvim-surround").setup({
+  	  	  		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+     		})
+     	end
+  	})
 	use {
-  	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  	  requires = { {'nvim-lua/plenary.nvim'} }
+  	  	'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  	  	requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	-- use "terrortylor/nvim-comment"
 	use {
@@ -31,23 +31,23 @@ packer.startup(function(use)
 	}
 	use 'JoosepAlviste/nvim-ts-context-commentstring'
 	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-  	  	  require("toggleterm").setup()
+  	  	require("toggleterm").setup()
 		end
 	}
 	use {
 		"windwp/nvim-autopairs",
-    	 config = function() require("nvim-autopairs").setup {} end
+    	config = function() require("nvim-autopairs").setup {} end
 	}
 	use { 'lewis6991/gitsigns.nvim' }
 	use {
-    	 'goolord/alpha-nvim',
-    	 config = function ()
-        	  require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    	 end
+    	'goolord/alpha-nvim',
+    	config = function ()
+        	require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    	end
 	}
 	use {
-  	  'nvim-tree/nvim-tree.lua',
-  	  tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  	  	'nvim-tree/nvim-tree.lua',
+  	  	tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-buffer'
@@ -59,8 +59,8 @@ packer.startup(function(use)
 	use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
 	use 'rafamadriz/friendly-snippets'
    use {
-       'nvim-treesitter/nvim-treesitter',
-       run = ':TSUpdate'
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
    }
 
 	use 'neovim/nvim-lspconfig'
@@ -74,15 +74,15 @@ packer.startup(function(use)
 	use "ggandor/leap.nvim"
 	use { "arturgoms/moonbow.nvim" }
 	use({
-  	  "utilyre/barbecue.nvim",
-  	  tag = "*",
-  	  requires = {
-    	 "SmiteshP/nvim-navic",
-    	 "nvim-tree/nvim-web-devicons", -- optional dependency
-  	  },
-  	  after = "nvim-web-devicons", -- keep this if you're using NvChad
-  	  config = function()
-    	 require("barbecue").setup()
-  	  end,
+  	  	"utilyre/barbecue.nvim",
+  	  	tag = "*",
+  	  	requires = {
+    	 	"SmiteshP/nvim-navic",
+    	 	"nvim-tree/nvim-web-devicons", -- optional dependency
+  	  	},
+  	  	after = "nvim-web-devicons", -- keep this if you're using NvChad
+  	  	config = function()
+    	 	require("barbecue").setup()
+  	  	end,
 	})
 end)
