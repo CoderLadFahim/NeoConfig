@@ -52,10 +52,10 @@ neovim_lsp['volar'].setup(volar_options)
 
 neovim_lsp['tailwindcss'].setup({});
 neovim_lsp['emmet_ls'].setup({
-	filetypes = { 'php' }
+	filetypes = { 'php', 'jsx', 'tsx', 'css', 'vue', 'html' }
 })
 
-neovim_lsp['sumneko_lua'].setup({
+neovim_lsp['lua_ls'].setup({
   settings = {
     Lua = {
       runtime = {

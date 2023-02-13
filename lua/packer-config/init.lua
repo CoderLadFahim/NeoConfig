@@ -22,7 +22,13 @@ packer.startup(function(use)
   	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
   	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use "terrortylor/nvim-comment"
+	-- use "terrortylor/nvim-comment"
+	use {
+    	'numToStr/Comment.nvim',
+    	config = function()
+        	require('Comment').setup()
+    	end
+	}
 	use 'JoosepAlviste/nvim-ts-context-commentstring'
 	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   	  	  require("toggleterm").setup()
