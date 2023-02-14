@@ -72,7 +72,6 @@ packer.startup(function(use)
    use "tpope/vim-fugitive"
 	use "ellisonleao/gruvbox.nvim"
 	use "ggandor/leap.nvim"
-	use { "arturgoms/moonbow.nvim" }
 	use({
   	  	"utilyre/barbecue.nvim",
   	  	tag = "*",
