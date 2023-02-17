@@ -39,20 +39,21 @@ local lsp_options = { on_attach = on_attach, flags = lsp_flags }
 local volar_options = {
   	init_options = {
     	typescript = {
-      	tsdk = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
+      		tsdk = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
     	}
   	},
+  	filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
   	on_attach = on_attach,
   	flags = lsp_flags
 }
 
 neovim_lsp['intelephense'].setup(lsp_options)
-neovim_lsp['tsserver'].setup(lsp_options)
+-- neovim_lsp['tsserver'].setup(lsp_options)
 neovim_lsp['volar'].setup(volar_options)
 
 neovim_lsp['tailwindcss'].setup({});
 neovim_lsp['emmet_ls'].setup({
-	filetypes = { 'php', 'jsx', 'tsx', 'css', 'vue', 'html' }
+	filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'javascript', 'typescript' }
 })
 
 neovim_lsp['lua_ls'].setup({

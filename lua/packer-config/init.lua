@@ -58,18 +58,19 @@ packer.startup(function(use)
 
 	use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
 	use 'rafamadriz/friendly-snippets'
-   use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
-   }
+   	use {
+      	'nvim-treesitter/nvim-treesitter',
+      	run = ':TSUpdate'
+   	}
 
 	use 'neovim/nvim-lspconfig'
 	use "williamboman/mason.nvim"
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 	use('jose-elias-alvarez/null-ls.nvim')
 	use('MunifTanjim/prettier.nvim')
-   use "lukas-reineke/indent-blankline.nvim"
-   use "tpope/vim-fugitive"
+   	use "lukas-reineke/indent-blankline.nvim"
+   	use "tpope/vim-fugitive"
+   	use "rose-pine/neovim"
 	use "ellisonleao/gruvbox.nvim"
 	use "sainnhe/sonokai"
 	use "ggandor/leap.nvim"
