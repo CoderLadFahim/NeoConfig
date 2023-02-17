@@ -71,6 +71,7 @@ packer.startup(function(use)
    use "lukas-reineke/indent-blankline.nvim"
    use "tpope/vim-fugitive"
 	use "ellisonleao/gruvbox.nvim"
+	use "sainnhe/sonokai"
 	use "ggandor/leap.nvim"
 	use({
   	  	"utilyre/barbecue.nvim",
