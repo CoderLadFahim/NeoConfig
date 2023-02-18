@@ -4,8 +4,8 @@ if not toggleterm_status_ok then
 end
 
 toggleterm.setup({
-	size = 25,
-	open_mapping = [[<leader>tt]],
+	size = 20,
+	open_mapping = [[<M-t>]],
 	start_in_insert = true,
 	direction = 'horizontal',
 	float_opts = {
