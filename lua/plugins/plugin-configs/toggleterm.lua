@@ -26,6 +26,6 @@ function NODE_TOGGLE()
 	node:toggle()
 end
 
-function ARTISAN_TOGGLE()
+function TINKER_TOGGLE()
 	tinker:toggle()
 end

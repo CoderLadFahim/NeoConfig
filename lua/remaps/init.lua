@@ -45,7 +45,7 @@ vim.api.nvim_set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>", opts)
 -- Toggleterm mappings
 vim.api.nvim_set_keymap('n', "<leader>lg", "<cmd>lua LAZYGIT_TOGGLE()<CR>", opts)
 vim.api.nvim_set_keymap('n', "<leader>nd", "<cmd>lua NODE_TOGGLE()<CR>", opts)
-vim.api.nvim_set_keymap('n', "<leader>tk", "<cmd>lua ARTISAN_TOGGLE()<CR>", opts)
+vim.api.nvim_set_keymap('n', "<leader>tk", "<cmd>lua TINKER_TOGGLE()<CR>", opts)
 
 
 -- git mappings
