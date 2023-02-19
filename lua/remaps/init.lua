@@ -2,7 +2,7 @@ local opts = { noremap = true, silent = false }
 
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>q', ':q!', opts)
-vim.api.nvim_set_keymap('n', '<leader>src', ':luafile %', opts)
+vim.api.nvim_set_keymap('n', '<leader>so', ':so %', opts)
 vim.api.nvim_set_keymap('n', '<leader>v', '<C-v>', opts)
 vim.api.nvim_set_keymap('n', '<leader>fv', ':file<cr>', opts)
 

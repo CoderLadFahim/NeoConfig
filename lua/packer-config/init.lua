@@ -70,9 +70,7 @@ packer.startup(function(use)
 	use('MunifTanjim/prettier.nvim')
    	use "lukas-reineke/indent-blankline.nvim"
    	use "tpope/vim-fugitive"
-   	use "rose-pine/neovim"
 	use "ellisonleao/gruvbox.nvim"
-	use "sainnhe/sonokai"
 	use "ggandor/leap.nvim"
 	use({
   	  	"utilyre/barbecue.nvim",
