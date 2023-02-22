@@ -39,12 +39,12 @@ packer.startup(function(use)
     	config = function() require("nvim-autopairs").setup {} end
 	}
 	use { 'lewis6991/gitsigns.nvim' }
-	use {
-    	'goolord/alpha-nvim',
-    	config = function ()
-        	require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    	end
-	}
+	-- use {
+ 	--    	'goolord/alpha-nvim',
+ 	--    	config = function ()
+ 	--        	require'alpha'.setup(require'alpha.themes.dashboard'.config)
+ 	--    	end
+	-- }
 	use {
   	  	'nvim-tree/nvim-tree.lua',
   	  	tag = 'nightly' -- optional, updated every week. (see issue #1193)
@@ -70,7 +70,7 @@ packer.startup(function(use)
 	use('MunifTanjim/prettier.nvim')
    	use "lukas-reineke/indent-blankline.nvim"
    	use "tpope/vim-fugitive"
-	use "ellisonleao/gruvbox.nvim"
+	-- use "ellisonleao/gruvbox.nvim"
 	use "ggandor/leap.nvim"
 	use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
 	use({
