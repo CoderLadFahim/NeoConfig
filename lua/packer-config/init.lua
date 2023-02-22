@@ -72,6 +72,7 @@ packer.startup(function(use)
    	use "tpope/vim-fugitive"
 	use "ellisonleao/gruvbox.nvim"
 	use "ggandor/leap.nvim"
+	use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
 	use({
   	  	"utilyre/barbecue.nvim",
   	  	tag = "*",
