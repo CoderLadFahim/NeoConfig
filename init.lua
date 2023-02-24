@@ -1,7 +1,7 @@
 require('options');
 require('globals');
 require('remaps');
-require('packer-config');
+require('lazy-config');
 require('plugins');
 require('lsp');
 
@@ -11,9 +11,9 @@ function SET_COLORSCHEME()
 	local transparent_cmd_2 = 'highlight NonText guibg=none';
 
 	vim.cmd(colorscheme_command)
-	-- vim.cmd(colorscheme_command)
+	vim.cmd(colorscheme_command)
 	-- vim.cmd(transparent_cmd_1)
 	-- vim.cmd(transparent_cmd_2)
 end
 
-SET_COLORSCHEME();
+SET_COLORSCHEME()

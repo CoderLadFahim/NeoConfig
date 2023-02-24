@@ -5,6 +5,7 @@ end
 
 -- OR setup with some options
 nvim_tree.setup({
+  	open_on_setup = true,
   	sort_by = "case_sensitive",
   	view = {
     	adaptive_size = true,
@@ -12,9 +13,9 @@ nvim_tree.setup({
     	width = 30,
     	relativenumber = true,
     	mappings = {
-      	list = {
+      		list = {
         		{ key = "u", action = "dir_up" },
-      	},
+      		},
     	},
   	},
   	renderer = {
