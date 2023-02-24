@@ -6,7 +6,7 @@ end
 lualine.setup({
   	options = {
     	icons_enabled = true,
-    	theme = 'github_dark',
+    	theme = 'vscode',
     	disabled_filetypes = {
       	statusline = {},
       	winbar = {},

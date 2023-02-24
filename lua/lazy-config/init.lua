@@ -15,6 +15,7 @@ require('lazy').setup({
 	'kyazdani42/nvim-web-devicons',
   	'nvim-lua/plenary.nvim',
   	'MunifTanjim/nui.nvim',
+ 	'Mofiqul/vscode.nvim',
   	'lewis6991/impatient.nvim',
   	{ 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
   	{
