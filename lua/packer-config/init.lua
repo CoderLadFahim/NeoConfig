@@ -1,88 +1,92 @@
-local packer_status_ok, packer = pcall(require, 'packer')
-if not packer_status_ok then
-	return
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  	vim.fn.system({
+    	"git",
+    	"clone",
+    	"--filter=blob:none",
+    	"https://github.com/folke/lazy.nvim.git",
+    	"--branch=stable", -- latest stable release
+    	lazypath,
+  	})
 end
+vim.opt.rtp:prepend(lazypath)
 
-packer.startup(function(use)
-  	use 'wbthomason/packer.nvim'
-  	use 'nvim-tree/nvim-web-devicons'
-  	use 'nvim-lua/plenary.nvim'
-  	use 'MunifTanjim/nui.nvim'
-  	use 'lewis6991/impatient.nvim'
-  	use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = false} }
-  	use({
+require('lazy').setup({
+	'kyazdani42/nvim-web-devicons',
+  	'nvim-lua/plenary.nvim',
+  	'MunifTanjim/nui.nvim',
+  	'lewis6991/impatient.nvim',
+  	{ 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
+  	{
   	  	"kylechui/nvim-surround",
   	  	config = function()
   	  	  	require("nvim-surround").setup({
-  	  	  		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+  	  	  		tag = "*", --  for stability; omit to use `main` branch for the latest features
      		})
      	end
-  	})
-	use {
+  	},
+	{
   	  	'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  	  	requires = { {'nvim-lua/plenary.nvim'} }
-	}
-	-- use "terrortylor/nvim-comment"
-	use {
+  	  	dependencies = { {'nvim-lua/plenary.nvim'} }
+	},
+	--  "terrortylor/nvim-comment"
+	{
     	'numToStr/Comment.nvim',
     	config = function()
         	require('Comment').setup()
     	end
-	}
-	use 'JoosepAlviste/nvim-ts-context-commentstring'
-	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+	},
+	'JoosepAlviste/nvim-ts-context-commentstring',
+	{"akinsho/toggleterm.nvim", config = function()
   	  	require("toggleterm").setup()
 		end
-	}
-	use {
+	},
+	{
 		"windwp/nvim-autopairs",
     	config = function() require("nvim-autopairs").setup {} end
-	}
-	use { 'lewis6991/gitsigns.nvim' }
-	-- use {
- 	--    	'goolord/alpha-nvim',
- 	--    	config = function ()
- 	--        	require'alpha'.setup(require'alpha.themes.dashboard'.config)
- 	--    	end
-	-- }
-	use {
+	},
+	{ 'lewis6991/gitsigns.nvim' },
+	 {
+ 	   	'goolord/alpha-nvim',
+ 	   	config = function ()
+ 	       	require'alpha'.setup(require'alpha.themes.dashboard'.config)
+ 	   	end
+	},
+	{
   	  	'nvim-tree/nvim-tree.lua',
   	  	tag = 'nightly' -- optional, updated every week. (see issue #1193)
-	}
-	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-path'
-	use 'hrsh7th/cmp-cmdline'
-	use 'saadparwaiz1/cmp_luasnip'
-	use 'hrsh7th/cmp-nvim-lsp'
-
-	use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
-	use 'rafamadriz/friendly-snippets'
-   	use {
+	},
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-buffer',
+	'hrsh7th/cmp-path',
+	'hrsh7th/cmp-cmdline',
+	'saadparwaiz1/cmp_luasnip',
+	'hrsh7th/cmp-nvim-lsp',
+	-- {"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"},
+	{"L3MON4D3/LuaSnip"},
+	'rafamadriz/friendly-snippets',
+   	{
       	'nvim-treesitter/nvim-treesitter',
-      	run = ':TSUpdate'
-   	}
-
-	use 'neovim/nvim-lspconfig'
-	use "williamboman/mason.nvim"
-	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
-	use('jose-elias-alvarez/null-ls.nvim')
-	use('MunifTanjim/prettier.nvim')
-   	use "lukas-reineke/indent-blankline.nvim"
-   	use "tpope/vim-fugitive"
-	-- use "ellisonleao/gruvbox.nvim"
-	use "ggandor/leap.nvim"
-	use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
-	use({
+      	build = ':TSUpdate'
+   	},
+	'neovim/nvim-lspconfig',
+	"williamboman/mason.nvim",
+	{'akinsho/bufferline.nvim', dependencies = 'kyazdani42/nvim-web-devicons'},
+	'jose-elias-alvarez/null-ls.nvim',
+	'MunifTanjim/prettier.nvim',
+   	"lukas-reineke/indent-blankline.nvim",
+   	"tpope/vim-fugitive",
+	--  "ellisonleao/gruvbox.nvim"
+	"ggandor/leap.nvim",
+	({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }),
+	({
   	  	"utilyre/barbecue.nvim",
-  	  	tag = "*",
-  	  	requires = {
+  	  	dependencies = {
     	 	"SmiteshP/nvim-navic",
-    	 	"nvim-tree/nvim-web-devicons", -- optional dependency
+ 			'kyazdani42/nvim-web-devicons', -- optional dependency
   	  	},
-  	  	after = "nvim-web-devicons", -- keep this if you're using NvChad
   	  	config = function()
     	 	require("barbecue").setup()
   	  	end,
 	})
-end)
+})

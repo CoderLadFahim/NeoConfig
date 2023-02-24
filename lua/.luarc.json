@@ -44,5 +44,6 @@
         "/home/emroz/.local/share/nvim/site/pack/packer/start/cmp-path/after",
         "/home/emroz/.local/share/nvim/site/pack/packer/start/cmp_luasnip/after",
         "${3rd}/luassert/library"
-    ]
+    ],
+    "workspace.checkThirdParty": false
 }
