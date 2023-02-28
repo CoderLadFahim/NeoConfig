@@ -5,7 +5,7 @@ end
 
 toggleterm.setup({
 	size = 20,
-	open_mapping = [[<M-t>]],
+	open_mapping = [[<leader><SPACE>]],
 	start_in_insert = true,
 	direction = 'horizontal',
 	float_opts = {

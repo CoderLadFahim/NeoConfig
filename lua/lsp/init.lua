@@ -48,6 +48,7 @@ local volar_options = {
 }
 
 neovim_lsp['intelephense'].setup(lsp_options)
+neovim_lsp['pyright'].setup(lsp_options)
 -- neovim_lsp['tsserver'].setup(lsp_options)
 neovim_lsp['volar'].setup(volar_options)
 

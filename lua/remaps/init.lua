@@ -20,7 +20,7 @@ vim.api.nvim_set_keymap('n', '<leader>bl', ':BufferLineCloseLeft', opts)
 vim.api.nvim_set_keymap('n', '<leader>fr', ':%s/', opts)
 
 vim.api.nvim_set_keymap('n', '<leader>taa', ':ToggleTermToggleAll<CR>', opts)
-vim.api.nvim_set_keymap('t', '<esc>', [[<C-\><C-n>]], opts)
+vim.api.nvim_set_keymap('t', '<leader><esc>', [[<C-\><C-n>]], opts)
 
 vim.api.nvim_set_keymap('n', "<leader>hh","<C-w>h", opts)
 vim.api.nvim_set_keymap('n', "<leader>jj","<C-w>j", opts)
