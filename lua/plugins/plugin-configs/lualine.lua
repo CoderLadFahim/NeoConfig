@@ -6,7 +6,8 @@ end
 lualine.setup({
   	options = {
     	icons_enabled = true,
-    	theme = 'github_dark_default',
+    	-- theme = 'github_dark_default',
+    	theme =  GET_GLOBAL_COLOR_SCHEME(),
     	disabled_filetypes = {
       	statusline = {},
       	winbar = {},

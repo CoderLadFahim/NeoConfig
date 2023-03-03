@@ -15,7 +15,14 @@ require('lazy').setup({
 	'kyazdani42/nvim-web-devicons',
   	'nvim-lua/plenary.nvim',
   	'MunifTanjim/nui.nvim',
- 	'Mofiqul/vscode.nvim',
+ 	-- 	'Mofiqul/vscode.nvim',
+	-- 'sainnhe/sonokai',
+	{
+    	'rose-pine/neovim',
+    	name = 'rose-pine',
+    	lazy = false,
+    	priority = 1000,
+	},
   	'lewis6991/impatient.nvim',
   	{ 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
   	{
@@ -47,7 +54,7 @@ require('lazy').setup({
     	config = function() require("nvim-autopairs").setup {} end
 	},
 	{ 'lewis6991/gitsigns.nvim' },
-	 {
+	{
  	   	'goolord/alpha-nvim',
  	   	config = function ()
  	       	require'alpha'.setup(require'alpha.themes.dashboard'.config)
@@ -79,7 +86,7 @@ require('lazy').setup({
    	"tpope/vim-fugitive",
 	--  "ellisonleao/gruvbox.nvim"
 	"ggandor/leap.nvim",
-	({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }),
+	-- ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }),
 	({
   	  	"utilyre/barbecue.nvim",
   	  	dependencies = {

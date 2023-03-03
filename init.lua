@@ -1,3 +1,7 @@
+function GET_GLOBAL_COLOR_SCHEME(theme)
+	return 'rose-pine'
+end
+
 require('options');
 require('globals');
 require('remaps');
@@ -6,7 +10,7 @@ require('plugins');
 require('lsp');
 
 function SET_COLORSCHEME()
-	local colorscheme_command = 'colo github_dark_default';
+	local colorscheme_command = 'colo ' .. GET_GLOBAL_COLOR_SCHEME()
 	local transparent_cmd_1 = 'highlight Normal guibg=none';
 	local transparent_cmd_2 = 'highlight NonText guibg=none';
 

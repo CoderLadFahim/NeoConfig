@@ -11,7 +11,7 @@ nvim_tree.setup({
     	adaptive_size = true,
     	side = 'left',
     	width = 30,
-    	relativenumber = true,
+    	relativenumber = false,
     	mappings = {
       		list = {
         		{ key = "u", action = "dir_up" },
