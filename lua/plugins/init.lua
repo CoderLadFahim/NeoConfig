@@ -1,6 +1,6 @@
+require('plugins.plugin-configs.impatient');
 require('plugins.plugin-configs.lualine');
 require('plugins.plugin-configs.nvimtree');
--- require('plugins.plugin-configs.nvim-comment');
 require('plugins.plugin-configs.commentnvim');
 require('plugins.plugin-configs.telescope');
 require('plugins.plugin-configs.toggleterm');

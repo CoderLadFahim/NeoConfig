@@ -15,14 +15,6 @@ require('lazy').setup({
 	'kyazdani42/nvim-web-devicons',
   	'nvim-lua/plenary.nvim',
   	'MunifTanjim/nui.nvim',
- 	-- 	'Mofiqul/vscode.nvim',
-	-- 'sainnhe/sonokai',
-	{
-    	'rose-pine/neovim',
-    	name = 'rose-pine',
-    	lazy = false,
-    	priority = 1000,
-	},
   	'lewis6991/impatient.nvim',
   	{ 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
   	{
@@ -37,7 +29,6 @@ require('lazy').setup({
   	  	'nvim-telescope/telescope.nvim', tag = '0.1.0',
   	  	dependencies = { {'nvim-lua/plenary.nvim'} }
 	},
-	--  "terrortylor/nvim-comment"
 	{
     	'numToStr/Comment.nvim',
     	config = function()
@@ -70,7 +61,6 @@ require('lazy').setup({
 	'hrsh7th/cmp-cmdline',
 	'saadparwaiz1/cmp_luasnip',
 	'hrsh7th/cmp-nvim-lsp',
-	-- {"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"},
 	{"L3MON4D3/LuaSnip"},
 	'rafamadriz/friendly-snippets',
    	{
@@ -84,9 +74,8 @@ require('lazy').setup({
 	'MunifTanjim/prettier.nvim',
    	"lukas-reineke/indent-blankline.nvim",
    	"tpope/vim-fugitive",
-	--  "ellisonleao/gruvbox.nvim"
+	"sainnhe/gruvbox-material",
 	"ggandor/leap.nvim",
-	-- ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }),
 	({
   	  	"utilyre/barbecue.nvim",
   	  	dependencies = {
