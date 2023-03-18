@@ -36,10 +36,24 @@ end
 
 local lsp_flags = { debounce_text_changes = 150 }
 local lsp_options = { on_attach = on_attach, flags = lsp_flags }
+
+local macos_ts_tsdk_location = '/usr/local/lib/node_modules/typescript/lib'
+local linux_ts_tsdk_location = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
+local tsdk_to_use = nil
+
+if package.config:sub(1,1) == '/' then
+  if package.config:sub(2,2) == '/' then
+    tsdk_to_use = macos_ts_tsdk_location;
+  else
+    tsdk_to_use = linux_ts_tsdk_location;
+  end
+end
+
 local volar_options = {
   	init_options = {
     	typescript = {
-      		tsdk = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
+      		-- tsdk = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
+      		tsdk = tsdk_to_use
     	}
   	},
   	filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
@@ -56,4 +70,5 @@ neovim_lsp['tailwindcss'].setup({});
 neovim_lsp['emmet_ls'].setup({
 	filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'javascript', 'typescript', 'php' }
 })
+
 
