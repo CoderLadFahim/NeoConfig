@@ -3,6 +3,17 @@ if not lsp_status_ok then
 	return
 end
 
+function directoryExists(path)
+    local ok, err, code = os.rename(path, path)
+    if not ok then
+        if code == 13 then
+            return true
+        end
+        return false
+    end
+    return true
+end
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -41,18 +52,15 @@ local macos_ts_tsdk_location = '/usr/local/lib/node_modules/typescript/lib'
 local linux_ts_tsdk_location = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
 local tsdk_to_use = nil
 
-if package.config:sub(1,1) == '/' then
-  if package.config:sub(2,2) == '/' then
-    tsdk_to_use = macos_ts_tsdk_location;
-  else
-    tsdk_to_use = linux_ts_tsdk_location;
-  end
+if (directoryExists(linux_ts_tsdk_location)) then
+	tsdk_to_use = linux_ts_tsdk_location
+else
+	tsdk_to_use = macos_ts_tsdk_location
 end
 
 local volar_options = {
   	init_options = {
     	typescript = {
-      		-- tsdk = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
       		tsdk = tsdk_to_use
     	}
   	},
