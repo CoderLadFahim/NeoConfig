@@ -39,7 +39,7 @@ nvim_tree.setup({
   	},
   	renderer = {
     	group_empty = true,
-    	indent_width = 4,
+    	indent_width = 2,
 		indent_markers = {
           	enable = true,
           	inline_arrows = true,
