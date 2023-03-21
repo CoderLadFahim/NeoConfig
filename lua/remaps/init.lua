@@ -1,5 +1,9 @@
 local opts = { noremap = true, silent = false }
 
+function set_keymap(mode, seq, cmd)
+	vim.api.nvim_set_keymap(mode,seq, cmd, opts)
+end
+
 function WRITE_FILE()
   	local modified = vim.api.nvim_buf_get_option(0, 'modified')
   	local write_command = 'w'
@@ -10,78 +14,78 @@ function WRITE_FILE()
 	end
 end
 
--- vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>w', ':lua WRITE_FILE()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>q', ':q!', opts)
-vim.api.nvim_set_keymap('n', '<leader>so', ':so %', opts)
-vim.api.nvim_set_keymap('n', '<leader>v', '<C-v>', opts)
-vim.api.nvim_set_keymap('n', '<leader>fv', ':file<cr>', opts)
+set_keymap('n', '<leader>w', ':lua WRITE_FILE()<CR>')
+set_keymap('n', '<leader>q', ':q!')
+set_keymap('n', '<leader>so', ':so %')
+set_keymap('n', '<leader>v', '<C-v>')
+set_keymap('n', '<leader>fv', ':file<cr>')
 
 -- Better tab controls
-vim.api.nvim_set_keymap('n', '<leader>tn', ':tabedit<cr>', opts)
-vim.api.nvim_set_keymap('n', '<leader>tq', ':tabclose!<cr>', opts)
-vim.api.nvim_set_keymap('n', '<leader>taq', ':tabonly!<cr>', opts)
-vim.api.nvim_set_keymap('n', '}', ':BufferLineCycleNext<cr>', opts)
-vim.api.nvim_set_keymap('n', '{', ':BufferLineCyclePrev<cr>', opts)
-vim.api.nvim_set_keymap('n', '<leader>bp', ':BufferLinePick<cr>', opts)
-vim.api.nvim_set_keymap('n', '<leader>bq', ':b#|bd#', opts)
-vim.api.nvim_set_keymap('n', '<leader>br', ':BufferLineCloseRight', opts)
-vim.api.nvim_set_keymap('n', '<leader>bl', ':BufferLineCloseLeft', opts)
+set_keymap('n', '<leader>tn', ':tabedit<cr>')
+set_keymap('n', '<leader>tq', ':tabclose!<cr>')
+set_keymap('n', '<leader>taq', ':tabonly!<cr>')
+set_keymap('n', '}', ':BufferLineCycleNext<cr>')
+set_keymap('n', '{', ':BufferLineCyclePrev<cr>')
+set_keymap('n', '<leader>bp', ':BufferLinePick<cr>')
+set_keymap('n', '<leader>bq', ':b#|bd#')
+set_keymap('n', '<leader>br', ':BufferLineCloseRight')
+set_keymap('n', '<leader>bl', ':BufferLineCloseLeft')
 
-vim.api.nvim_set_keymap('n', '<leader>fr', ':%s/', opts)
+set_keymap('n', '<leader>fr', ':%s/')
 
-vim.api.nvim_set_keymap('n', '<leader>taa', ':ToggleTermToggleAll<CR>', opts)
-vim.api.nvim_set_keymap('t', '<leader><esc>', [[<C-\><C-n>]], opts)
+set_keymap('n', '<leader>taa', ':ToggleTermToggleAll<CR>')
+set_keymap('t', '<leader><esc>', [[<C-\><C-n>]])
 
-vim.api.nvim_set_keymap('n', "<leader>hh","<C-w>h", opts)
-vim.api.nvim_set_keymap('n', "<leader>jj","<C-w>j", opts)
-vim.api.nvim_set_keymap('n', "<leader>kk","<C-w>k", opts)
-vim.api.nvim_set_keymap('n', "<leader>ll","<C-w>l", opts)
+set_keymap('n', "<leader>hh","<C-w>h")
+set_keymap('n', "<leader>jj","<C-w>j")
+set_keymap('n', "<leader>kk","<C-w>k")
+set_keymap('n', "<leader>ll","<C-w>l")
 
-vim.api.nvim_set_keymap('n', "(", "<cmd>vertical resize +2<CR>", opts)
-vim.api.nvim_set_keymap('n', "+", "<cmd>resize +2<CR>", opts)
-vim.api.nvim_set_keymap('n', "-", "<cmd>resize -2<CR>", opts)
-vim.api.nvim_set_keymap('n', ")", "<cmd>vertical resize -2<CR>", opts)
+set_keymap('n', "(", "<cmd>vertical resize +4<CR>")
+set_keymap('n', "+", "<cmd>resize +4<CR>")
+set_keymap('n', "-", "<cmd>resize -4<CR>")
+set_keymap('n', ")", "<cmd>vertical resize -4<CR>")
 
 -- Nvim tree mappings
-vim.api.nvim_set_keymap('n', '<leader>ft', ':NvimTreeToggle<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>tf', ':NvimTreeFindFile<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>fc', ':NvimTreeCollapse<CR>', opts)
+set_keymap('n', '<leader>ft', ':NvimTreeToggle<CR>')
+set_keymap('n', '<leader>tf', ':NvimTreeFindFile<CR>')
+set_keymap('n', '<leader>fc', ':NvimTreeCollapse<CR>')
 
 -- Telescope mappings
-vim.api.nvim_set_keymap('n', "<leader>ff", "<cmd>Telescope git_files<CR>", opts)
-vim.api.nvim_set_keymap('n', "<leader>FF", "<cmd>Telescope find_files<CR>", opts)
-vim.api.nvim_set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>", opts)
-vim.api.nvim_set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>", opts)
+set_keymap('n', "<leader>ff", "<cmd>Telescope git_files<CR>")
+set_keymap('n', "<leader>FF", "<cmd>Telescope find_files<CR>")
+set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>")
+set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
+set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
 
 -- -- Toggleterm mappings
--- vim.api.nvim_set_keymap('n', "<leader>lg", "<cmd>lua LAZYGIT_TOGGLE()<CR>", opts)
--- vim.api.nvim_set_keymap('n', "<leader>nd", "<cmd>lua NODE_TOGGLE()<CR>", opts)
--- vim.api.nvim_set_keymap('n', "<leader>tk", "<cmd>lua TINKER_TOGGLE()<CR>", opts)
+-- set_keymap('n', "<leader>lg", "<cmd>lua LAZYGIT_TOGGLE()<CR>")
+-- set_keymap('n', "<leader>nd", "<cmd>lua NODE_TOGGLE()<CR>")
+-- set_keymap('n', "<leader>tk", "<cmd>lua TINKER_TOGGLE()<CR>")
 
 
 -- git mappings
-vim.api.nvim_set_keymap('n', "<leader>ga.", ":G add .", opts)
-vim.api.nvim_set_keymap('n', "<leader>gs", ":G status", opts)
-vim.api.nvim_set_keymap('n', "<leader>glo", ":G log --oneline ", opts)
-vim.api.nvim_set_keymap('n', "<leader>gcm", ':G commit -m ""', opts)
-vim.api.nvim_set_keymap('n', "<leader>gcam", ':G commit --amend -m ""', opts)
-vim.api.nvim_set_keymap('n', "<leader>gcan", ':G commit --amend --no-edit', opts)
-vim.api.nvim_set_keymap('n', "<leader>gr.", ":G restore .", opts)
-vim.api.nvim_set_keymap('n', "<leader>gd", ":G diff", opts)
+set_keymap('n', "<leader>ga.", ":G add .")
+set_keymap('n', "<leader>gs", ":G status")
+-- set_keymap('n', "<leader>glo", ":G log --oneline ")
+set_keymap('n', "<leader>gcm", ':G commit -m ""')
+set_keymap('n', "<leader>gcam", ':G commit --amend -m ""')
+set_keymap('n', "<leader>gcan", ':G commit --amend --no-edit')
+set_keymap('n', "<leader>gr.", ":G restore .")
+set_keymap('n', "<leader>gd", ":G diff")
 
-vim.api.nvim_set_keymap('n', "<C-d>", "<C-d>zz", opts)
-vim.api.nvim_set_keymap('n', "<C-u>", "<C-u>zz", opts)
-vim.api.nvim_set_keymap('n', "<C-f>", "<C-f>zz", opts)
-vim.api.nvim_set_keymap('n', "<C-b>", "<C-b>zz", opts)
+set_keymap('n', "<C-d>", "<C-d>zz")
+set_keymap('n', "<C-u>", "<C-u>zz")
+set_keymap('n', "<C-f>", "<C-f>zz")
+set_keymap('n', "<C-b>", "<C-b>zz")
 
 -- moving visual blocks
-vim.api.nvim_set_keymap('v', "J", ":m '>+1<CR>gv=gv", opts)
-vim.api.nvim_set_keymap('v', "K", ":m '<-2<CR>gv=gv", opts)
+set_keymap('v', "J", ":m '>+1<CR>gv=gv")
+set_keymap('v', "K", ":m '<-2<CR>gv=gv")
 
 -- Keeping the search term in the middle of the screen
-vim.api.nvim_set_keymap('n', "n", "nzzzv", opts)
-vim.api.nvim_set_keymap('n', "N", "Nzzzv", opts)
+set_keymap('n', "n", "nzzzv")
+set_keymap('n', "N", "Nzzzv")
 
 -- keeping the yanked content in the register after pasting over
-vim.api.nvim_set_keymap('v', "p", "\"_dP", opts)
+set_keymap('v', "p", "\"_dP")
