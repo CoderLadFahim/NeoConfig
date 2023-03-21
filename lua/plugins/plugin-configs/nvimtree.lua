@@ -56,3 +56,41 @@ nvim_tree.setup({
     	dotfiles = true,
   	},
 })
+
+function OPEN_NVIM_TREE(mode)
+	local nvim_find_file_cmd = 'NvimTreeFindFile'
+	if mode == 'float' then
+		nvim_tree.setup({
+			view = {
+				-- side = 'left',
+				-- width = 30,
+				relativenumber = true,
+				float = {
+    				enable = true,
+          			quit_on_focus_loss = true,
+          			open_win_config = {
+            			border = "rounded",
+    					width = float_win_width,
+            			height = float_win_height,
+            			row = row_centered,
+            			col = col_centered,
+        			},
+    			} 
+			}
+		})
+	else
+		nvim_tree.setup({
+			view = {
+				side = mode,
+    			adaptive_size = true,
+				relativenumber = true,
+				width = 40,
+				float = {
+					enable = false
+				}
+			}
+		})
+	end
+	vim.cmd(nvim_find_file_cmd)
+end
+
