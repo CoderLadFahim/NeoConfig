@@ -16,6 +16,7 @@ require('lazy').setup({
   	'nvim-lua/plenary.nvim',
   	'MunifTanjim/nui.nvim',
   	'lewis6991/impatient.nvim',
+	"akinsho/git-conflict.nvim",
   	{ 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
   	{
   	  	"kylechui/nvim-surround",
@@ -76,6 +77,7 @@ require('lazy').setup({
    	"tpope/vim-fugitive",
 	"sainnhe/gruvbox-material",
 	"ggandor/leap.nvim",
+	"mrjones2014/nvim-ts-rainbow",
 	({
   	  	"utilyre/barbecue.nvim",
   	  	dependencies = {

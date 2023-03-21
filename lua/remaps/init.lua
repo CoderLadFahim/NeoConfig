@@ -52,6 +52,7 @@ vim.api.nvim_set_keymap('n', '<leader>fc', ':NvimTreeCollapse<CR>', opts)
 vim.api.nvim_set_keymap('n', "<leader>ff", "<cmd>Telescope git_files<CR>", opts)
 vim.api.nvim_set_keymap('n', "<leader>FF", "<cmd>Telescope find_files<CR>", opts)
 vim.api.nvim_set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>", opts)
+vim.api.nvim_set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>", opts)
 
 -- -- Toggleterm mappings
 -- vim.api.nvim_set_keymap('n', "<leader>lg", "<cmd>lua LAZYGIT_TOGGLE()<CR>", opts)
@@ -67,6 +68,7 @@ vim.api.nvim_set_keymap('n', "<leader>gcm", ':G commit -m ""', opts)
 vim.api.nvim_set_keymap('n', "<leader>gcam", ':G commit --amend -m ""', opts)
 vim.api.nvim_set_keymap('n', "<leader>gcan", ':G commit --amend --no-edit', opts)
 vim.api.nvim_set_keymap('n', "<leader>gr.", ":G restore .", opts)
+vim.api.nvim_set_keymap('n', "<leader>gd", ":G diff", opts)
 
 vim.api.nvim_set_keymap('n', "<C-d>", "<C-d>zz", opts)
 vim.api.nvim_set_keymap('n', "<C-u>", "<C-u>zz", opts)
