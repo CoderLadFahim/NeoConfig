@@ -1,7 +1,6 @@
-local opts = { noremap = true, silent = false }
-
 function set_keymap(mode, seq, cmd)
-	vim.api.nvim_set_keymap(mode,seq, cmd, opts)
+	local opts = { noremap = true, silent = false }
+	vim.api.nvim_set_keymap(mode, seq, cmd, opts)
 end
 
 function WRITE_FILE()
@@ -21,9 +20,9 @@ set_keymap('n', '<leader>v', '<C-v>')
 set_keymap('n', '<leader>fv', ':file<CR>')
 
 -- Better tab controls
-set_keymap('n', '<leader>tn', ':tabedit<CR>')
-set_keymap('n', '<leader>tq', ':tabclose!<CR>')
-set_keymap('n', '<leader>taq', ':tabonly!<CR>')
+-- set_keymap('n', '<leader>tn', ':tabedit<CR>')
+-- set_keymap('n', '<leader>tq', ':tabclose!<CR>')
+-- set_keymap('n', '<leader>taq', ':tabonly!<CR>')
 set_keymap('n', '}', ':BufferLineCycleNext<CR>')
 set_keymap('n', '{', ':BufferLineCyclePrev<CR>')
 set_keymap('n', '<leader>bp', ':BufferLinePick<CR>')
@@ -34,7 +33,7 @@ set_keymap('n', '<leader>bl', ':BufferLineCloseLeft')
 set_keymap('n', '<leader>fr', ':%s/')
 
 set_keymap('n', '<leader>taa', ':ToggleTermToggleAll<CR>')
-set_keymap('t', '<leader><esc>', [[<C-\><C-n>]])
+set_keymap('t', '<esc>', [[<C-\><C-n>]])
 
 set_keymap('n', "<leader>hh","<C-w>h")
 set_keymap('n', "<leader>jj","<C-w>j")
@@ -47,9 +46,13 @@ set_keymap('n', "-", "<cmd>resize -4<CR>")
 set_keymap('n', ")", "<cmd>vertical resize -4<CR>")
 
 -- Nvim tree mappings
-set_keymap('n', '<leader>ft', ':NvimTreeToggle<CR>')
-set_keymap('n', '<leader>tf', ':NvimTreeFindFile<CR>')
-set_keymap('n', '<leader>fc', ':NvimTreeCollapse<CR>')
+-- set_keymap('n', '<leader>ft', ':NvimTreeToggle<CR>')
+-- set_keymap('n', '<leader>tf', ':NvimTreeFindFile<CR>')
+-- set_keymap('n', '<leader>fc', ':NvimTreeCollapse<CR>')
+
+set_keymap('n', '<leader>tf', ":lua OPEN_NVIM_TREE('float')<CR>")
+set_keymap('n', '<leader>tl', ":lua OPEN_NVIM_TREE('left')<CR>")
+set_keymap('n', '<leader>tr', ":lua OPEN_NVIM_TREE('right')<CR>")
 
 -- Telescope mappings
 set_keymap('n', "<leader>ff", "<cmd>Telescope git_files<CR>")
