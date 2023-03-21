@@ -1,5 +1,5 @@
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'ayu-dark'
+	return 'gruvbox-material'
 end
 
 require('options');

@@ -75,8 +75,7 @@ require('lazy').setup({
 	'MunifTanjim/prettier.nvim',
    	"lukas-reineke/indent-blankline.nvim",
    	"tpope/vim-fugitive",
-	-- "sainnhe/gruvbox-material",
-	"Shatur/neovim-ayu",
+	"sainnhe/gruvbox-material",
 	"ggandor/leap.nvim",
 	"mrjones2014/nvim-ts-rainbow",
 	({
