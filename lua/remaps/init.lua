@@ -1,6 +1,17 @@
 local opts = { noremap = true, silent = false }
 
-vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', opts)
+function WRITE_FILE()
+  	local modified = vim.api.nvim_buf_get_option(0, 'modified')
+  	local write_command = 'w'
+  	if modified then
+		vim.cmd(write_command)
+	else
+		print('Nothing to save')
+	end
+end
+
+-- vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>w', ':lua WRITE_FILE()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>q', ':q!', opts)
 vim.api.nvim_set_keymap('n', '<leader>so', ':so %', opts)
 vim.api.nvim_set_keymap('n', '<leader>v', '<C-v>', opts)
