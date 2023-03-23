@@ -9,7 +9,16 @@ function WRITE_FILE()
   	if modified then
 		vim.cmd(write_command)
 	else
-		print('Nothing to save')
+		print("File written")
+	end
+end
+
+function SEARCH_GIT_FILES()
+	local git_file_searching_command = 'Telescope git_files'
+	if vim.fn.isdirectory('.git') == 1 then
+  		vim.cmd(git_file_searching_command)
+	else
+		print('Not a git repository')
 	end
 end
 
@@ -55,7 +64,8 @@ set_keymap('n', '<leader>tr', ":lua OPEN_NVIM_TREE('left')<CR>")
 set_keymap('n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>")
 
 -- Telescope mappings
-set_keymap('n', "<leader>ff", "<cmd>Telescope git_files<CR>")
+-- set_keymap('n', "<leader>ff", "<cmd>Telescope git_files<CR>")
+set_keymap('n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>")
 set_keymap('n', "<leader>FF", "<cmd>Telescope find_files<CR>")
 set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>")
 set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
