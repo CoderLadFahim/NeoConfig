@@ -4,5 +4,5 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.g.gruvbox_material_foreground = 'original'
 vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
-
+vim.g.gruvbox_material_background = 'hard'
 
