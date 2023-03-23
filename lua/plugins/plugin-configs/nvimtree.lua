@@ -11,86 +11,52 @@ local float_win_width = math.floor((70 / 100) * cols)
 local row_centered = math.floor(rows / 2) - math.floor((float_win_height + 5) / 2) 
 local col_centered = math.floor(cols / 2) - math.floor(float_win_width / 2)
 
--- OR setup with some options
-nvim_tree.setup({
-  	-- open_on_setup = true,
-  	sort_by = "case_sensitive",
-  	view = {
-    	-- adaptive_size = true,
-    	-- side = 'left',
-    	-- width = 30,
-    	relativenumber = true,
-    	mappings = {
-      		list = {
-        		{ key = "u", action = "dir_up" },
-      		},
-    	},
-    	float = {
-    		enable = true,
-          	quit_on_focus_loss = true,
-          	open_win_config = {
-            	border = "rounded",
-    			width = float_win_width,
-            	height = float_win_height,
-            	row = row_centered,
-            	col = col_centered,
-        	},
-    	}
-  	},
-  	renderer = {
-    	group_empty = true,
-    	indent_width = 2,
-		indent_markers = {
-          	enable = true,
-          	inline_arrows = true,
-          	icons = {
-            	corner = "└",
-            	edge = "│",
-            	item = "│",
-            	bottom = "─",
-            	none = " ",
-          	},
-        }
-  	},
-  	filters = {
-    	dotfiles = true,
-  	},
-})
-
 function OPEN_NVIM_TREE(mode)
 	local nvim_find_file_cmd = 'NvimTreeFindFile'
-	if mode == 'float' then
-		nvim_tree.setup({
-			view = {
-				-- side = 'left',
-				-- width = 30,
-				relativenumber = true,
-				float = {
-    				enable = true,
-          			quit_on_focus_loss = true,
-          			open_win_config = {
-            			border = "rounded",
-    					width = float_win_width,
-            			height = float_win_height,
-            			row = row_centered,
-            			col = col_centered,
-        			},
-    			} 
-			}
-		})
-	else
-		nvim_tree.setup({
-			view = {
-				side = mode,
-    			adaptive_size = true,
-				relativenumber = true,
-				width = 40,
-				float = {
-					enable = false
-				}
-			}
-		})
-	end
+	nvim_tree.setup({
+  		-- open_on_setup = true,
+  		sort_by = "case_sensitive",
+  		view = {
+    		-- adaptive_size = true,
+    		side = mode ~= 'float' and mode or '',
+    		width = mode ~= 'float' and 40 or float_win_width,
+    		relativenumber = true,
+    		mappings = {
+      			list = {
+        			{ key = "u", action = "dir_up" },
+      			},
+    		},
+    		float = {
+    			enable = mode == 'float',
+          		quit_on_focus_loss = true,
+          		open_win_config = {
+            		border = "rounded",
+    				width = float_win_width,
+            		height = float_win_height,
+            		row = row_centered,
+            		col = col_centered,
+        		},
+    		}
+  		},
+  		renderer = {
+    		group_empty = true,
+    		indent_width = 2,
+			indent_markers = {
+          		enable = true,
+          		inline_arrows = true,
+          		icons = {
+            		corner = "└",
+            		edge = "│",
+            		item = "│",
+            		bottom = "─",
+            		none = " ",
+          		},
+        	}
+  		},
+  		filters = {
+    		dotfiles = true,
+  		},
+	})
 	vim.cmd(nvim_find_file_cmd)
 end
 
