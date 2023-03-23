@@ -16,7 +16,6 @@ require('lazy').setup({
   	'nvim-lua/plenary.nvim',
   	'MunifTanjim/nui.nvim',
   	'lewis6991/impatient.nvim',
-	"akinsho/git-conflict.nvim",
   	{ 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
   	{
   	  	"kylechui/nvim-surround",
