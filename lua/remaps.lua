@@ -27,8 +27,8 @@ set_keymap('n', '}', ':BufferLineCycleNext<CR>')
 set_keymap('n', '{', ':BufferLineCyclePrev<CR>')
 set_keymap('n', '<leader>bp', ':BufferLinePick<CR>')
 set_keymap('n', '<leader>bq', ':b#|bd#')
-set_keymap('n', '<leader>br', ':BufferLineCloseRight')
-set_keymap('n', '<leader>bl', ':BufferLineCloseLeft')
+set_keymap('n', '<leader>xc', ':BufferLineCloseRight')
+set_keymap('n', '<leader>xz', ':BufferLineCloseLeft')
 
 set_keymap('n', '<leader>fr', ':%s/')
 
@@ -51,8 +51,8 @@ set_keymap('n', ")", "<cmd>vertical resize -4<CR>")
 -- set_keymap('n', '<leader>fc', ':NvimTreeCollapse<CR>')
 
 set_keymap('n', '<leader>tf', ":lua OPEN_NVIM_TREE('float')<CR>")
-set_keymap('n', '<leader>tl', ":lua OPEN_NVIM_TREE('left')<CR>")
-set_keymap('n', '<leader>tr', ":lua OPEN_NVIM_TREE('right')<CR>")
+set_keymap('n', '<leader>tr', ":lua OPEN_NVIM_TREE('left')<CR>")
+set_keymap('n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>")
 
 -- Telescope mappings
 set_keymap('n', "<leader>ff", "<cmd>Telescope git_files<CR>")
