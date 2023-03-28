@@ -16,5 +16,4 @@ require('plugins.plugin-configs.alpha');
 require('plugins.plugin-configs.leapnvim');
 require('plugins.plugin-configs.rose-pine')
 require('plugins.plugin-configs.bufferline')
-require('plugins.plugin-configs.git-conflicts')
 -- require('plugins.plugin-configs.gruvbox')
