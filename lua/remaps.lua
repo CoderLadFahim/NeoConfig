@@ -22,9 +22,19 @@ function SEARCH_GIT_FILES()
 	end
 end
 
+function SOURCE_FILE()
+	local sourcing_command = 'so %';
+	if vim.bo.filetype == "lua" then
+  		vim.cmd(sourcing_command)
+	else
+		print('Not a lua file')
+	end
+end
+
 set_keymap('n', '<leader>w', ':lua WRITE_FILE()<CR>')
 set_keymap('n', '<leader>q', ':q!')
-set_keymap('n', '<leader>so', ':so %')
+-- set_keymap('n', '<leader>so', ':so %')
+set_keymap('n', '<leader>so', ':lua SOURCE_FILE()')
 set_keymap('n', '<leader>v', '<C-v>')
 set_keymap('n', '<leader>fv', ':file<CR>')
 
