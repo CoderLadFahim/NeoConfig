@@ -27,7 +27,6 @@ vim.opt.splitright = true -- Splitting a new window at the right of the current 
 vim.opt.swapfile = false -- Disable use of swapfile for the buffer
 vim.opt.tabstop = 4 -- Number of space in a tab
 vim.opt.termguicolors = true -- Enable 24-bit RGB color in the TUI
-vim.opt.timeoutlen = 300 -- Length of time to wait for a mapped sequence
 vim.opt.undofile = true -- Enable persistent undo
 vim.opt.updatetime = 300 -- Length of time to wait before triggering the plugin
 vim.opt.wrap = true -- Disable wrapping of lines longer than the width of window
@@ -35,3 +34,15 @@ vim.opt.writebackup = false -- Disable making a backup before overwriting a file
 vim.opt.guicursor = "" -- Keeps the cursor fat in insert mode
 
 vim.opt.termguicolors = true -- set termguicolors to enable highlight groups
+
+function InsertLeave()
+	vim.opt.timeoutlen = 300
+end
+
+function InsertEnter()
+	vim.opt.timeoutlen = 0
+end
+local insert_mode_autocmd = 'autocmd InsertEnter * call v:lua.InsertEnter()';
+local normal_mode_autocmd = 'autocmd InsertLeave * call v:lua.InsertLeave()'; 
+vim.cmd(insert_mode_autocmd)
+vim.cmd(normal_mode_autocmd)
