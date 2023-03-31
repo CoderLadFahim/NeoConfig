@@ -56,5 +56,45 @@ treesitter.setup({
   	context_commentstring = {
     	enable = true,
     	enable_autocmd = false,
+  	},
+	playground = {
+    	enable = true,
+    	disable = {},
+    	updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+    	persist_queries = false, -- Whether the query persists across vim sessions
+    	keybindings = {
+      		toggle_query_editor = 'o',
+      		toggle_hl_groups = 'i',
+      		toggle_injected_languages = 't',
+      		toggle_anonymous_nodes = 'a',
+      		toggle_language_display = 'I',
+      		focus_language = 'f',
+      		unfocus_language = 'F',
+      		update = 'R',
+      		goto_node = '<cr>',
+      		show_help = '?',
+    	},
   	}
 })
+
+local ts_utils_status_ok, ts_utils = pcall(require, 'nvim-treesitter.ts_utils')
+if not ts_utils_status_ok then
+	return
+end
+
+function MyCursorMoved()
+ 	local node = ts_utils.get_node_at_cursor()
+ 	local nodes_to_check = {'<node start_tag>', '<node tag_name>', '<node self_closing_tag>'}
+ 	local node_under_cursor = tostring(node)
+
+	set_keymap('i', '=', '=')
+
+ 	if (table.concat(nodes_to_check, ','):find(node_under_cursor)) then
+		set_keymap('i', '=', '=""<LEFT>')
+	end
+end
+
+local cursor_moved_autocmd = 'autocmd CursorMoved * call v:lua.MyCursorMoved()';
+local mode_change_autocmd = 'autocmd InsertEnter,InsertLeave * call v:lua.MyCursorMoved()';
+vim.cmd(cursor_moved_autocmd)
+vim.cmd(mode_change_autocmd)

@@ -80,6 +80,7 @@ set_keymap('n', "<leader>FF", "<cmd>Telescope find_files<CR>")
 set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>")
 set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
 set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
+set_keymap('n', "<leader>gs", "<cmd>Telescope git_status<CR>")
 
 -- -- Toggleterm mappings
 -- set_keymap('n', "<leader>lg", "<cmd>lua LAZYGIT_TOGGLE()<CR>")
@@ -89,7 +90,7 @@ set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
 
 -- git mappings
 set_keymap('n', "<leader>ga.", ":G add .")
-set_keymap('n', "<leader>gs", ":G status")
+-- set_keymap('n', "<leader>gs", ":G status")
 -- set_keymap('n', "<leader>glo", ":G log --oneline ")
 set_keymap('n', "<leader>gcm", ':G commit -m ""')
 set_keymap('n', "<leader>gcam", ':G commit --amend -m ""')

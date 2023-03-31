@@ -55,6 +55,7 @@ require('lazy').setup({
   	  	'nvim-tree/nvim-tree.lua',
   	  	tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	},
+	'mg979/vim-visual-multi',
 	'hrsh7th/nvim-cmp',
 	'hrsh7th/cmp-buffer',
 	'hrsh7th/cmp-path',
@@ -67,6 +68,7 @@ require('lazy').setup({
       	'nvim-treesitter/nvim-treesitter',
       	build = ':TSUpdate'
    	},
+	'nvim-treesitter/playground',
 	'neovim/nvim-lspconfig',
 	"williamboman/mason.nvim",
 	{'akinsho/bufferline.nvim', dependencies = 'kyazdani42/nvim-web-devicons'},
