@@ -94,7 +94,5 @@ function MyCursorMoved()
 	end
 end
 
-local cursor_moved_autocmd = 'autocmd CursorMoved * call v:lua.MyCursorMoved()';
-local mode_change_autocmd = 'autocmd InsertEnter,InsertLeave * call v:lua.MyCursorMoved()';
-vim.cmd(cursor_moved_autocmd)
-vim.cmd(mode_change_autocmd)
+local autocmd_cmd = 'autocmd CursorMoved,InsertEnter,InsertLeave * call v:lua.MyCursorMoved()';
+vim.cmd(autocmd_cmd)

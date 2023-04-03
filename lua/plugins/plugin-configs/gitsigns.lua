@@ -31,7 +31,7 @@ gitsigns.setup({
     	map('n', '<leader>hb', gs.blame_line)
     	map('n', '<leader>hv', gs.preview_hunk)
     	map('n', '<leader>hr', gs.reset_hunk)
-    	map('n', '<leader>hR', gs.reset_buffer)
+    	-- map('n', '<leader>hR', gs.reset_buffer)
     	map('n', '<leader>hs', gs.stage_hunk)
     	map('n', '<leader>hu', gs.undo_stage_hunk)
     	map('n', '<leader>hd', gs.diffthis)

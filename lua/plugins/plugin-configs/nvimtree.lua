@@ -17,7 +17,7 @@ function OPEN_NVIM_TREE(mode)
   		-- open_on_setup = true,
   		sort_by = "case_sensitive",
   		view = {
-    		-- adaptive_size = true,
+    		adaptive_size = true,
     		side = mode ~= 'float' and mode or '',
     		width = mode ~= 'float' and 40 or float_win_width,
     		relativenumber = true,
@@ -54,7 +54,7 @@ function OPEN_NVIM_TREE(mode)
         	}
   		},
   		filters = {
-    		dotfiles = true,
+    		dotfiles = false,
   		},
 	})
 	vim.cmd(nvim_find_file_cmd)
