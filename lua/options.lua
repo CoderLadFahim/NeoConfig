@@ -15,7 +15,7 @@ vim.opt.number = true -- Show numberline
 vim.opt.preserveindent = true -- Preserve indent structure as much as possible
 vim.opt.pumheight = 10 -- Height of the pop up menu
 vim.opt.relativenumber = true -- Show relative numberline
-vim.opt.scrolloff = 8 -- Number of lines to keep above and below the cursor
+vim.opt.scrolloff = 5 -- Number of lines to keep above and below the cursor
 vim.opt.shiftwidth = 4 -- Number of space inserted for indentation
 vim.opt.showmode = false -- Disable showing modes in command line
 vim.opt.sidescrolloff = 8 -- Number of columns to keep at the sides of the cursor
@@ -31,7 +31,7 @@ vim.opt.undofile = true -- Enable persistent undo
 vim.opt.updatetime = 300 -- Length of time to wait before triggering the plugin
 vim.opt.wrap = true -- Disable wrapping of lines longer than the width of window
 vim.opt.writebackup = false -- Disable making a backup before overwriting a file
-vim.opt.guicursor = "" -- Keeps the cursor fat in insert mode
+-- vim.opt.guicursor = "" -- Keeps the cursor fat in insert mode
 
 vim.opt.termguicolors = true -- set termguicolors to enable highlight groups
 
