@@ -78,7 +78,7 @@ require('lazy').setup({
    	"tpope/vim-fugitive",
 	"sainnhe/gruvbox-material",
 	"ggandor/leap.nvim",
-	"mrjones2014/nvim-ts-rainbow",
+	-- "mrjones2014/nvim-ts-rainbow",
 	({
   	  	"utilyre/barbecue.nvim",
   	  	dependencies = {

@@ -31,22 +31,12 @@ function SOURCE_FILE()
 	end
 end
 
-function RESET_BUFFER()
-	local resetting_command = ':Gitsigns reset_buffer';
-	local toggle_rainbow = ':TSBufToggle rainbow';
-	vim.cmd(resetting_command)
-	vim.cmd(toggle_rainbow)
-	vim.cmd(toggle_rainbow)
-end
-
 set_keymap('n', '<leader>w', ':lua WRITE_FILE()<CR>')
 set_keymap('n', '<leader>q', ':q!')
 -- set_keymap('n', '<leader>so', ':so %')
 set_keymap('n', '<leader>so', ':lua SOURCE_FILE()')
 set_keymap('n', '<leader>v', '<C-v>')
 set_keymap('n', '<leader>fv', ':file<CR>')
-
-set_keymap('n', '<leader>hR', ':lua RESET_BUFFER()<CR>')
 
 -- Better tab controls
 -- set_keymap('n', '<leader>tn', ':tabedit<CR>')
