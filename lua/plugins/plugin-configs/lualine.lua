@@ -4,8 +4,8 @@ if not lualine_status_ok then
 end
 
 function GET_CURRENT_DIRECTORY()
-  local path = vim.loop.cwd()
-  return vim.fn.fnamemodify(path, ':t')
+    local path = vim.loop.cwd()
+    return vim.fn.fnamemodify(path, ':t')
 end
 
 local current_dir = GET_CURRENT_DIRECTORY()
@@ -16,17 +16,17 @@ lualine.setup({
     	-- theme = 'github_dark_default',
     	theme =  GET_GLOBAL_COLOR_SCHEME(),
     	disabled_filetypes = {
-      	statusline = {},
-      	winbar = {},
-      	'packer', 'alpha'
+      	    statusline = {},
+      	    winbar = {},
+      	    'packer', 'alpha'
     	},
     	ignore_focus = {},
     	always_divide_middle = true,
     	globalstatus = false,
     	refresh = {
-      	statusline = 1000,
-      	tabline = 1000,
-      	winbar = 1000,
+      	    statusline = 1000,
+      	    tabline = 1000,
+      	    winbar = 1000,
     	}
   	},
   	sections = {
