@@ -54,11 +54,6 @@ set_keymap('n', '<leader>fr', ':%s/')
 set_keymap('n', '<leader>taa', ':ToggleTermToggleAll<CR>')
 set_keymap('t', '<esc>', [[<C-\><C-n>]])
 
-set_keymap('n', "<leader>hh","<C-w>h")
-set_keymap('n', "<leader>jj","<C-w>j")
-set_keymap('n', "<leader>kk","<C-w>k")
-set_keymap('n', "<leader>ll","<C-w>l")
-
 set_keymap('n', "(", "<cmd>vertical resize +4<CR>")
 set_keymap('n', "+", "<cmd>resize +4<CR>")
 set_keymap('n', "-", "<cmd>resize -4<CR>")
