@@ -3,6 +3,13 @@ if not lualine_status_ok then
 	return
 end
 
+function GET_CURRENT_DIRECTORY()
+  local path = vim.loop.cwd()
+  return vim.fn.fnamemodify(path, ':t')
+end
+
+local current_dir = GET_CURRENT_DIRECTORY()
+
 lualine.setup({
   	options = {
     	icons_enabled = true,
@@ -30,8 +37,8 @@ lualine.setup({
     	-- lualine_y = {'progress'},
     	-- lualine_z = {'location'}
 	 	lualine_a = {'mode'},
-    	lualine_b = {'branch', 'diff', 'diagnostics'},
-    	lualine_c = {'filename'},
+    	lualine_b = { GET_CURRENT_DIRECTORY, 'branch', 'diff', 'diagnostics' },
+    	lualine_c = {  },
     	lualine_x = {"os.date('%A %d %b %Y %I:%M:%S %p')", 'encoding', 'fileformat', 'filetype'},
     	lualine_y = {'progress'},
     	lualine_z = {'location'}
