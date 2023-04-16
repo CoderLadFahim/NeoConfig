@@ -76,6 +76,7 @@ set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>")
 set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
 set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
 set_keymap('n', "<leader>gs", "<cmd>Telescope git_status<CR>")
+set_keymap('n', "<leader>hg", "<cmd>Telescope help_tags<CR>")
 
 -- -- Toggleterm mappings
 -- set_keymap('n', "<leader>lg", "<cmd>lua LAZYGIT_TOGGLE()<CR>")
@@ -93,6 +94,7 @@ set_keymap('n', "<leader>gcan", ':G commit --amend --no-edit')
 set_keymap('n', "<leader>gr.", ":G restore .")
 set_keymap('n', "<leader>gd", ":G diff")
 set_keymap('n', "<leader>gv", ":Gvdiffsplit!<CR>")
+set_keymap('n', "<leader>gm", ":G blame<CR>")
 
 
 set_keymap('n', "<C-d>", "<C-d>zz")
