@@ -1,17 +1,24 @@
-require('plugins.plugin-configs.impatient');
-require('plugins.plugin-configs.lualine');
-require('plugins.plugin-configs.nvimtree');
-require('plugins.plugin-configs.treesitter');
-require('plugins.plugin-configs.commentnvim');
-require('plugins.plugin-configs.telescope');
-require('plugins.plugin-configs.toggleterm');
-require('plugins.plugin-configs.auto-pairs');
-require('plugins.plugin-configs.gitsigns');
-require('plugins.plugin-configs.cmp');
-require('plugins.plugin-configs.mason');
-require('plugins.plugin-configs.null-ls');
-require('plugins.plugin-configs.prettier');
-require('plugins.plugin-configs.indent-blankline');
-require('plugins.plugin-configs.alpha');
-require('plugins.plugin-configs.leapnvim');
-require('plugins.plugin-configs.bufferline')
+local plugin_configs = {
+    'impatient',
+    'lualine',
+    'nvimtree',
+    'treesitter',
+    'commentnvim',
+    'telescope',
+    'toggleterm',
+    'auto-pairs',
+    'gitsigns',
+    'cmp',
+    'mason',
+    'null-ls',
+    'prettier',
+    'indent-blankline',
+    'alpha',
+    'leapnvim',
+    'bufferline',
+}
+
+for _, value in ipairs(plugin_configs) do
+    local path = 'plugins.plugin-configs.' .. value;
+    require(path);
+end
