@@ -44,6 +44,12 @@ local kind_icons = {
   	TypeParameter = "",
 }
 
+luasnip.setup({
+	history = true,
+	region_check_events = "InsertEnter",
+	delete_check_events = "TextChanged,InsertLeave",
+});
+
 cmp.setup {
   	snippet = {
     	expand = function(args)

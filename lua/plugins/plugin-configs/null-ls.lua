@@ -7,7 +7,7 @@ if not status_ok then return end
 null_ls.setup({
   	on_attach = function(client, bufnr)
     	if client.server_capabilities.documentFormattingProvider then
-      	    local seq_sync_cmd = "nnoremap <silent><buffer> <Leader>$$ :lua vim.lsp.buf.formatting_seq_sync()<CR>"
+      	    local seq_sync_cmd = "nnoremap <silent><buffer> <Leader>$$ :lua vim.lsp.buf.format()<CR>"
       	    vim.cmd(seq_sync_cmd)
     		--   --
     		--   -- format on save
