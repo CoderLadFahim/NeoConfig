@@ -26,6 +26,7 @@ function SET_COLORSCHEME()
 	local transparent_cmd_2 = 'highlight NonText guibg=none';
 
 	vim.cmd(colorscheme_command)
+	vim.cmd(colorscheme_command)
 end
 
 SET_COLORSCHEME()
