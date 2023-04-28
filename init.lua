@@ -10,7 +10,7 @@ local themes = {
 
 function GET_GLOBAL_COLOR_SCHEME(theme)
     local weekday = tostring(os.date('%a'))
-	return themes['Wed']
+	return themes[weekday]
 end
 
 require('options');

@@ -43,4 +43,3 @@ onedark.setup ({
     },
 })
 
-print('this is running from one dark')
