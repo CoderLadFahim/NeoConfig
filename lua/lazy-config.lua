@@ -94,7 +94,7 @@ require('lazy').setup({
 	"sainnhe/sonokai",
     "navarasu/onedark.nvim",
     "neanias/everforest-nvim",
-    "oxfist/night-owl.nvim",
+    { "catppuccin/nvim", name = "catppuccin" },
     'folke/tokyonight.nvim',
     { 'rose-pine/neovim', as = 'rose-pine' }
 

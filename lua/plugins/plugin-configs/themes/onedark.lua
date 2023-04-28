@@ -42,3 +42,5 @@ onedark.setup ({
         background = true,    -- use background color for virtual text
     },
 })
+
+print('this is running from one dark')

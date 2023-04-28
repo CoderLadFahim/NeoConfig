@@ -17,6 +17,9 @@ local plugin_configs = {
     'leapnvim',
     'bufferline',
     'themes.onedark',
+    'themes.rosepine',
+    'themes.catppuccin',
+    'themes.tokyonight',
 }
 
 for _, value in ipairs(plugin_configs) do
