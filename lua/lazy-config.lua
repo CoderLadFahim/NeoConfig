@@ -76,8 +76,6 @@ require('lazy').setup({
 	'MunifTanjim/prettier.nvim',
    	"lukas-reineke/indent-blankline.nvim",
    	"tpope/vim-fugitive",
-	"sainnhe/gruvbox-material",
-    'navarasu/onedark.nvim',
 	"ggandor/leap.nvim",
 	-- "mrjones2014/nvim-ts-rainbow",
 	({
@@ -89,5 +87,15 @@ require('lazy').setup({
   	  	config = function()
     	 	require("barbecue").setup()
   	  	end,
-	})
+	}),
+
+	-- themes
+	"sainnhe/gruvbox-material",
+	"sainnhe/sonokai",
+    "navarasu/onedark.nvim",
+    { 'projekt0n/github-nvim-theme', version = 'v0.0.7' },
+    "oxfist/night-owl.nvim",
+    'folke/tokyonight.nvim',
+    { 'rose-pine/neovim', as = 'rose-pine' }
+
 })

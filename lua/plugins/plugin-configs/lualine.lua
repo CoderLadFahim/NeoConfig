@@ -8,8 +8,6 @@ function GET_CURRENT_DIRECTORY()
     return vim.fn.fnamemodify(path, ':t')
 end
 
-local current_dir = GET_CURRENT_DIRECTORY()
-
 lualine.setup({
   	options = {
     	icons_enabled = true,
@@ -18,7 +16,7 @@ lualine.setup({
     	disabled_filetypes = {
       	    statusline = {},
       	    winbar = {},
-      	    'packer', 'alpha'
+      	    'packer', 'NvimTree', 
     	},
     	ignore_focus = {},
     	always_divide_middle = true,

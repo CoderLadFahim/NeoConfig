@@ -15,10 +15,12 @@ end
 
 function SEARCH_GIT_FILES()
 	local git_file_searching_command = 'Telescope git_files'
+	local all_file_searching_command = 'Telescope find_files'
 	if vim.fn.isdirectory('.git') == 1 then
   		vim.cmd(git_file_searching_command)
 	else
-		print('Not a git repository')
+		print('Not a git repository, searching all files');
+  		vim.cmd(all_file_searching_command)
 	end
 end
 
@@ -33,21 +35,20 @@ end
 
 set_keymap('n', '<leader>w', ':lua WRITE_FILE()<CR>')
 set_keymap('n', '<leader>q', ':q!')
--- set_keymap('n', '<leader>so', ':so %')
 set_keymap('n', '<leader>so', ':lua SOURCE_FILE()')
 set_keymap('n', '<leader>v', '<C-v>')
 set_keymap('n', '<leader>fv', ':file<CR>')
 
--- Better tab controls
--- set_keymap('n', '<leader>tn', ':tabedit<CR>')
--- set_keymap('n', '<leader>tq', ':tabclose!<CR>')
--- set_keymap('n', '<leader>taq', ':tabonly!<CR>')
+-- Bufferline
 set_keymap('n', '}', ':BufferLineCycleNext<CR>')
 set_keymap('n', '{', ':BufferLineCyclePrev<CR>')
+set_keymap('n', '<C-l>', ':BufferLineMoveNext<CR>')
+set_keymap('n', '<C-h>', ':BufferLineMovePrev<CR>')
 set_keymap('n', '<leader>p', ':BufferLinePick<CR>')
-set_keymap('n', '<leader>bq', ':b#|bd#')
+set_keymap('n', '<leader>x', ':BufferLinePickClose<CR>')
 set_keymap('n', '<leader>xc', ':BufferLineCloseRight')
 set_keymap('n', '<leader>xz', ':BufferLineCloseLeft')
+set_keymap('n', '<leader>bq', ':b#|bd#')
 
 set_keymap('n', '<leader>fr', ':%s/')
 
@@ -59,17 +60,11 @@ set_keymap('n', "+", "<cmd>resize +4<CR>")
 set_keymap('n', "-", "<cmd>resize -4<CR>")
 set_keymap('n', ")", "<cmd>vertical resize -4<CR>")
 
--- Nvim tree mappings
--- set_keymap('n', '<leader>ft', ':NvimTreeToggle<CR>')
--- set_keymap('n', '<leader>tf', ':NvimTreeFindFile<CR>')
--- set_keymap('n', '<leader>fc', ':NvimTreeCollapse<CR>')
-
 set_keymap('n', '<leader>tf', ":lua OPEN_NVIM_TREE('float')<CR>")
 set_keymap('n', '<leader>tr', ":lua OPEN_NVIM_TREE('left')<CR>")
 set_keymap('n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>")
 
 -- Telescope mappings
--- set_keymap('n', "<leader>ff", "<cmd>Telescope git_files<CR>")
 set_keymap('n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>")
 set_keymap('n', "<leader>FF", "<cmd>Telescope find_files<CR>")
 set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>")
@@ -79,16 +74,8 @@ set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
 set_keymap('n', "<leader>gs", "<cmd>Telescope git_status<CR>")
 set_keymap('n', "<leader>hg", "<cmd>Telescope help_tags<CR>")
 
--- -- Toggleterm mappings
--- set_keymap('n', "<leader>lg", "<cmd>lua LAZYGIT_TOGGLE()<CR>")
--- set_keymap('n', "<leader>nd", "<cmd>lua NODE_TOGGLE()<CR>")
--- set_keymap('n', "<leader>tk", "<cmd>lua TINKER_TOGGLE()<CR>")
-
-
 -- git mappings
 set_keymap('n', "<leader>ga.", ":G add .")
--- set_keymap('n', "<leader>gs", ":G status")
--- set_keymap('n', "<leader>glo", ":G log --oneline ")
 set_keymap('n', "<leader>gcm", ':G commit -m ""')
 set_keymap('n', "<leader>gcam", ':G commit --amend -m ""')
 set_keymap('n', "<leader>gcan", ':G commit --amend --no-edit')

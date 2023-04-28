@@ -1,5 +1,16 @@
+local themes = {
+    Sun = 'sonokai',
+    Mon = 'github-dark',
+    Tue = 'onedark',
+    Wed = 'night-owl',
+    Thu = 'gruvbox-material',
+    Fri = 'tokyonight-night',
+    Sat = 'rose-pine-moon',
+}
+
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'onedark'
+    local weekday = tostring(os.date('%a'))
+	return themes[weekday]
 end
 
 require('options');
@@ -15,9 +26,6 @@ function SET_COLORSCHEME()
 	local transparent_cmd_2 = 'highlight NonText guibg=none';
 
 	vim.cmd(colorscheme_command)
-	vim.cmd(colorscheme_command)
-	-- vim.cmd(transparent_cmd_1)
-	-- vim.cmd(transparent_cmd_2)
 end
 
 SET_COLORSCHEME()
