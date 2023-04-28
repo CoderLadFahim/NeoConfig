@@ -1,10 +1,10 @@
 local themes = {
     Sun = 'sonokai',
-    Mon = 'github-dark',
+    Mon = 'everforest',
     Tue = 'onedark',
     Wed = 'night-owl',
     Thu = 'gruvbox-material',
-    Fri = 'tokyonight-night',
+    Fri = 'tokyonight',
     Sat = 'rose-pine-moon',
 }
 

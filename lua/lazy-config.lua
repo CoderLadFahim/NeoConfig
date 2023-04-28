@@ -93,7 +93,7 @@ require('lazy').setup({
 	"sainnhe/gruvbox-material",
 	"sainnhe/sonokai",
     "navarasu/onedark.nvim",
-    { 'projekt0n/github-nvim-theme', version = 'v0.0.7' },
+    "neanias/everforest-nvim",
     "oxfist/night-owl.nvim",
     'folke/tokyonight.nvim',
     { 'rose-pine/neovim', as = 'rose-pine' }
