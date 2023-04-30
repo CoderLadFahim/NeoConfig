@@ -4,10 +4,19 @@ if not telescope_status_ok then
 end
 
 telescope.setup(
-    -- {
-    --     defaults = {
-    --         file_ignore_patterns = {'package', 'public/vendor', 'public/install', 'package/installer', 'composer.lock', 'package-lock.json', 'yarn.lock', }
-    --     }
-    -- }
+    {
+        defaults = {
+            file_ignore_patterns = {
+                'package',
+                'vendor',
+                'public/vendor',
+                'node_modules',
+                'public',
+                'composer.lock',
+                'package-lock.json',
+                'yarn.lock',
+            }
+        }
+    }
 )
 

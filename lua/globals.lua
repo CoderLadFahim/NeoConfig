@@ -7,4 +7,5 @@ vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
 vim.g.gruvbox_material_background = 'soft'
 
 vim.g.sonokai_style = 'espresso'
+vim.g.sonokai_diagnostic_virtual_text = 'colored'
 
