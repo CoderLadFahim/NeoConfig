@@ -88,14 +88,19 @@ require('lazy').setup({
     	 	require("barbecue").setup()
   	  	end,
 	}),
+    ({
+        "iamcco/markdown-preview.nvim",
+        build = function() vim.fn["mkdp#util#install"]() end,
+    }),
 
 	-- themes
-	"sainnhe/gruvbox-material",
-	"sainnhe/sonokai",
-    "navarasu/onedark.nvim",
-    "neanias/everforest-nvim",
-    { "catppuccin/nvim", name = "catppuccin" },
-    'folke/tokyonight.nvim',
-    { 'rose-pine/neovim', as = 'rose-pine' }
+	-- "sainnhe/gruvbox-material",
+	-- "sainnhe/sonokai",
+ --    "navarasu/onedark.nvim",
+ --    "neanias/everforest-nvim",
+ --    { "catppuccin/nvim", name = "catppuccin" },
+ --    'folke/tokyonight.nvim',
+ --    { 'rose-pine/neovim', as = 'rose-pine' }
+    "lunarvim/darkplus.nvim"
 
 })
