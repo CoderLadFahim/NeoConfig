@@ -92,6 +92,7 @@ require('lazy').setup({
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
     }),
+    'jwalton512/vim-blade',
 
 	-- themes
 	-- "sainnhe/gruvbox-material",
