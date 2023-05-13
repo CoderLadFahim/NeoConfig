@@ -94,14 +94,6 @@ require('lazy').setup({
     }),
     'jwalton512/vim-blade',
 
-	-- themes
-	-- "sainnhe/gruvbox-material",
-	-- "sainnhe/sonokai",
- --    "navarasu/onedark.nvim",
- --    "neanias/everforest-nvim",
- --    { "catppuccin/nvim", name = "catppuccin" },
- --    'folke/tokyonight.nvim',
- --    { 'rose-pine/neovim', as = 'rose-pine' }
-    "lunarvim/darkplus.nvim"
+	"sainnhe/sonokai",
 
 })

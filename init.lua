@@ -1,17 +1,5 @@
-local themes = {
-    Sun = 'sonokai',
-    Mon = 'everforest',
-    Tue = 'onedark',
-    Wed = 'catppuccin',
-    Thu = 'gruvbox-material',
-    Fri = 'tokyonight',
-    Sat = 'rose-pine',
-}
-
 function GET_GLOBAL_COLOR_SCHEME(theme)
-    local weekday = tostring(os.date('%a'))
-	-- return themes[weekday]
-	return 'darkplus'
+	return 'sonokai'
 end
 
 require('options');
