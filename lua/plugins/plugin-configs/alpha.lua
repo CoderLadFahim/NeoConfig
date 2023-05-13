@@ -30,9 +30,13 @@ dashboard.section.buttons.val = {
    	-- dashboard.button( "s", "  > Settings" , ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
    	-- dashboard.button( "q", "  > Quit NVIM", ":qa<CR>"),
    	--
-   	dashboard.button( "f", "  > Search files", ":Telescope find_files<CR>"),
-   	dashboard.button( "g", "  > Search git files", ":Telescope git_files<CR>"),
-   	dashboard.button( "q", "  > Quit NVIM", ":qa<CR>"),
+   	-- dashboard.button( "f", "  > Search files", ":Telescope find_files<CR>"),
+   	-- dashboard.button( "g", "  > Search git files", ":Telescope git_files<CR>"),
+   	-- dashboard.button( "q", "  > Quit NVIM", ":qa<CR>"),
+
+   	dashboard.button( "f", "=> Search files", ":Telescope find_files<CR>"),
+   	dashboard.button( "g", "=> Search git files", ":Telescope git_files<CR>"),
+   	dashboard.button( "q", "=> Quit NVIM", ":qa<CR>"),
 }
 
 -- Set footer
