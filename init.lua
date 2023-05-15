@@ -20,16 +20,3 @@ end
 
 SET_COLORSCHEME()
 
-
-function get_file_extension(path)
-    local dot_index = string.find(path, "%.[^%.]*$") -- find the last dot in the string
-    if dot_index then
-        return string.sub(path, dot_index + 1) -- return everything after the dot
-    else
-        return nil -- no file extension found
-    end
-end
-
-local path = ".gitignore"
-local extension = get_file_extension(path)
-print(extension) -- "lua"

@@ -37,7 +37,7 @@ lualine.setup({
 	 	lualine_a = {'mode'},
     	lualine_b = { GET_CURRENT_DIRECTORY, 'branch', 'diff', 'diagnostics' },
     	lualine_c = {  },
-    	lualine_x = {"os.date('%A %d %b %Y %I:%M:%S %p')", 'encoding', 'fileformat', 'filetype'},
+    	lualine_x = {"os.date('%A %d %b %Y %I:%M:%S %p')", 'encoding', '', 'filetype'},
     	lualine_y = {'progress'},
     	lualine_z = {'location'}
   	},
