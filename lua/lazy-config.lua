@@ -16,7 +16,7 @@ require('lazy').setup({
   	'nvim-lua/plenary.nvim',
   	'MunifTanjim/nui.nvim',
   	'lewis6991/impatient.nvim',
-  	{ 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
+  	-- { 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
   	{
   	  	"kylechui/nvim-surround",
   	  	config = function()
@@ -45,12 +45,12 @@ require('lazy').setup({
     	config = function() require("nvim-autopairs").setup {} end
 	},
 	{ 'lewis6991/gitsigns.nvim' },
-	{
- 	   	'goolord/alpha-nvim',
- 	   	config = function ()
- 	       	require'alpha'.setup(require'alpha.themes.dashboard'.config)
- 	   	end
-	},
+	-- {
+ -- 	   	'goolord/alpha-nvim',
+ -- 	   	config = function ()
+ -- 	       	require'alpha'.setup(require'alpha.themes.dashboard'.config)
+ -- 	   	end
+	-- },
 	{
   	  	'nvim-tree/nvim-tree.lua',
   	  	tag = 'nightly' -- optional, updated every week. (see issue #1193)
@@ -78,16 +78,16 @@ require('lazy').setup({
    	"tpope/vim-fugitive",
 	"ggandor/leap.nvim",
 	-- "mrjones2014/nvim-ts-rainbow",
-	({
-  	  	"utilyre/barbecue.nvim",
-  	  	dependencies = {
-    	 	"SmiteshP/nvim-navic",
- 			'kyazdani42/nvim-web-devicons', -- optional dependency
-  	  	},
-  	  	config = function()
-    	 	require("barbecue").setup()
-  	  	end,
-	}),
+	-- ({
+ --  	  	"utilyre/barbecue.nvim",
+ --  	  	dependencies = {
+ --    	 	"SmiteshP/nvim-navic",
+ -- 			'kyazdani42/nvim-web-devicons', -- optional dependency
+ --  	  	},
+ --  	  	config = function()
+ --    	 	require("barbecue").setup()
+ --  	  	end,
+	-- }),
     ({
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
