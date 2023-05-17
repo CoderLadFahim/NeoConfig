@@ -14,8 +14,8 @@ function WRITE_FILE()
 end
 
 function SEARCH_GIT_FILES()
-	local git_file_searching_command = 'Telescope git_files disable_devicons=true'
-	local all_file_searching_command = 'Telescope find_files disable_devicons=true'
+	local git_file_searching_command = 'Telescope git_files'
+	local all_file_searching_command = 'Telescope find_files'
 	if vim.fn.isdirectory('.git') == 1 then
   		vim.cmd(git_file_searching_command)
 	else
@@ -66,13 +66,13 @@ set_keymap('n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>")
 
 -- Telescope mappings
 set_keymap('n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>")
-set_keymap('n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=true<CR>")
-set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=true<CR>")
-set_keymap('v', "<leader>fw", "<cmd>Telescope grep_string disable_devicons=true<CR>")
-set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches disable_devicons=true<CR>")
-set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits disable_devicons=true<CR>")
-set_keymap('n', "<leader>gs", "<cmd>Telescope git_status disable_devicons=true<CR>")
-set_keymap('n', "<leader>hg", "<cmd>Telescope help_tags disable_devicons=true<CR>")
+set_keymap('n', "<leader>FF", "<cmd>Telescope find_files<CR>")
+set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep<CR>")
+set_keymap('v', "<leader>fw", "<cmd>Telescope grep_string<CR>")
+set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
+set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
+set_keymap('n', "<leader>gs", "<cmd>Telescope git_status<CR>")
+set_keymap('n', "<leader>hg", "<cmd>Telescope help_tags<CR>")
 
 -- git mappings
 set_keymap('n', "<leader>ga.", ":G add .")

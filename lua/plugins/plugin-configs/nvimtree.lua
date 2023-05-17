@@ -43,8 +43,8 @@ function OPEN_NVIM_TREE(mode)
     		indent_width = 2,
     		icons = {
                 show = {
-                    file = false,
-                    folder = false
+                    file = true,
+                    folder = true
                 }
     		},
 			indent_markers = {
