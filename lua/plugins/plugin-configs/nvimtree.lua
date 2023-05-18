@@ -8,7 +8,7 @@ local cols = vim.api.nvim_get_option("columns")
 local float_win_height = math.floor((70 / 100) * rows) + 5
 local float_win_width = math.floor((70 / 100) * cols)
 
-local row_centered = math.floor(rows / 2) - math.floor((float_win_height + 5) / 2) 
+local row_centered = math.floor(rows / 2) - math.floor((float_win_height) / 2) 
 local col_centered = math.floor(cols / 2) - math.floor(float_win_width / 2)
 
 function OPEN_NVIM_TREE(mode)
@@ -41,6 +41,12 @@ function OPEN_NVIM_TREE(mode)
   		renderer = {
     		group_empty = true,
     		indent_width = 2,
+    		icons = {
+                show = {
+                    file = true,
+                    folder = true
+                }
+    		},
 			indent_markers = {
           		enable = true,
           		inline_arrows = true,

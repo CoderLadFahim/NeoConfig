@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
 	'kyazdani42/nvim-web-devicons',
   	'nvim-lua/plenary.nvim',
-  	'MunifTanjim/nui.nvim',
+  	-- 'MunifTanjim/nui.nvim',
   	'lewis6991/impatient.nvim',
   	-- { 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
   	{
@@ -95,5 +95,6 @@ require('lazy').setup({
     'jwalton512/vim-blade',
 
 	"sainnhe/sonokai",
+	-- "LunarVim/darkplus.nvim",
 
 })
