@@ -1,6 +1,6 @@
 local plugin_configs = {
     'impatient',
-    -- 'lualine',
+    'lualine',
     'nvimtree',
     'treesitter',
     'commentnvim',
@@ -13,7 +13,7 @@ local plugin_configs = {
     'null-ls',
     'prettier',
     'indent-blankline',
-    -- 'alpha',
+    'alpha',
     'leapnvim',
     'bufferline',
 }
