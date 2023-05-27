@@ -27,6 +27,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 local on_attach = function(client, bufnr)
   	-- Mappings.
   	-- See `:help vim.lsp.*` for documentation on any of the below functions
+    vim.diagnostic.config({ virtual_text = false })	
   	local bufopts = { noremap=true, silent=true, buffer=bufnr }
   	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   	vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)

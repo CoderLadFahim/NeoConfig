@@ -94,8 +94,8 @@ require('lazy').setup({
     }),
     'jwalton512/vim-blade',
 
-	"sainnhe/sonokai",
-	-- "LunarVim/darkplus.nvim",
-	-- "RchrdAlv/pulpFictionNvim"
+	-- "sainnhe/gruvbox-material",
+	-- "sainnhe/sonokai",
+    'navarasu/onedark.nvim'
 
 })
