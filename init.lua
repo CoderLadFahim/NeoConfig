@@ -8,6 +8,7 @@ require('remaps');
 require('lazy-config');
 require('plugins');
 require('lsp');
+require('statusline');
 
 function SET_COLORSCHEME()
 	local colorscheme_command = 'colo ' .. GET_GLOBAL_COLOR_SCHEME()
