@@ -14,7 +14,7 @@ vim.opt.fillchars = { eob = " "  } -- Disable `~` on nonexistent lines
 vim.opt.history = 100 -- Number of commands to remember in a history table
 vim.opt.ignorecase = true -- Case insensitive searching
 vim.opt.laststatus = 3 -- globalstatus
--- vim.opt.winbar= "   " ..GET_CURRENT_DIRECTORY() .. " => %f %m" -- globalstatus
+vim.opt.winbar= "%f" -- globalstatus
 -- vim.opt.statusline = ""
 vim.opt.lazyredraw = true -- lazily redraw screen
 vim.opt.mouse = "" -- Enable mouse support
