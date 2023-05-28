@@ -49,7 +49,13 @@ end
 function InsertEnter()
 	vim.opt.timeoutlen = 0
 end
-local insert_mode_autocmd = 'autocmd InsertEnter * call v:lua.InsertEnter()';
-local normal_mode_autocmd = 'autocmd InsertLeave * call v:lua.InsertLeave()'; 
-vim.cmd(insert_mode_autocmd)
-vim.cmd(normal_mode_autocmd)
+
+vim.api.nvim_create_autocmd('InsertEnter', {
+    pattern = '*',
+    callback = InsertEnter
+})
+
+vim.api.nvim_create_autocmd('InsertLeave', {
+    pattern = '*',
+    callback = InsertLeave
+})
