@@ -3,6 +3,7 @@ function GET_CURRENT_DIRECTORY()
     return vim.fn.fnamemodify(path, ':t')
 end
 
+
 local modes = {
     n = "NORMAL",
     i = "INSERT",
@@ -13,6 +14,15 @@ local modes = {
     R = "REPLACE",
     t = "TERMINAL"
 }
+
+function set_winbar()
+    local vim_mode = tostring(vim.api.nvim_get_mode().mode) 
+    if (vim_mode ~= 't') then
+        vim.opt.winbar= "   %f" -- globalstatus
+    else 
+        vim.opt.winbar= "" -- globalstatus
+    end
+end
 
 function update_status_line()
     local vim_mode = vim.api.nvim_get_mode().mode 
@@ -42,6 +52,9 @@ vim.api.nvim_create_autocmd('User', {
 
 vim.api.nvim_create_autocmd('ModeChanged', {
     pattern = '*',
-    callback = update_status_line
+    callback = function()
+        update_status_line()
+        -- set_winbar()
+    end
 })
 
