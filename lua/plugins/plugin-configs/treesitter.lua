@@ -94,5 +94,7 @@ function MyCursorMoved()
 	end
 end
 
-local autocmd_cmd = 'autocmd CursorMoved,InsertEnter,InsertLeave * call v:lua.MyCursorMoved()';
-vim.cmd(autocmd_cmd)
+vim.api.nvim_create_autocmd({ 'CursorMoved', 'InsertEnter', 'InsertLeave' }, {
+    pattern = '*',
+    callback = MyCursorMoved
+})

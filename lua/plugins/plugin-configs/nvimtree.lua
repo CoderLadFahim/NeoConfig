@@ -12,7 +12,6 @@ local row_centered = math.floor(rows / 2) - math.floor((float_win_height) / 2)
 local col_centered = math.floor(cols / 2) - math.floor(float_win_width / 2)
 
 function OPEN_NVIM_TREE(mode)
-	local nvim_find_file_cmd = 'NvimTreeFindFile'
 	nvim_tree.setup({
   		-- open_on_setup = true,
   		sort_by = "case_sensitive",
@@ -63,6 +62,6 @@ function OPEN_NVIM_TREE(mode)
     		dotfiles = false,
   		},
 	})
-	vim.cmd(nvim_find_file_cmd)
+	vim.cmd('NvimTreeFindFile')
 end
 

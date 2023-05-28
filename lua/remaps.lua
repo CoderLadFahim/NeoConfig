@@ -5,29 +5,25 @@ end
 
 function WRITE_FILE()
   	local modified = vim.api.nvim_buf_get_option(0, 'modified')
-  	local write_command = 'w'
   	if modified then
-		vim.cmd(write_command)
+		vim.cmd('w')
 	else
 		print("File written")
 	end
 end
 
 function SEARCH_GIT_FILES()
-	local git_file_searching_command = 'Telescope git_files'
-	local all_file_searching_command = 'Telescope find_files'
 	if vim.fn.isdirectory('.git') == 1 then
-  		vim.cmd(git_file_searching_command)
+  		vim.cmd('Telescope git_files')
 	else
 		print('Not a git repository, searching all files');
-  		vim.cmd(all_file_searching_command)
+  		vim.cmd('Telescope find_files')
 	end
 end
 
 function SOURCE_FILE()
-	local sourcing_command = 'so %';
 	if vim.bo.filetype == "lua" then
-  		vim.cmd(sourcing_command)
+  		vim.cmd('so %')
 	else
 		print('Not a lua file')
 	end

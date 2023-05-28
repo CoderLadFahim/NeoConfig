@@ -7,16 +7,14 @@ if not status_ok then return end
 null_ls.setup({
   	on_attach = function(client, bufnr)
     	if client.server_capabilities.documentFormattingProvider then
-      	    local seq_sync_cmd = "nnoremap <silent><buffer> <Leader>$$ :lua vim.lsp.buf.format()<CR>"
-      	    vim.cmd(seq_sync_cmd)
+      	    vim.cmd("nnoremap <silent><buffer> <Leader>$$ :lua vim.lsp.buf.format()<CR>")
     		--   --
     		--   -- format on save
     		-- vim.cmd("autocmd BufWritePost <buffer> Prettier")
     	end
     	--
     	if client.server_capabilities.documentRangeFormattingProvider then
-      	    local format_cmd = "xnoremap <silent><buffer> <Leader>$$ :lua vim.lsp.buf.format()<CR>"
-      	    vim.cmd(format_cmd)
+      	    vim.cmd("xnoremap <silent><buffer> <Leader>$$ :lua vim.lsp.buf.format()<CR>")
     	end
   	end,
   	sources = {
