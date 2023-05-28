@@ -78,16 +78,16 @@ require('lazy').setup({
    	"tpope/vim-fugitive",
 	"ggandor/leap.nvim",
 	-- "mrjones2014/nvim-ts-rainbow",
-	({
-  	  	"utilyre/barbecue.nvim",
-  	  	dependencies = {
-    	 	"SmiteshP/nvim-navic",
- 			'kyazdani42/nvim-web-devicons', -- optional dependency
-  	  	},
-  	  	config = function()
-    	 	require("barbecue").setup()
-  	  	end,
-	}),
+	-- ({
+ --  	  	"utilyre/barbecue.nvim",
+ --  	  	dependencies = {
+ --    	 	"SmiteshP/nvim-navic",
+ -- 			'kyazdani42/nvim-web-devicons', -- optional dependency
+ --  	  	},
+ --  	  	config = function()
+ --    	 	require("barbecue").setup()
+ --  	  	end,
+	-- }),
     ({
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
