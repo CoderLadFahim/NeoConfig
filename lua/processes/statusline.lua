@@ -18,7 +18,7 @@ local modes = {
 function SET_WINBAR()
     local vim_mode = tostring(vim.api.nvim_get_mode().mode) 
     if (vim_mode ~= 't') then
-        vim.opt.winbar= "   %f" -- globalstatus
+        vim.opt.winbar= "   %f %y %m %= %p%% (%L lines)" -- globalstatus
     else 
         vim.opt.winbar=" " -- globalstatus
     end
@@ -30,12 +30,15 @@ function UPDATE_STATUS_LINE()
     local current_dir =  GET_CURRENT_DIRECTORY()
     local current_branch = vim.b.gitsigns_head
     local time = os.date('%A %d %b %Y %I:%M %p')
+
     if (current_branch) then last_known_branch = current_branch end
+
     vim.opt.statusline = string.format(
-        "[%s] (%s) <%s> - %s",
+        "[%s] (%s) <%s>     %s %s",
         vim_mode and modes[vim_mode] or 'VISUAL_VERTICAL', 
         current_dir, 
-        current_branch and current_branch or last_known_branch, 
+        current_branch and current_branch or last_known_branch,
+        '%=',
         time
     ) 
 end
