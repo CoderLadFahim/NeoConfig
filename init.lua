@@ -8,7 +8,7 @@ require('remaps');
 require('lazy-config');
 require('plugins');
 require('lsp');
-require('statusline');
+require('processes');
 
 function SET_COLORSCHEME()
 	local transparent_cmd_1 = 'highlight Normal guibg=none';
