@@ -69,6 +69,9 @@ set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
 set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
 set_keymap('n', "<leader>gs", "<cmd>Telescope git_status<CR>")
 set_keymap('n', "<leader>hg", "<cmd>Telescope help_tags<CR>")
+set_keymap('n', "<leader>cs", "<cmd>Telescope colorscheme<CR>")
+set_keymap('n', "<leader>bf", "<cmd>Telescope buffers<CR>")
+set_keymap('n', "<leader>rm", "<cmd>Telescope keymaps<CR>")
 
 -- git mappings
 set_keymap('n', "<leader>ga.", ":G add .")
