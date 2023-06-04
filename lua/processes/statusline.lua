@@ -15,15 +15,6 @@ local modes = {
     t = "TERMINAL"
 }
 
-function SET_WINBAR()
-    local vim_mode = tostring(vim.api.nvim_get_mode().mode) 
-    if (vim_mode ~= 't') then
-        vim.opt.winbar= "   %f %y %m %= %p%% (%L lines)" -- globalstatus
-    else 
-        vim.opt.winbar=" " -- globalstatus
-    end
-end
-
 local last_known_branch = ''
 function UPDATE_STATUS_LINE()
     local vim_mode = vim.api.nvim_get_mode().mode 
@@ -59,7 +50,6 @@ vim.api.nvim_create_autocmd('ModeChanged', {
     pattern = '*',
     callback = function()
         UPDATE_STATUS_LINE()
-        SET_WINBAR()
     end
 })
 

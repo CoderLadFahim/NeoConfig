@@ -45,9 +45,9 @@ commentnvim.setup(
     	---Function to call before (un)comment
   		-- pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
   		--
-        pre_hook = function(ctx)
-            return require('Comment.jsx').calculate(ctx)
-        end,
+        -- pre_hook = function(ctx)
+            -- return require('Comment.jsx').calculate(ctx)
+        -- end,
     	---Function to call after (un)comment
     	post_hook = nil,
 	}

@@ -72,7 +72,7 @@ bufferline.setup({
         },
         color_icons = true, -- whether or not to add the filetype icon highlights
         -- show_buffer_icons = true, -- disable filetype icons for buffers
-        show_buffer_icons = true, -- disable filetype icons for buffers
+        show_buffer_icons = false, -- disable filetype icons for buffers
         show_buffer_close_icons = false,
         -- show_buffer_default_icon = true, -- whether or not an unrecognised filetype should show a default icon
         show_close_icon = false,
@@ -82,7 +82,7 @@ bufferline.setup({
         -- can also be a table containing 2 custom separators
         -- [focused and unfocused]. eg: { '|', '|' }
         separator_style ={ '<=', '' },
-        enforce_regular_tabs = true,
+        -- enforce_regular_tabs = true,
         always_show_bufferline = true,
         hover = {
             enabled = true,
