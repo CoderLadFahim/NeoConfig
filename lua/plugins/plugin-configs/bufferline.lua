@@ -35,7 +35,7 @@ bufferline.setup({
         max_name_length = 1800,
         max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
         truncate_names = true, -- whether or not tab names should be truncated
-        tab_size = 20,
+        tab_size = 0,
         diagnostics = "nvim_lsp",
         diagnostics_update_in_insert = false,
         -- The diagnostics indicator can be set to nil to keep the buffer name highlight but delete the highlighting
@@ -81,7 +81,7 @@ bufferline.setup({
         persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
         -- can also be a table containing 2 custom separators
         -- [focused and unfocused]. eg: { '|', '|' }
-        separator_style ={ '<=', '' },
+        separator_style ={ '', '' },
         -- enforce_regular_tabs = true,
         always_show_bufferline = true,
         hover = {

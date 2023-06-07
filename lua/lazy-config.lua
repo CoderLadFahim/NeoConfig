@@ -96,6 +96,7 @@ require('lazy').setup({
 
 	-- "sainnhe/gruvbox-material",
 	"sainnhe/sonokai",
+	-- "LunarVim/darkplus.nvim",
     -- 'navarasu/onedark.nvim'
 
 })
