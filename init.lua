@@ -1,5 +1,5 @@
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'gruvbox-material'
+	return 'sonokai'
 end
 
 require('options');
