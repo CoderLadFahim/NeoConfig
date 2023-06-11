@@ -5,6 +5,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.gruvbox_material_foreground = 'material'
 vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
 vim.g.gruvbox_material_background = 'soft'
+vim.g.gruvbox_material_transparent_background = 1
 
 vim.g.sonokai_style = 'maia'
 vim.g.sonokai_diagnostic_virtual_text = 'colored'

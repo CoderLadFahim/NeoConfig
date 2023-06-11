@@ -28,7 +28,7 @@ telescope.setup(
             path_display = function(opts, path)
                 local tail = require("telescope.utils").path_tail(path)
                 local filetype = get_file_extension(path)
-                return string.format("[%s] - %s", filetype, path)
+                return string.format("%s - %s", filetype, path)
             end,
         }
     }

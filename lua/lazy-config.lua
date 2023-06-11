@@ -71,6 +71,10 @@ require('lazy').setup({
 	'nvim-treesitter/playground',
 	'neovim/nvim-lspconfig',
 	"williamboman/mason.nvim",
+    {
+        "glepnir/lspsaga.nvim",
+        event = "LspAttach",
+    }, 
 	{'akinsho/bufferline.nvim', dependencies = 'kyazdani42/nvim-web-devicons'},
 	'jose-elias-alvarez/null-ls.nvim',
 	'MunifTanjim/prettier.nvim',
