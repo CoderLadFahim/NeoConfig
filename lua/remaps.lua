@@ -83,6 +83,12 @@ set_keymap('n', "<leader>gd", ":G diff")
 set_keymap('n', "<leader>gv", ":Gvdiffsplit!<CR>")
 set_keymap('n', "<leader>gm", ":G blame<CR>")
 
+-- Lsp saga mappings
+set_keymap('n', "<leader>dp", ":Lspsaga peek_definition<CR>")
+set_keymap('n', "<leader>tp", ":Lspsaga peek_type_definition<CR>")
+set_keymap('n', "<leader>lf", ":Lspsaga lsp_finder<CR>")
+set_keymap('n', "<leader>ld", ":Lspsaga show_buf_diagnostics<CR>")
+
 
 set_keymap('n', "<C-d>", "<C-d>zz")
 set_keymap('n', "<C-u>", "<C-u>zz")

@@ -81,3 +81,31 @@ neovim_lsp['emmet_ls'].setup({
 })
 
 
+local lspsaga_status_ok, lspsaga = pcall(require, "lspsaga")
+if not lspsaga_status_ok then
+	return
+end
+
+lspsaga.setup({
+    symbol_in_winbar = {
+        enable = false,
+    },
+    lightbulb = {
+        enable = true,
+        enable_in_insert = true,
+        sign = true,
+        sign_priority = 40,
+        virtual_text = true,
+    },
+    code_action = {
+        num_shortcut = true,
+        show_server_name = true,
+        extend_gitsigns = false,
+        keys = {
+            -- string | table type
+            quit = "q",
+            exec = "<CR>",
+        },
+    },
+})
+

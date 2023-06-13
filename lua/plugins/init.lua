@@ -13,7 +13,6 @@ local plugin_configs = {
     'prettier',
     'indent-blankline',
     'leapnvim',
-    'lspsaga',
     'bufferline',
 }
 
