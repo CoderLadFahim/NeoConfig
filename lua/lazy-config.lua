@@ -35,7 +35,7 @@ require('lazy').setup({
         	require('Comment').setup()
     	end
 	},
-	-- 'JoosepAlviste/nvim-ts-context-commentstring',
+	'JoosepAlviste/nvim-ts-context-commentstring',
 	{"akinsho/toggleterm.nvim", config = function()
   	  	require("toggleterm").setup()
 		end
