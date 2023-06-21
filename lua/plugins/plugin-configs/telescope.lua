@@ -16,11 +16,11 @@ telescope.setup(
     {
         defaults = {
             file_ignore_patterns = {
-                'package',
+                -- 'package',
                 'vendor',
                 'public/vendor',
                 'node_modules',
-                'public',
+                -- 'public',
                 'composer.lock',
                 'package-lock.json',
                 'yarn.lock',
@@ -28,7 +28,7 @@ telescope.setup(
             path_display = function(opts, path)
                 local tail = require("telescope.utils").path_tail(path)
                 local filetype = get_file_extension(path)
-                return string.format("%s - %s", filetype, path)
+                return string.format("[%s] - %s", filetype, path)
             end,
         }
     }

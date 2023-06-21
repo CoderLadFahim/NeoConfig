@@ -72,6 +72,7 @@ set_keymap('n', "<leader>hg", "<cmd>Telescope help_tags<CR>")
 set_keymap('n', "<leader>cs", "<cmd>Telescope colorscheme<CR>")
 set_keymap('n', "<leader>bf", "<cmd>Telescope buffers disable_devicons=true<CR>")
 set_keymap('n', "<leader>rm", "<cmd>Telescope keymaps<CR>")
+set_keymap('n', "<leader>cm", "<cmd>Telescope commands<CR>")
 
 -- git mappings
 set_keymap('n', "<leader>ga.", ":G add .")

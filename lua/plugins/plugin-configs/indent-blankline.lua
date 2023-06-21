@@ -9,3 +9,8 @@ indent_blankline.setup {
     show_current_context_start = true,
 	show_end_of_line = true,
 }
+
+
+-- vim.g.indent_blankline_char_list = { '│', '¦', '┆', '┊' }
+vim.g.indent_blankline_char_list = { '│', '|', '¦', '┆', '┊' }
+vim.g.indent_blankline_char_blankline = {'_'}
