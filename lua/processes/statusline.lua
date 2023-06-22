@@ -20,12 +20,12 @@ function UPDATE_STATUS_LINE()
     local vim_mode = vim.api.nvim_get_mode().mode 
     local current_dir =  GET_CURRENT_DIRECTORY()
     local current_branch = vim.b.gitsigns_head
-    local time = os.date('%A %d %b %Y %I:%M %p')
+    local time = os.date('%A %d %b %Y %I:%M:%S %p')
 
     if (current_branch) then last_known_branch = current_branch end
 
     vim.opt.statusline = string.format(
-        "[%s] (%s) <%s>     %s %s",
+        "[%s] (%s) <%s> %s %s",
         vim_mode and modes[vim_mode] or '_', 
         current_dir, 
         current_branch and current_branch or last_known_branch,
@@ -34,7 +34,8 @@ function UPDATE_STATUS_LINE()
     ) 
 end
 
-local interval = 1000 * 60 -- Interval in milliseconds (1 minute)
+-- local interval = 1000 * 60 -- Interval in milliseconds (1 minute)
+local interval = 1000
 local timer_id
 
 -- Start the timer
