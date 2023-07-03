@@ -10,4 +10,3 @@ indent_blankline.setup {
 	show_end_of_line = true,
 }
 
-vim.g.indent_blankline_char = '┊'

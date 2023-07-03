@@ -14,6 +14,7 @@ local plugin_configs = {
     'indent-blankline',
     'leapnvim',
     'bufferline',
+    'onedark',
 }
 
 for _, value in ipairs(plugin_configs) do
