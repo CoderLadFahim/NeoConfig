@@ -29,6 +29,28 @@ function SOURCE_FILE()
 	end
 end
 
+function GET_VISUAL_SELECTION()
+    local s_start = vim.fn.getpos("'<")
+    local s_end = vim.fn.getpos("'>")
+    local n_lines = math.abs(s_end[2] - s_start[2]) + 1
+    local lines = vim.api.nvim_buf_get_lines(0, s_start[2] - 1, s_end[2], false)
+    lines[1] = string.sub(lines[1], s_start[3], -1)
+    if n_lines == 1 then
+        lines[n_lines] = string.sub(lines[n_lines], 1, s_end[3] - s_start[3] + 1)
+    else
+        lines[n_lines] = string.sub(lines[n_lines], 1, s_end[3])
+    end
+    return table.concat(lines, '\n')
+end
+
+function VISUAL_GREP_STRING() 
+    local visual_selection = GET_VISUAL_SELECTION()
+    print(visual_selection)
+    require('telescope.builtin').grep_string({
+        search = visual_selection
+    })
+end
+
 set_keymap('n', '<leader>w', ':lua WRITE_FILE()<CR>')
 set_keymap('n', '<leader>q', ':q!')
 set_keymap('n', '<leader>so', ':lua SOURCE_FILE()')
@@ -64,7 +86,6 @@ set_keymap('n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>")
 set_keymap('n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>")
 set_keymap('n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=true<CR>")
 set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=true<CR>")
-set_keymap('v', "<leader>fw", "<cmd>Telescope grep_string disable_devicons=true<CR>")
 set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
 set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
 set_keymap('n', "<leader>gs", "<cmd>Telescope git_status<CR>")
@@ -75,6 +96,8 @@ set_keymap('n', "<leader>rm", "<cmd>Telescope keymaps<CR>")
 set_keymap('n', "<leader>cm", "<cmd>Telescope commands<CR>")
 set_keymap('n', "<leader>ds", "<cmd>Telescope lsp_document_symbols<CR>")
 set_keymap('n', "<leader>ws", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>")
+set_keymap('n', "<leader>lf", "<cmd>Telescope lsp_references<CR>")
+set_keymap('v', "<leader>fw", ":lua VISUAL_GREP_STRING()<CR>")
 
 -- git mappings
 set_keymap('n', "<leader>ga.", ":G add .")
@@ -89,7 +112,7 @@ set_keymap('n', "<leader>gm", ":G blame<CR>")
 -- Lsp saga mappings
 set_keymap('n', "<leader>dp", ":Lspsaga peek_definition<CR>")
 set_keymap('n', "<leader>tp", ":Lspsaga peek_type_definition<CR>")
-set_keymap('n', "<leader>lf", ":Lspsaga lsp_finder<CR>")
+-- set_keymap('n', "<leader>lf", ":Lspsaga lsp_finder<CR>")
 set_keymap('n', "<leader>ld", ":Lspsaga show_buf_diagnostics<CR>")
 
 

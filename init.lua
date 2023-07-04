@@ -1,5 +1,5 @@
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'gruvbox-material'
+	return 'onedark'
 end
 
 require('options');
@@ -15,6 +15,9 @@ function SET_COLORSCHEME()
 	local transparent_cmd_2 = 'highlight NonText guibg=none';
 
 	vim.cmd('colo ' .. GET_GLOBAL_COLOR_SCHEME())
+
+	vim.cmd('highlight IndentBlanklineChar guifg=#666666 gui=nocombine')
+	vim.cmd('highlight IndentBlanklineContextChar guifg=# gui=nocombine')
 end
 
 SET_COLORSCHEME()

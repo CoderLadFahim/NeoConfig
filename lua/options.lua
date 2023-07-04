@@ -1,8 +1,3 @@
-function GET_CURRENT_DIRECTORY()
-    local path = vim.loop.cwd()
-    return vim.fn.fnamemodify(path, ':t')
-end
-
 vim.opt.backspace = vim.opt.backspace + { "nostop" } -- Don't stop backspace at insert
 vim.opt.clipboard = "unnamedplus" -- Connection to the system clipboard
 vim.opt.completeopt = { "menuone", "noselect"  } -- Options for insert mode completion

@@ -26,8 +26,6 @@ gitsigns.setup({
       		return '<Ignore>'
     	end, {expr=true})
 
-    	map('n', ']]', gs.next_hunk)
-    	map('n', '[[', gs.prev_hunk)
     	map('n', '<leader>hb', gs.blame_line)
     	map('n', '<leader>hv', gs.preview_hunk)
     	map('n', '<leader>hr', gs.reset_hunk)

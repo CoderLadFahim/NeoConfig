@@ -3,8 +3,8 @@ if not cmp_status_ok then
 	return
 end
 
-local cmp_status_ok, luasnip = pcall(require, 'luasnip')
-if not cmp_status_ok then
+local luasnip_status_ok, luasnip = pcall(require, 'luasnip')
+if not luasnip_status_ok then
 	return
 end
 
