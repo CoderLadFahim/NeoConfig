@@ -33,7 +33,9 @@ onedark.setup({
 
     -- Custom Highlights --
     colors = {}, -- Override default colors
-    highlights = {}, -- Override highlight groups
+    highlights = {
+        ["@tag.delimiter"] = {fg = '$cyan'},
+    }, -- Override highlight groups
 
     -- Plugins Config --
     diagnostics = {
