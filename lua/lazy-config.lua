@@ -97,7 +97,6 @@ require('lazy').setup({
         build = function() vim.fn["mkdp#util#install"]() end,
     }),
     'jwalton512/vim-blade',
-    "RRethy/vim-illuminate",
 
 	-- "sainnhe/gruvbox-material",
 	-- "sainnhe/sonokai",
