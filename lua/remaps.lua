@@ -14,10 +14,10 @@ end
 
 function SEARCH_GIT_FILES()
 	if vim.fn.isdirectory('.git') == 1 then
-  		vim.cmd('Telescope git_files disable_devicons=true')
+  		vim.cmd('Telescope git_files disable_devicons=false')
 	else
 		print('Not a git repository, searching all files');
-  		vim.cmd('Telescope find_files disable_devicons=true')
+  		vim.cmd('Telescope find_files disable_devicons=false')
 	end
 end
 
@@ -84,14 +84,14 @@ set_keymap('n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>")
 
 -- Telescope mappings
 set_keymap('n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>")
-set_keymap('n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=true<CR>")
-set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=true<CR>")
+set_keymap('n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=false<CR>")
+set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=false<CR>")
 set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
 set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
 set_keymap('n', "<leader>gs", "<cmd>Telescope git_status<CR>")
 set_keymap('n', "<leader>hg", "<cmd>Telescope help_tags<CR>")
 set_keymap('n', "<leader>cs", "<cmd>Telescope colorscheme<CR>")
-set_keymap('n', "<leader>bf", "<cmd>Telescope buffers disable_devicons=true<CR>")
+set_keymap('n', "<leader>bf", "<cmd>Telescope buffers disable_devicons=false<CR>")
 set_keymap('n', "<leader>rm", "<cmd>Telescope keymaps<CR>")
 set_keymap('n', "<leader>cm", "<cmd>Telescope commands<CR>")
 set_keymap('n', "<leader>ds", "<cmd>Telescope lsp_document_symbols<CR>")
@@ -105,9 +105,11 @@ set_keymap('n', "<leader>gcm", ':G commit -m ""')
 set_keymap('n', "<leader>gcam", ':G commit --amend -m ""')
 set_keymap('n', "<leader>gcan", ':G commit --amend --no-edit')
 set_keymap('n', "<leader>gr.", ":G restore .")
-set_keymap('n', "<leader>gd", ":G diff")
+set_keymap('n', "<leader>do", ":DiffviewOpen<CR>")
+set_keymap('n', "<leader>dc", ":DiffviewClose<CR>")
 set_keymap('n', "<leader>gv", ":Gvdiffsplit!<CR>")
 set_keymap('n', "<leader>gm", ":G blame<CR>")
+set_keymap('n', "<leader>ft", ":lua require('telescope.builtin').live_grep({type_filter = 'js'})")
 
 -- Lsp saga mappings
 set_keymap('n', "<leader>dp", ":Lspsaga peek_definition<CR>")
@@ -131,3 +133,4 @@ set_keymap('n', "N", "Nzzzv")
 
 -- keeping the yanked content in the register after pasting over
 set_keymap('v', "p", "\"_dP")
+vim.keymap.set('v', '<leader>$$', vim.lsp.buf.format, {silent = true, buffer = 0})

@@ -5,7 +5,7 @@ end
 
 onedark.setup({
     -- Main options --
-    style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+    style = 'darker', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     transparent = false,  -- Show/hide background
     term_colors = true, -- Change terminal color as per the selected theme style
     ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
@@ -36,6 +36,11 @@ onedark.setup({
     highlights = {
         ["@tag.delimiter"] = {fg = '$cyan'},
         ["Visual"] = {bg = '#f1f1f1'},
+        -- ["LineNr"] = {bg = '#2c3e50', fg = '#7f8c8d' },
+        -- ["CursorLineNr"] = {bg = '#2c3e50', fg = '#f1f1f1' },
+        --
+        ["LineNr"] = { fg = '#7f8c8d' },
+        ["CursorLineNr"] = { fg = '#f1f1f1' },
     }, -- Override highlight groups
 
     -- Plugins Config --

@@ -18,6 +18,7 @@ null_ls.setup({
     	end
   	end,
   	sources = {
-    	null_ls.builtins.formatting.prettier
+    	null_ls.builtins.formatting.prettier,
+    	null_ls.builtins.formatting.autopep8
   	}
 })

@@ -15,6 +15,7 @@ end
 telescope.setup(
     {
         defaults = {
+            layout_strategy = 'vertical',
             file_ignore_patterns = {
                 -- 'package',
                 'vendor',
@@ -25,11 +26,11 @@ telescope.setup(
                 'package-lock.json',
                 'yarn.lock',
             },
-            path_display = function(opts, path)
-                local tail = require("telescope.utils").path_tail(path)
-                local filetype = get_file_extension(path)
-                return string.format("[%s] - %s", filetype, path)
-            end,
+            -- path_display = function(opts, path)
+            --     local tail = require("telescope.utils").path_tail(path)
+            --     local filetype = get_file_extension(path)
+            --     return string.format("[%s] - %s", filetype, path)
+            -- end,
         }
     }
 )
