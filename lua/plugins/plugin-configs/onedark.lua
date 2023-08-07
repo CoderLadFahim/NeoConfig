@@ -36,9 +36,6 @@ onedark.setup({
     highlights = {
         ["@tag.delimiter"] = {fg = '$cyan'},
         ["Visual"] = {bg = '#f1f1f1'},
-        -- ["LineNr"] = {bg = '#2c3e50', fg = '#7f8c8d' },
-        -- ["CursorLineNr"] = {bg = '#2c3e50', fg = '#f1f1f1' },
-        --
         ["LineNr"] = { fg = '#7f8c8d' },
         ["CursorLineNr"] = { fg = '#f1f1f1' },
     }, -- Override highlight groups

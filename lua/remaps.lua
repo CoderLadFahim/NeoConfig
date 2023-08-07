@@ -57,6 +57,11 @@ set_keymap('n', '<leader>so', ':lua SOURCE_FILE()')
 set_keymap('n', '<leader>v', '<C-v>')
 set_keymap('n', '<leader>fv', ':file<CR>')
 
+set_keymap('n', '<leader><esc>', ':nohls<CR>')
+
+set_keymap('n', '<leader>nm', ':%norm ')
+set_keymap('v', '<leader>nm', ':%norm ')
+
 -- Bufferline
 set_keymap('n', '}', ':BufferLineCycleNext<CR>')
 set_keymap('n', '{', ':BufferLineCyclePrev<CR>')
