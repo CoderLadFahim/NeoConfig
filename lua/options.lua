@@ -12,7 +12,7 @@ vim.opt.laststatus = 3 -- globalstatus
 vim.opt.winbar= "%f" -- globalstatus
 -- vim.opt.statusline = ""
 vim.opt.lazyredraw = true -- lazily redraw screen
-vim.opt.mouse = "" -- Enable mouse support
+vim.opt.mouse = "a" -- Enable mouse support
 vim.opt.number = true -- Show numberline
 vim.opt.preserveindent = true -- Preserve indent structure as much as possible
 vim.opt.pumheight = 10 -- Height of the pop up menu
@@ -24,7 +24,7 @@ vim.opt.sidescrolloff = 8 -- Number of columns to keep at the sides of the curso
 vim.opt.signcolumn = "yes" -- Always show the sign column
 -- vim.opt.smartcase = true -- Case sensitivie searching
 vim.opt.splitbelow = true -- Splitting a new window below the current one
-vim.opt.hlsearch = true -- Splitting a new window below the current one
+vim.opt.hlsearch = true -- searh highlight
 vim.opt.splitright = true -- Splitting a new window at the right of the current one
 vim.opt.swapfile = false -- Disable use of swapfile for the buffer
 vim.opt.tabstop = 4 -- Number of space in a tab
@@ -35,7 +35,6 @@ vim.opt.wrap = true -- Disable wrapping of lines longer than the width of window
 vim.opt.writebackup = false -- Disable making a backup before overwriting a file
 vim.opt.guicursor = "" -- Keeps the cursor fat in insert mode
 vim.opt.cc = "135" -- color column
-vim.opt.mouse = "a" -- color column
 
 vim.opt.termguicolors = true -- set termguicolors to enable highlight groups
 
