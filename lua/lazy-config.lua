@@ -68,7 +68,7 @@ require('lazy').setup({
       	'nvim-treesitter/nvim-treesitter',
       	build = ':TSUpdate'
    	},
-	'nvim-treesitter/playground',
+	-- 'nvim-treesitter/playground',
 	'neovim/nvim-lspconfig',
 	"williamboman/mason.nvim",
     {
