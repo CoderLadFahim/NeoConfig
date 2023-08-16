@@ -11,6 +11,28 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local options = {
+    defaults = {
+        lazy = false
+    },
+    ui = {
+        -- icons = {
+        --     cmd = "⌘",
+        --     config = "",
+        --     event = "",
+        --     ft = "",
+        --     init = "",
+        --     keys = "",
+        --     plugin = "",
+        --     runtime = "",
+        --     source = "",
+        --     start = "",
+        --     task = "",
+        --     lazy = " ",
+        -- }
+    }
+}
+
 require('lazy').setup({
 	'kyazdani42/nvim-web-devicons',
   	'nvim-lua/plenary.nvim',
@@ -97,11 +119,11 @@ require('lazy').setup({
         build = function() vim.fn["mkdp#util#install"]() end,
     }),
     'jwalton512/vim-blade',
-    "sindrets/diffview.nvim",
+    -- "sindrets/diffview.nvim",
 
 	-- "sainnhe/gruvbox-material",
 	-- "sainnhe/sonokai",
 	-- "LunarVim/darkplus.nvim",
     'navarasu/onedark.nvim',
 
-})
+}, options)
