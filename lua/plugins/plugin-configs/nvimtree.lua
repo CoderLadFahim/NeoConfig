@@ -40,10 +40,18 @@ function OPEN_NVIM_TREE(mode)
   		renderer = {
     		group_empty = true,
     		indent_width = 2,
+            highlight_git = true,
     		icons = {
                 show = {
-                    file = true,
-                    folder = false
+                    file = ENABLE_ICONS(),
+                    folder = ENABLE_ICONS(),
+                    git = ENABLE_ICONS(),
+                },
+                glyphs = {
+                    folder = {
+                        arrow_closed = "+",
+                        arrow_open = "-",
+                    }
                 }
     		},
 			indent_markers = {

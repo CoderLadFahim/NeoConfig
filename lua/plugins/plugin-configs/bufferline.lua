@@ -15,12 +15,16 @@ bufferline.setup({
             icon = '▎', -- this should be omitted if indicator style is not 'icon'
             style = 'icon',
         },
-        buffer_close_icon = '',
+        buffer_close_icon = 'x',
         -- modified_icon = '●',
         modified_icon = '',
-        close_icon = '',
-        left_trunc_marker = '',
-        right_trunc_marker = '',
+        -- close_icon = '',
+        close_icon = 'x',
+        -- left_trunc_marker = '',
+        -- right_trunc_marker = '',
+        --
+        left_trunc_marker = '<',
+        right_trunc_marker = '>',
         --- name_formatter can be used to change the buffer's label in the bufferline.
         --- Please note some names can/will break the
         --- bufferline so use this at your discretion knowing that it has
@@ -72,7 +76,7 @@ bufferline.setup({
         },
         color_icons = true, -- whether or not to add the filetype icon highlights
         -- show_buffer_icons = true, -- disable filetype icons for buffers
-        show_buffer_icons = true, -- disable filetype icons for buffers
+        show_buffer_icons = ENABLE_ICONS(), -- disable filetype icons for buffers
         show_buffer_close_icons = false,
         -- show_buffer_default_icon = true, -- whether or not an unrecognised filetype should show a default icon
         show_close_icon = false,

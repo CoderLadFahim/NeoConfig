@@ -2,6 +2,10 @@ function GET_GLOBAL_COLOR_SCHEME(theme)
 	return 'onedark'
 end
 
+function ENABLE_ICONS()
+	return false
+end
+
 require('options');
 require('globals');
 require('remaps');
