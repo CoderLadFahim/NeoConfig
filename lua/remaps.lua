@@ -14,11 +14,11 @@ end
 
 function SEARCH_GIT_FILES()
 	if vim.fn.isdirectory('.git') == 1 then
-  		vim.cmd('Telescope git_files disable_devicons=true')
+  		vim.cmd('Telescope git_files disable_devicons=' .. tostring(ENABLE_ICONS() == false))
 	else
 		print('Not a git repository, searching all files');
-  		vim.cmd('Telescope find_files disable_devicons=true')
-	end
+  		vim.cmd('Telescope find_files disable_devicons=' .. tostring(ENABLE_ICONS() == false))
+  	end
 end
 
 function SOURCE_FILE()
@@ -47,7 +47,7 @@ function VISUAL_GREP_STRING()
     local visual_selection = GET_VISUAL_SELECTION()
     require('telescope.builtin').grep_string({
         search = visual_selection,
-        disable_devicons = true
+        disable_devicons = ENABLE_ICONS() == false 
     })
 end
 
@@ -89,14 +89,14 @@ set_keymap('n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>")
 
 -- Telescope mappings
 set_keymap('n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>")
-set_keymap('n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=true<CR>")
-set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=true<CR>")
+set_keymap('n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>")
+set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>")
 set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
 set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
 set_keymap('n', "<leader>gs", "<cmd>Telescope git_status<CR>")
 set_keymap('n', "<leader>hg", "<cmd>Telescope help_tags<CR>")
 set_keymap('n', "<leader>cs", "<cmd>Telescope colorscheme<CR>")
-set_keymap('n', "<leader>bf", "<cmd>Telescope buffers disable_devicons=true<CR>")
+set_keymap('n', "<leader>bf", "<cmd>Telescope buffers disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>")
 set_keymap('n', "<leader>rm", "<cmd>Telescope keymaps<CR>")
 set_keymap('n', "<leader>cm", "<cmd>Telescope commands<CR>")
 set_keymap('n', "<leader>ds", "<cmd>Telescope lsp_document_symbols<CR>")

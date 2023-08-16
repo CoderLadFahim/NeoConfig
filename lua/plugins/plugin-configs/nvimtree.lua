@@ -43,9 +43,9 @@ function OPEN_NVIM_TREE(mode)
             highlight_git = true,
     		icons = {
                 show = {
-                    file = false,
-                    folder = false,
-                    git = false,
+                    file = ENABLE_ICONS(),
+                    folder = ENABLE_ICONS(),
+                    git = ENABLE_ICONS(),
                 },
                 glyphs = {
                     folder = {

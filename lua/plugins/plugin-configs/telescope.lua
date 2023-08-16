@@ -29,7 +29,15 @@ telescope.setup(
             path_display = function(opts, path)
                 local tail = require("telescope.utils").path_tail(path)
                 local filetype = get_file_extension(path)
-                return string.format("[%s] - %s", filetype, path)
+
+                local iconless_path = string.format("[%s] - %s", filetype, path)
+                local path_with_icons = string.format("%s", path)
+                 
+                if ENABLE_ICONS() then
+                    return path_with_icons
+                else
+                    return iconless_path
+                end
             end,
         }
     }
