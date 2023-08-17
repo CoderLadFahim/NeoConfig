@@ -72,6 +72,9 @@ set_keymap('n', '<leader>x', ':BufferLinePickClose<CR>')
 set_keymap('n', '<leader>xc', ':BufferLineCloseRight')
 set_keymap('n', '<leader>xz', ':BufferLineCloseLeft')
 set_keymap('n', '<leader>bq', ':b#|bd#')
+set_keymap('n', '<leader>nn', ':set rnu!<CR>')
+
+set_keymap('n', '<leader>zz', ':Lazy <CR>')
 
 set_keymap('n', '<leader>fr', ':%s/')
 
@@ -102,6 +105,7 @@ set_keymap('n', "<leader>cm", "<cmd>Telescope commands<CR>")
 set_keymap('n', "<leader>ds", "<cmd>Telescope lsp_document_symbols<CR>")
 set_keymap('n', "<leader>ws", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>")
 set_keymap('n', "<leader>lf", "<cmd>Telescope lsp_references<CR>")
+set_keymap('n', "<leader>hh", "<cmd>Telescope highlights<CR>")
 set_keymap('v', "<leader>fw", ":lua VISUAL_GREP_STRING()<CR>")
 
 -- git mappings

@@ -7,7 +7,7 @@ toggleterm.setup({
 	size = 20,
 	open_mapping = [[<leader><SPACE>]],
 	start_in_insert = true,
-	hide_numbers = false,
+	hide_numbers = true,
 	direction = 'horizontal',
 	float_opts = {
 		border = 'curved'
