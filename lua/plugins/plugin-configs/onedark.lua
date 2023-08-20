@@ -38,6 +38,12 @@ onedark.setup({
         ["Visual"] = {bg = '#f1f1f1'},
         ["LineNr"] = { fg = '#7f8c8d' },
         ["CursorLineNr"] = { fg = '#f1f1f1' },
+
+        -- 1f2329
+        ["TelescopePromptBorder"] = { fg = '$grey' },
+        ["TelescopePreviewBorder"] = { fg = '$grey' },
+        ["TelescopeResultsBorder"] = { fg = '$grey' },
+        ["TelescopeMatching"] = { fg = '$green' },
     }, -- Override highlight groups
 
     -- Plugins Config --

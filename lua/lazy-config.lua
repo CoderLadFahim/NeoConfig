@@ -34,7 +34,7 @@ local options = {
 }
 
 require('lazy').setup({
-	'kyazdani42/nvim-web-devicons',
+	-- 'kyazdani42/nvim-web-devicons',
   	'nvim-lua/plenary.nvim',
   	-- 'MunifTanjim/nui.nvim',
   	'lewis6991/impatient.nvim',
@@ -97,7 +97,8 @@ require('lazy').setup({
         "glepnir/lspsaga.nvim",
         event = "LspAttach",
     }, 
-	{'akinsho/bufferline.nvim', dependencies = 'kyazdani42/nvim-web-devicons'},
+	-- {'akinsho/bufferline.nvim', dependencies = 'kyazdani42/nvim-web-devicons'},
+	{'akinsho/bufferline.nvim'},
 	'jose-elias-alvarez/null-ls.nvim',
 	'MunifTanjim/prettier.nvim',
    	"lukas-reineke/indent-blankline.nvim",
@@ -125,5 +126,6 @@ require('lazy').setup({
 	-- "sainnhe/sonokai",
 	-- "LunarVim/darkplus.nvim",
     'navarasu/onedark.nvim',
+
 
 }, options)
