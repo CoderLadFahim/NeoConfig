@@ -17,11 +17,11 @@ telescope.setup(
         defaults = {
             layout_strategy = 'vertical',
             file_ignore_patterns = {
-                -- 'package',
+                'package',
                 'vendor',
                 'public/vendor',
                 'node_modules',
-                -- 'public',
+                'public',
                 'composer.lock',
                 'package-lock.json',
                 'yarn.lock',

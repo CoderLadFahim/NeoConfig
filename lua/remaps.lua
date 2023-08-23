@@ -62,6 +62,11 @@ set_keymap('n', '<leader><esc>', ':nohls<CR>')
 set_keymap('n', '<leader>nm', ':%norm ')
 set_keymap('v', '<leader>nm', ':%norm ')
 
+set_keymap('n', '<LEFT>', ':lua print("use h")<CR>')
+set_keymap('n', '<DOWN>', ':lua print("use j")<CR>')
+set_keymap('n', '<UP>', ':lua print("use k")<CR>')
+set_keymap('n', '<RIGHT>', ':lua print("use l")<CR>')
+
 -- Bufferline
 set_keymap('n', '}', ':BufferLineCycleNext<CR>')
 set_keymap('n', '{', ':BufferLineCyclePrev<CR>')
@@ -74,7 +79,7 @@ set_keymap('n', '<leader>xz', ':BufferLineCloseLeft')
 set_keymap('n', '<leader>bq', ':b#|bd#')
 set_keymap('n', '<leader>nn', ':set rnu!<CR>')
 
-set_keymap('n', '<leader>zz', ':Lazy <CR>')
+set_keymap('n', '<leader>lz', ':Lazy <CR>')
 
 set_keymap('n', '<leader>fr', ':%s/')
 

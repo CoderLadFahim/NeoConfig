@@ -44,6 +44,7 @@ onedark.setup({
         ["TelescopePreviewBorder"] = { fg = '$grey' },
         ["TelescopeResultsBorder"] = { fg = '$grey' },
         ["TelescopeMatching"] = { fg = '$green' },
+        ["VertSplit"] = { fg = '$cyan' },
     }, -- Override highlight groups
 
     -- Plugins Config --
