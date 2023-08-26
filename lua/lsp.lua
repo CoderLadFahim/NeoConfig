@@ -25,6 +25,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+  	print('lsp attached');
   	-- Mappings.
   	-- See `:help vim.lsp.*` for documentation on any of the below functions
     vim.diagnostic.config({ virtual_text = false })	
@@ -51,12 +52,16 @@ local lsp_options = { on_attach = on_attach, flags = lsp_flags }
 
 local macos_ts_tsdk_location = '/usr/local/lib/node_modules/typescript/lib'
 local linux_ts_tsdk_location = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
+local linux_ts_tsdk_location2 = '/home/fahim/.nvm/versions/node/v18.17.0/lib/node_modules/typescript/lib'
+
 local tsdk_to_use = nil
 
-if (directoryExists(linux_ts_tsdk_location)) then
-	tsdk_to_use = linux_ts_tsdk_location
+if (directoryExists(linux_ts_tsdk_location2)) then
+	tsdk_to_use = linux_ts_tsdk_location2 
+elseif (directoryExists(linux_ts_tsdk_location)) then
+	tsdk_to_use = linux_ts_tsdk_location 
 else
-	tsdk_to_use = macos_ts_tsdk_location
+	tsdk_to_use = macos_ts_tsdk_location 
 end
 
 local volar_options = {
