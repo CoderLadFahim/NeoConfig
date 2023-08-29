@@ -67,6 +67,8 @@ set_keymap('n', '<DOWN>', ':lua print("use j")<CR>')
 set_keymap('n', '<UP>', ':lua print("use k")<CR>')
 set_keymap('n', '<RIGHT>', ':lua print("use l")<CR>')
 
+set_keymap('n', '<leader>ar', ':lua print()<LEFT>')
+
 -- Bufferline
 set_keymap('n', '}', ':BufferLineCycleNext<CR>')
 set_keymap('n', '{', ':BufferLineCyclePrev<CR>')

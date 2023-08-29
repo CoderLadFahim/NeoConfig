@@ -32,7 +32,12 @@ onedark.setup({
     },
 
     -- Custom Highlights --
-    colors = {}, -- Override default colors
+    colors = {
+        cyan = '#079992',
+        purple = '#8854d0',
+        blue = '#2d98da',
+        -- green = '#A3CB38'
+    }, -- Override default colors
     highlights = {
         ["@tag.delimiter"] = {fg = '$cyan'},
         ["Visual"] = {bg = '#f1f1f1'},
