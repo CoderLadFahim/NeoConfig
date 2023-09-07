@@ -14,6 +14,7 @@ local plugin_configs = {
     'indent-blankline',
     'leapnvim',
     'bufferline',
+    'gitconflict',
     'onedark',
 }
 

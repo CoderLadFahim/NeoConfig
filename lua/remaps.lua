@@ -112,6 +112,7 @@ set_keymap('n', "<leader>ws", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>"
 set_keymap('n', "<leader>lf", "<cmd>Telescope lsp_references<CR>")
 set_keymap('n', "<leader>hh", "<cmd>Telescope highlights<CR>")
 set_keymap('v', "<leader>fw", ":lua VISUAL_GREP_STRING()<CR>")
+set_keymap('n', "<leader>ft", ":lua require('telescope.builtin').live_grep({type_filter = 'js'})")
 
 -- git mappings
 set_keymap('n', "<leader>ga.", ":G add .")
@@ -119,11 +120,18 @@ set_keymap('n', "<leader>gcm", ':G commit -m ""')
 set_keymap('n', "<leader>gcam", ':G commit --amend -m ""')
 set_keymap('n', "<leader>gcan", ':G commit --amend --no-edit')
 set_keymap('n', "<leader>gr.", ":G restore .")
--- set_keymap('n', "<leader>do", ":DiffviewOpen<CR>")
--- set_keymap('n', "<leader>dc", ":DiffviewClose<CR>")
 set_keymap('n', "<leader>gv", ":Gvdiffsplit!<CR>")
 set_keymap('n', "<leader>gm", ":G blame<CR>")
-set_keymap('n', "<leader>ft", ":lua require('telescope.builtin').live_grep({type_filter = 'js'})")
+set_keymap('n', "<leader>2", ":GitConflictChooseOurs")
+set_keymap('n', "<leader>3", ":GitConflictChooseTheirs")
+set_keymap('n', "<leader>4", ":GitConflictChooseNone")
+set_keymap('n', "<leader>1", ":GitConflictChooseBoth")
+set_keymap('n', "]z", ":GitConflictNextConflict<CR>")
+set_keymap('n', "[z", ":GitConflictPrevConflict<CR>")
+set_keymap('n', "<leader>cq", ":GitConflictListQf<CR>")
+
+-- set_keymap('n', "<leader>do", ":DiffviewOpen<CR>")
+-- set_keymap('n', "<leader>dc", ":DiffviewClose<CR>")
 
 -- Lsp saga mappings
 set_keymap('n', "<leader>dp", ":Lspsaga peek_definition<CR>")

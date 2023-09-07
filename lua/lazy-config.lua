@@ -121,6 +121,8 @@ require('lazy').setup({
     }),
     'jwalton512/vim-blade',
     -- "sindrets/diffview.nvim",
+    --
+    'akinsho/git-conflict.nvim',
 
 	-- "sainnhe/gruvbox-material",
 	-- "sainnhe/sonokai",
