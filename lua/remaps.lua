@@ -66,6 +66,8 @@ set_keymap('n', '<LEFT>', ':lua print("use h")<CR>')
 set_keymap('n', '<DOWN>', ':lua print("use j")<CR>')
 set_keymap('n', '<UP>', ':lua print("use k")<CR>')
 set_keymap('n', '<RIGHT>', ':lua print("use l")<CR>')
+set_keymap('n', '<RIGHT>', ':lua print("use l")<CR>')
+set_keymap('n', '<leader>ar', ':lua print()<LEFT>')
 
 -- Bufferline
 set_keymap('n', '}', ':BufferLineCycleNext<CR>')
@@ -116,8 +118,8 @@ set_keymap('n', "<leader>ft", ":lua require('telescope.builtin').live_grep({type
 
 -- git mappings
 set_keymap('n', "<leader>ga.", ":G add .")
-set_keymap('n', "<leader>gcm", ':G commit -m ""')
-set_keymap('n', "<leader>gcam", ':G commit --amend -m ""')
+set_keymap('n', "<leader>gcm", ':G commit -m ""<LEFT>')
+set_keymap('n', "<leader>gcam", ':G commit --amend -m ""<LEFT>')
 set_keymap('n', "<leader>gcan", ':G commit --amend --no-edit')
 set_keymap('n', "<leader>gr.", ":G restore .")
 set_keymap('n', "<leader>gv", ":Gvdiffsplit!<CR>")

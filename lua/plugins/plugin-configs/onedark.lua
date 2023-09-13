@@ -34,17 +34,21 @@ onedark.setup({
     -- Custom Highlights --
     colors = {}, -- Override default colors
     highlights = {
-        ["@tag.delimiter"] = {fg = '$cyan'},
+        ["@tag.delimiter"] = {fg = '$blue'},
+        ["@tag"] = {fg = '$red'},
         ["Visual"] = {bg = '#f1f1f1'},
         ["LineNr"] = { fg = '#7f8c8d' },
         ["CursorLineNr"] = { fg = '#f1f1f1' },
 
         -- 1f2329
-        ["TelescopePromptBorder"] = { fg = '$grey' },
-        ["TelescopePreviewBorder"] = { fg = '$grey' },
-        ["TelescopeResultsBorder"] = { fg = '$grey' },
+        ["TelescopePromptBorder"] = { fg = '$cyan' },
+        ["TelescopePreviewBorder"] = { fg = '$cyan' },
+        ["TelescopeResultsBorder"] = { fg = '$cyan' },
         ["TelescopeMatching"] = { fg = '$green' },
         ["VertSplit"] = { fg = '$cyan' },
+
+        ["IndentBlanklineChar"] = { fg = '$grey' },
+        ["IndentBlanklineContextChar"] = { fg = '$blue' },
     }, -- Override highlight groups
 
     -- Plugins Config --
