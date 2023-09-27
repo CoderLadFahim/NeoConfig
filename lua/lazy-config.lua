@@ -33,8 +33,7 @@ local options = {
     }
 }
 
-require('lazy').setup({
-	-- 'kyazdani42/nvim-web-devicons',
+local plugins = {
   	'nvim-lua/plenary.nvim',
   	-- 'MunifTanjim/nui.nvim',
   	'lewis6991/impatient.nvim',
@@ -128,6 +127,10 @@ require('lazy').setup({
 	-- "sainnhe/sonokai",
 	-- "LunarVim/darkplus.nvim",
     'navarasu/onedark.nvim',
+}
 
+if ENABLE_ICONS() then
+    table.insert(plugins, 1, 'kyazdani42/nvim-web-devicons')
+end
 
-}, options)
+require('lazy').setup(plugins, options)

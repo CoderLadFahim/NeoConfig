@@ -49,8 +49,10 @@ function OPEN_NVIM_TREE(mode)
                 },
                 glyphs = {
                     folder = {
-                        arrow_closed = "+",
-                        arrow_open = "-",
+                        arrow_closed = ENABLE_ICONS() and "" or "+",
+                        arrow_open = ENABLE_ICONS() and "" or "-"
+                        -- arrow_closed = "",
+                        -- arrow_open = "",
                     }
                 }
     		},
