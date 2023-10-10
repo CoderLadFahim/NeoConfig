@@ -132,8 +132,8 @@ set_keymap('n', "]z", ":GitConflictNextConflict<CR>")
 set_keymap('n', "[z", ":GitConflictPrevConflict<CR>")
 set_keymap('n', "<leader>cq", ":GitConflictListQf<CR>")
 
--- set_keymap('n', "<leader>do", ":DiffviewOpen<CR>")
--- set_keymap('n', "<leader>dc", ":DiffviewClose<CR>")
+set_keymap('n', "<leader>do", ":DiffviewOpen ")
+set_keymap('n', "<leader>dc", ":DiffviewClose<CR>")
 
 -- Lsp saga mappings
 set_keymap('n', "<leader>dp", ":Lspsaga peek_definition<CR>")

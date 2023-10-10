@@ -119,7 +119,7 @@ local plugins = {
         build = function() vim.fn["mkdp#util#install"]() end,
     }),
     'jwalton512/vim-blade',
-    -- "sindrets/diffview.nvim",
+    "sindrets/diffview.nvim",
     --
     'akinsho/git-conflict.nvim',
 
