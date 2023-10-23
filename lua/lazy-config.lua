@@ -47,7 +47,7 @@ local plugins = {
      	end
   	},
 	{
-  	  	'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  	  	'nvim-telescope/telescope.nvim', tag = '0.1.4',
   	  	dependencies = { {'nvim-lua/plenary.nvim'} }
 	},
 	{
@@ -100,7 +100,7 @@ local plugins = {
 	{'akinsho/bufferline.nvim'},
 	'jose-elias-alvarez/null-ls.nvim',
 	'MunifTanjim/prettier.nvim',
-   	{ "lukas-reineke/indent-blankline.nvim", commit = '9637670896b68805430e2f72cf5d16be5b97a22a' },
+   	{"lukas-reineke/indent-blankline.nvim", commit = '9637670'},
    	"tpope/vim-fugitive",
 	"ggandor/leap.nvim",
 	-- "mrjones2014/nvim-ts-rainbow",
