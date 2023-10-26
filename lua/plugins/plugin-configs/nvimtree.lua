@@ -5,7 +5,7 @@ end
 
 local rows = vim.api.nvim_get_option("lines")
 local cols = vim.api.nvim_get_option("columns")
-local float_win_height = math.floor((70 / 100) * rows) + 5
+local float_win_height = math.floor((70 / 100) * rows)
 local float_win_width = math.floor((70 / 100) * cols)
 
 local row_centered = math.floor(rows / 2) - math.floor((float_win_height) / 2) 

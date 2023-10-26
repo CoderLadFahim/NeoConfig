@@ -97,7 +97,7 @@ local plugins = {
         event = "LspAttach",
     }, 
 	-- {'akinsho/bufferline.nvim', dependencies = 'kyazdani42/nvim-web-devicons'},
-	{'akinsho/bufferline.nvim'},
+	-- {'akinsho/bufferline.nvim'},
 	'jose-elias-alvarez/null-ls.nvim',
 	'MunifTanjim/prettier.nvim',
    	{"lukas-reineke/indent-blankline.nvim", commit = '9637670'},
@@ -122,6 +122,7 @@ local plugins = {
     "sindrets/diffview.nvim",
     --
     'akinsho/git-conflict.nvim',
+    'j-morano/buffer_manager.nvim',
 
 	-- "sainnhe/gruvbox-material",
 	-- "sainnhe/sonokai",
