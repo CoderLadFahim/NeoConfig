@@ -125,6 +125,7 @@ local plugins = {
     'j-morano/buffer_manager.nvim',
 
 	-- "sainnhe/gruvbox-material",
+	{ "ellisonleao/gruvbox.nvim" },
 	-- "sainnhe/sonokai",
 	-- "LunarVim/darkplus.nvim",
     'navarasu/onedark.nvim',
