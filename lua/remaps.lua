@@ -97,8 +97,8 @@ set_keymap('n', "+", "<cmd>resize +4<CR>")
 set_keymap('n', "-", "<cmd>resize -4<CR>")
 set_keymap('n', ")", "<cmd>vertical resize -4<CR>")
 
-set_keymap('n', '<leader>tf', ":lua OPEN_NVIM_TREE('left')<CR>")
-set_keymap('n', '<leader>tr', ":lua OPEN_NVIM_TREE('float')<CR>")
+set_keymap('n', '<leader>tr', ":lua OPEN_NVIM_TREE('left')<CR>")
+set_keymap('n', '<leader>tf', ":lua OPEN_NVIM_TREE('float')<CR>")
 set_keymap('n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>")
 
 -- Telescope mappings

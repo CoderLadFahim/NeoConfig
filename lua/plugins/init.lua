@@ -11,7 +11,7 @@ local plugin_configs = {
     'mason',
     'null-ls',
     'prettier',
-    'gruvbox',
+    -- 'gruvbox',
     'indent-blankline',
     'leapnvim',
     -- 'bufferline',
