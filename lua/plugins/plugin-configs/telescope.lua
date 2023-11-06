@@ -39,7 +39,12 @@ telescope.setup(
                     return iconless_path
                 end
             end,
-        }
+            mappings = {
+                i = {
+                    ["<Esc>"] = "close",
+                },
+            }
+        },
     }
 )
 

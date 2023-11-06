@@ -1,5 +1,4 @@
 local plugin_configs = {
-    'impatient',
     'nvimtree',
     'treesitter',
     'commentnvim',
@@ -24,9 +23,16 @@ for _, value in ipairs(plugin_configs) do
     require(path);
 end
 
+local rows = vim.api.nvim_get_option("lines")
+local cols = vim.api.nvim_get_option("columns")
+local float_win_height = math.floor((70 / 100) * rows)
+local float_win_width = math.floor((70 / 100) * cols)
+
 require("buffer_manager").setup( 
     {
         line_keys = "1234567890",
+        width = float_win_width,
+        height = float_win_height,
         select_menu_item_commands = {
             edit = {
                 key = "<CR>",
@@ -34,7 +40,7 @@ require("buffer_manager").setup(
             }
         },
         focus_alternate_buffer = false,
-        short_file_names = true,
+        short_file_names = false,
         short_term_names = true,
         loop_nav = true,
         highlight = "",

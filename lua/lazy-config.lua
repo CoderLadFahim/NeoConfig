@@ -35,7 +35,6 @@ local options = {
 local plugins = {
   	'nvim-lua/plenary.nvim',
   	-- 'MunifTanjim/nui.nvim',
-  	'lewis6991/impatient.nvim',
   	-- { 'nvim-lualine/lualine.nvim', dependencies = {'kyazdani42/nvim-web-devicons', opt = false} },
   	{
   	  	"kylechui/nvim-surround",
