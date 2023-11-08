@@ -1,4 +1,4 @@
-local gruvbox =  require("gruvbox")
+local gruvbox = require("gruvbox")
 
 gruvbox.setup({
     terminal_colors = true, -- add neovim terminal colors
@@ -37,6 +37,8 @@ gruvbox.setup({
     dim_inactive = false,
     transparent_mode = false,
 })
+
+vim.cmd('colo gruvbox')
 
   -- dark0_hard = "#1d2021",
   -- dark0 = "#282828",

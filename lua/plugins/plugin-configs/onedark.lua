@@ -58,3 +58,5 @@ onedark.setup({
         background = true,    -- use background color for virtual text
     },
 })
+
+vim.cmd('colo onedark')

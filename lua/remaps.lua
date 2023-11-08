@@ -51,113 +51,95 @@ function VISUAL_GREP_STRING()
     })
 end
 
-set_keymap('n', '<leader>w', ':lua WRITE_FILE()<CR>')
-set_keymap('n', '<leader>q', ':q!')
-set_keymap('n', '<leader>ss', ':lua SOURCE_FILE()')
-set_keymap('n', '<leader>v', '<C-v>')
-set_keymap('n', '<leader>fv', ':file<CR>')
+local keymaps = {
 
-set_keymap('n', '<leader><esc>', ':nohls<CR>')
+    -- Telescope
+    { 'n', "<leader>p", "<cmd>Telescope buffers disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>" },
+    { 'n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>" },
+    { 'n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>" },
+    { 'n', "<leader>gb", "<cmd>Telescope git_branches<CR>" },
+    { 'n', "<leader>glo", "<cmd>Telescope git_commits<CR>" },
+    { 'n', "<leader>gs", "<cmd>Telescope git_status<CR>" },
+    { 'n', "<leader>hg", "<cmd>Telescope help_tags<CR>" },
+    { 'n', "<leader>cs", "<cmd>Telescope colorscheme<CR>" },
+    { 'n', "<leader>rm", "<cmd>Telescope keymaps<CR>" },
+    { 'n', "<leader>cm", "<cmd>Telescope commands<CR>" },
+    { 'n', "<leader>ds", "<cmd>Telescope lsp_document_symbols<CR>" },
+    { 'n', "<leader>ws", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>" },
+    { 'n', "<leader>lf", "<cmd>Telescope lsp_references<CR>" },
+    { 'n', "<leader>hh", "<cmd>Telescope highlights<CR>" },
+    { 'n', "<leader>ft", ":lua require('telescope.builtin').live_grep({type_filter = 'js'})" },
+    { 'v', "<leader>fw", ":lua VISUAL_GREP_STRING()<CR>" },
+    { 'n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>" },
 
-set_keymap('n', '<leader>nm', ':%norm ')
-set_keymap('v', '<leader>nm', ':%norm ')
+    -- Fugitive
+    { 'n', "<leader>ga.", ":G add ." },
+    { 'n', "<leader>gcm", ':G commit -m ""<LEFT>' },
+    { 'n', "<leader>gcam", ':G commit --amend -m ""<LEFT>' },
+    { 'n', "<leader>gcan", ':G commit --amend --no-edit' },
+    { 'n', "<leader>gr.", ":G restore ." },
+    { 'n', "<leader>gv", ":Gvdiffsplit!<CR>" },
+    { 'n', "<leader>gm", ":G blame<CR>" },
 
-set_keymap('n', '<LEFT>', ':lua print("use h")<CR>')
-set_keymap('n', '<DOWN>', ':lua print("use j")<CR>')
-set_keymap('n', '<UP>', ':lua print("use k")<CR>')
-set_keymap('n', '<RIGHT>', ':lua print("use l")<CR>')
-set_keymap('n', '<RIGHT>', ':lua print("use l")<CR>')
-set_keymap('n', '<leader>ar', ':lua print()<LEFT>')
+    -- LspSaga
+    { 'n', "<leader>dp", ":Lspsaga peek_definition<CR>" },
+    { 'n', "<leader>tp", ":Lspsaga peek_type_definition<CR>" },
+    { 'n', "<leader>ld", ":Lspsaga show_buf_diagnostics<CR>" },
 
--- Bufferline
--- set_keymap('n', '}', ':BufferLineCycleNext<CR>')
--- set_keymap('n', '{', ':BufferLineCyclePrev<CR>')
--- set_keymap('n', '<C-l>', ':BufferLineMoveNext<CR>')
--- set_keymap('n', '<C-h>', ':BufferLineMovePrev<CR>')
--- set_keymap('n', '<leader>p', ':BufferLinePick<CR>')
--- set_keymap('n', '<leader>x', ':BufferLinePickClose<CR>')
--- set_keymap('n', '<leader>xc', ':BufferLineCloseRight')
--- set_keymap('n', '<leader>xz', ':BufferLineCloseLeft')
-set_keymap('n', '<leader>bf', ':lua require("buffer_manager.ui").toggle_quick_menu()<CR>')
-set_keymap('n', "<leader>p", "<cmd>Telescope buffers disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>")
-set_keymap('n', '}', ':lua require("buffer_manager.ui").nav_next()<CR>')
-set_keymap('n', '{', ':lua require("buffer_manager.ui").nav_prev()<CR>')
-set_keymap('n', '<leader>bq', ':b#|bd#')
-set_keymap('n', '<leader>nn', ':set rnu!<CR>')
+    -- NvimTree
+    { 'n', '<leader>tr', ":lua OPEN_NVIM_TREE('left')<CR>" },
+    { 'n', '<leader>tf', ":lua OPEN_NVIM_TREE('float')<CR>" },
+    { 'n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>" },
 
-set_keymap('n', '<leader>lz', ':Lazy <CR>')
+    -- Buffer manager
+    { 'n', '<leader>bf', ':lua require("buffer_manager.ui").toggle_quick_menu()<CR>' },
+    { 'n', '}', ':lua require("buffer_manager.ui").nav_next()<CR>' },
+    { 'n', '{', ':lua require("buffer_manager.ui").nav_prev()<CR>' },
 
-set_keymap('n', '<leader>fr', ':%s/')
+    -- DiffView
+    { 'n', "<leader>do", ":DiffviewOpen " },
+    { 'n', "<leader>dc", ":DiffviewClose<CR>" },
 
-set_keymap('n', '<leader>taa', ':ToggleTermToggleAll<CR>')
-set_keymap('t', '<esc>', [[<C-\><C-n>]])
+    -- Misc
+    { 't', '<esc>', [[<C-\><C-n>]] },
+    { 'n', '<leader>w', ':lua WRITE_FILE()<CR>' },
+    { 'n', '<leader>ss', ':lua SOURCE_FILE()' },
+    { 'n', '<leader>q', ':q!' },
+    { 'n', '<leader>v', '<C-v>' },
+    { 'n', '<leader>fv', ':file<CR>' },
+    { 'n', '<leader><esc>', ':nohls<CR>' },
+    { 'n', '<leader>nm', ':%norm ' },
+    { 'n', '<leader>ar', ':lua print()<LEFT>' },
+    { 'n', '<leader>bq', ':b#|bd#' },
+    { 'n', '<leader>nn', ':set rnu!<CR>' },
+    { 'n', '<leader>lz', ':Lazy <CR>' },
+    { 'n', '<leader>fr', ':%s/' },
+    { 'n', '<leader>taa', ':ToggleTermToggleAll<CR>' },
+    { 'n', "n", "nzzzv" },
+    { 'n', "N", "Nzzzv" },
+    { 'n', '<LEFT>', ':lua print("use h")<CR>' },
+    { 'n', '<DOWN>', ':lua print("use j")<CR>' },
+    { 'n', '<UP>', ':lua print("use k")<CR>' },
+    { 'n', '<RIGHT>', ':lua print("use l")<CR>' },
+    { 'n', "<C-d>", "<C-d>zz" },
+    { 'n', "<C-u>", "<C-u>zz" },
+    { 'n', "<C-f>", "<C-f>zz" },
+    { 'n', "<C-b>", "<C-b>zz" },
+    { 'n', "(", "<cmd>vertical resize +4<CR>" },
+    { 'n', "+", "<cmd>resize +4<CR>" },
+    { 'n', "-", "<cmd>resize -4<CR>" },
+    { 'n', ")", "<cmd>vertical resize -4<CR>" },
+    { 'v', '<leader>nm', ':%norm ' },
+    { 'v', "J", ":m '>+1<CR>gv=gv" },
+    { 'v', "K", ":m '<-2<CR>gv=gv" },
 
-set_keymap('n', "(", "<cmd>vertical resize +4<CR>")
-set_keymap('n', "+", "<cmd>resize +4<CR>")
-set_keymap('n', "-", "<cmd>resize -4<CR>")
-set_keymap('n', ")", "<cmd>vertical resize -4<CR>")
-
-set_keymap('n', '<leader>tr', ":lua OPEN_NVIM_TREE('left')<CR>")
-set_keymap('n', '<leader>tf', ":lua OPEN_NVIM_TREE('float')<CR>")
-set_keymap('n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>")
-
--- Telescope mappings
-set_keymap('n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>")
-set_keymap('n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>")
-set_keymap('n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>")
-set_keymap('n', "<leader>gb", "<cmd>Telescope git_branches<CR>")
-set_keymap('n', "<leader>glo", "<cmd>Telescope git_commits<CR>")
-set_keymap('n', "<leader>gs", "<cmd>Telescope git_status<CR>")
-set_keymap('n', "<leader>hg", "<cmd>Telescope help_tags<CR>")
-set_keymap('n', "<leader>cs", "<cmd>Telescope colorscheme<CR>")
-set_keymap('n', "<leader>rm", "<cmd>Telescope keymaps<CR>")
-set_keymap('n', "<leader>cm", "<cmd>Telescope commands<CR>")
-set_keymap('n', "<leader>ds", "<cmd>Telescope lsp_document_symbols<CR>")
-set_keymap('n', "<leader>ws", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>")
-set_keymap('n', "<leader>lf", "<cmd>Telescope lsp_references<CR>")
-set_keymap('n', "<leader>hh", "<cmd>Telescope highlights<CR>")
-set_keymap('v', "<leader>fw", ":lua VISUAL_GREP_STRING()<CR>")
-set_keymap('n', "<leader>ft", ":lua require('telescope.builtin').live_grep({type_filter = 'js'})")
-
--- git mappings
-set_keymap('n', "<leader>ga.", ":G add .")
-set_keymap('n', "<leader>gcm", ':G commit -m ""<LEFT>')
-set_keymap('n', "<leader>gcam", ':G commit --amend -m ""<LEFT>')
-set_keymap('n', "<leader>gcan", ':G commit --amend --no-edit')
-set_keymap('n', "<leader>gr.", ":G restore .")
-set_keymap('n', "<leader>gv", ":Gvdiffsplit!<CR>")
-set_keymap('n', "<leader>gm", ":G blame<CR>")
-set_keymap('n', "<leader>2", ":GitConflictChooseOurs")
-set_keymap('n', "<leader>3", ":GitConflictChooseTheirs")
-set_keymap('n', "<leader>4", ":GitConflictChooseNone")
-set_keymap('n', "<leader>1", ":GitConflictChooseBoth")
-set_keymap('n', "]z", ":GitConflictNextConflict<CR>")
-set_keymap('n', "[z", ":GitConflictPrevConflict<CR>")
-set_keymap('n', "<leader>cq", ":GitConflictListQf<CR>")
-
-set_keymap('n', "<leader>do", ":DiffviewOpen ")
-set_keymap('n', "<leader>dc", ":DiffviewClose<CR>")
-
--- Lsp saga mappings
-set_keymap('n', "<leader>dp", ":Lspsaga peek_definition<CR>")
-set_keymap('n', "<leader>tp", ":Lspsaga peek_type_definition<CR>")
--- set_keymap('n', "<leader>lf", ":Lspsaga lsp_finder<CR>")
-set_keymap('n', "<leader>ld", ":Lspsaga show_buf_diagnostics<CR>")
+}
 
 
-set_keymap('n', "<C-d>", "<C-d>zz")
-set_keymap('n', "<C-u>", "<C-u>zz")
-set_keymap('n', "<C-f>", "<C-f>zz")
-set_keymap('n', "<C-b>", "<C-b>zz")
-
--- moving visual blocks
-set_keymap('v', "J", ":m '>+1<CR>gv=gv")
-set_keymap('v', "K", ":m '<-2<CR>gv=gv")
-
--- Keeping the search term in the middle of the screen
-set_keymap('n', "n", "nzzzv")
-set_keymap('n', "N", "Nzzzv")
-
--- keeping the yanked content in the register after pasting over
-set_keymap('v', "p", "\"_dP")
-vim.keymap.set('v', '<leader>$$', vim.lsp.buf.format, {silent = true, buffer = 0})
+for _, value in ipairs(keymaps) do
+    set_keymap(
+        value[1],
+        value[2],
+        value[3]
+    )
+end
