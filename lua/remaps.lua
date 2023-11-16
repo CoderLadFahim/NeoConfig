@@ -101,6 +101,7 @@ local keymaps = {
     { 'n', "<leader>dc", ":DiffviewClose<CR>" },
 
     -- Misc
+    { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', '<leader>w', ':lua WRITE_FILE()<CR>' },
     { 'n', '<leader>ss', ':lua SOURCE_FILE()' },
     { 'n', '<leader>q', ':q!' },
@@ -114,7 +115,6 @@ local keymaps = {
     { 'n', '<leader>lz', ':Lazy <CR>' },
     { 'n', '<leader>fr', ':%s/' },
     { 'n', '<leader>taa', ':ToggleTermToggleAll<CR>' },
-    { 'v', '<leader>nm', ':%norm ' },
     { 'n', "<leader>cl", "Oconsole.log('')<LEFT><LEFT>" },
 
     { 't', '<esc>', [[<C-\><C-n>]] },
@@ -142,7 +142,6 @@ local keymaps = {
     { 'n', "dW", "diW" },
     { 'n', "cW", "ciW" },
     { 'n', "yW", "yiW" },
-
 }
 
 
