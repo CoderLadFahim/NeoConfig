@@ -101,7 +101,6 @@ local keymaps = {
     { 'n', "<leader>dc", ":DiffviewClose<CR>" },
 
     -- Misc
-    { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', '<leader>w', ':lua WRITE_FILE()<CR>' },
     { 'n', '<leader>ss', ':lua SOURCE_FILE()' },
     { 'n', '<leader>q', ':q!' },
@@ -115,6 +114,10 @@ local keymaps = {
     { 'n', '<leader>lz', ':Lazy <CR>' },
     { 'n', '<leader>fr', ':%s/' },
     { 'n', '<leader>taa', ':ToggleTermToggleAll<CR>' },
+    { 'v', '<leader>nm', ':%norm ' },
+    { 'n', "<leader>cl", "Oconsole.log('')<LEFT><LEFT>" },
+
+    { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', "n", "nzzzv" },
     { 'n', "N", "Nzzzv" },
     { 'n', '<LEFT>', ':lua print("use h")<CR>' },
@@ -129,9 +132,16 @@ local keymaps = {
     { 'n', "+", "<cmd>resize +4<CR>" },
     { 'n', "-", "<cmd>resize -4<CR>" },
     { 'n', ")", "<cmd>vertical resize -4<CR>" },
-    { 'v', '<leader>nm', ':%norm ' },
     { 'v', "J", ":m '>+1<CR>gv=gv" },
     { 'v', "K", ":m '<-2<CR>gv=gv" },
+
+    { 'n', "dw", "diw" },
+    { 'n', "cw", "ciw" },
+    { 'n', "yw", "yiw" },
+
+    { 'n', "dW", "diW" },
+    { 'n', "cW", "ciW" },
+    { 'n', "yW", "yiW" },
 
 }
 
