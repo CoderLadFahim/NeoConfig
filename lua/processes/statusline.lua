@@ -25,10 +25,9 @@ function UPDATE_STATUS_LINE()
     if (current_branch) then last_known_branch = current_branch end
 
     vim.opt.statusline = string.format(
-        "%s %s %s %s %s",
+        "%s %s %s %s",
         vim_mode and modes[vim_mode] or '_', 
-        current_dir, 
-        current_branch and current_branch or last_known_branch,
+        current_branch and 'git:' .. current_branch or last_known_branch,
         '%=',
         time
     ) 

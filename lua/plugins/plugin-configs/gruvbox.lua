@@ -21,6 +21,7 @@ gruvbox.setup({
     contrast = "hard", -- can be "hard", "soft" or empty string
     palette_overrides = {},
     overrides = {
+        ["@tag"] = { fg = gruvbox.palette.bright_red },
         ["@tag.delimiter"] = { fg = gruvbox.palette.bright_blue },
         IndentBlanklineChar = { fg = gruvbox.palette.gray },
         IndentBlanklineContextChar = { fg = gruvbox.palette.bright_green },

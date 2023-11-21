@@ -108,6 +108,7 @@ local keymaps = {
     { 'n', '<leader>v', '<C-v>' },
     { 'n', '<leader>fv', ':file<CR>' },
     { 'n', '<leader><esc>', ':nohls<CR>' },
+    { 'v', '<leader>nm', ':%norm ' },
     { 'n', '<leader>nm', ':%norm ' },
     { 'n', '<leader>ar', ':lua print()<LEFT>' },
     { 'n', '<leader>bq', ':b#|bd#' },
@@ -138,10 +139,7 @@ local keymaps = {
     { 'n', "dw", "diw" },
     { 'n', "cw", "ciw" },
     { 'n', "yw", "yiw" },
-
-    { 'n', "dW", "diW" },
-    { 'n', "cW", "ciW" },
-    { 'n', "yW", "yiW" },
+    { 'n', "vw", "viw" },
 }
 
 
