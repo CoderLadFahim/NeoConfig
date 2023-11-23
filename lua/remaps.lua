@@ -71,6 +71,7 @@ local keymaps = {
     { 'n', "<leader>ft", ":lua require('telescope.builtin').live_grep({type_filter = 'js'})" },
     { 'v', "<leader>fw", ":lua VISUAL_GREP_STRING()<CR>" },
     { 'n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>" },
+    { 'n', "<leader>mm", "<cmd>Telescope marks<CR>" },
 
     -- Fugitive
     { 'n', "<leader>ga.", ":G add ." },
@@ -135,6 +136,9 @@ local keymaps = {
     { 'n', ")", "<cmd>vertical resize -4<CR>" },
     { 'v', "J", ":m '>+1<CR>gv=gv" },
     { 'v', "K", ":m '<-2<CR>gv=gv" },
+
+    { 'i', "<C-h>", "<LEFT>" },
+    { 'i', "<C-l>", "<RIGHT>" },
 
     { 'n', "dw", "diw" },
     { 'n', "cw", "ciw" },

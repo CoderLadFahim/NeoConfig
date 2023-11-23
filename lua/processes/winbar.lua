@@ -6,8 +6,8 @@ function SET_WINBAR()
             "%s %s %s %s %s",
             GET_CURRENT_DIRECTORY() .. ':',
             "%f",
-            "%m",
             "%=",
+            "%m",
             "%y"
         )
     else 
