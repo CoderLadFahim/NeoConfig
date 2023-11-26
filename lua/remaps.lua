@@ -136,9 +136,11 @@ local keymaps = {
     { 'n', ")", "<cmd>vertical resize -4<CR>" },
     { 'v', "J", ":m '>+1<CR>gv=gv" },
     { 'v', "K", ":m '<-2<CR>gv=gv" },
+    { 'n', "<leader>cn", ":%s///gn<CR>" },
 
     { 'i', "<C-h>", "<LEFT>" },
     { 'i', "<C-l>", "<RIGHT>" },
+    { 'i', "<C-x>", "<Esc>xi" },
 
     { 'n', "dw", "diw" },
     { 'n', "cw", "ciw" },

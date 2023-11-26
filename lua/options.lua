@@ -1,5 +1,6 @@
 vim.loader.enable()
-vim.opt.backspace = vim.opt.backspace + { "nostop" } -- Don't stop backspace at insert
+-- vim.opt.backspace = vim.opt.backspace + { "nostop" } -- Don't stop backspace at insert
+vim.opt.backspace = '' -- Don't stop backspace at insert
 vim.opt.clipboard = "unnamedplus" -- Connection to the system clipboard
 vim.opt.completeopt = { "menuone", "noselect"  } -- Options for insert mode completion
 vim.opt.copyindent = true -- Copy the previous indentation on autoindenting
