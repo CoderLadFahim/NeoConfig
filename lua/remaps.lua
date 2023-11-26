@@ -82,6 +82,14 @@ local keymaps = {
     { 'n', "<leader>gv", ":Gvdiffsplit!<CR>" },
     { 'n', "<leader>gm", ":G blame<CR>" },
 
+    -- GtiConflict
+    { 'n', "<leader>2", ":GitConflictChooseOurs" },
+    { 'n', "<leader>3", ":GitConflictChooseTheirs" },
+    { 'n', "<leader>1", ":GitConflictChooseBoth" },
+    { 'n', "]z", ":GitConflictNextConflict<CR>" },
+    { 'n', "[z", ":GitConflictPrevConflict<CR>" },
+    { 'n', "<leader>cq", ":GitConflictListQf<CR>" },
+
     -- LspSaga
     { 'n', "<leader>dp", ":Lspsaga peek_definition<CR>" },
     { 'n', "<leader>tp", ":Lspsaga peek_type_definition<CR>" },
@@ -136,9 +144,11 @@ local keymaps = {
     { 'n', ")", "<cmd>vertical resize -4<CR>" },
     { 'v', "J", ":m '>+1<CR>gv=gv" },
     { 'v', "K", ":m '<-2<CR>gv=gv" },
+    { 'n', "<leader>cn", ":%s///gn<CR>" },
 
     { 'i', "<C-h>", "<LEFT>" },
     { 'i', "<C-l>", "<RIGHT>" },
+    { 'i', "<C-x>", "<Esc>xi" },
 
     { 'n', "dw", "diw" },
     { 'n', "cw", "ciw" },
