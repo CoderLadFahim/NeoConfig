@@ -23,9 +23,9 @@ gruvbox.setup({
     overrides = {
         ["@tag"] = { fg = gruvbox.palette.bright_red },
         ["@tag.delimiter"] = { fg = gruvbox.palette.bright_blue },
-        ["@function.call"] = { fg = gruvbox.palette.bright_aqua },
+        ["@string"] = { fg = gruvbox.palette.bright_yellow },
         IndentBlanklineChar = { fg = gruvbox.palette.gray },
-        IndentBlanklineContextChar = { fg = gruvbox.palette.bright_purple },
+        IndentBlanklineContextChar = { fg = gruvbox.palette.bright_green },
 
         ["TelescopePromptBorder"] =  { fg = gruvbox.palette.gray },
         ["TelescopePreviewBorder"] = { fg = gruvbox.palette.gray },
