@@ -37,6 +37,8 @@ gruvbox.setup({
         ["SignColumn"] = { bg = gruvbox.palette.dark0_hard },
         ["WinBarNC"] = { bg = gruvbox.palette.dark0_hard, fg = gruvbox.palette.dark4 },
         ["WinBar"] = { bg = gruvbox.palette.dark0_hard, fg = gruvbox.palette.light0_soft },
+        ["GitConflictCurrent"] = { bg = gruvbox.palette.dark0_soft },
+        ["GitConflictCurrentLabel"] = { fg = gruvbox.palette.dark0_hard, bg = gruvbox.palette.bright_yellow },
     },
     dim_inactive = false,
     transparent_mode = false,
