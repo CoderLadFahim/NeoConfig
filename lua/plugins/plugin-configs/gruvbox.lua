@@ -31,6 +31,8 @@ gruvbox.setup({
         ["TelescopePreviewBorder"] = { fg = gruvbox.palette.gray },
         ["TelescopeResultsBorder"] = { fg = gruvbox.palette.gray },
         ["TelescopeMatching"] = { fg = gruvbox.palette.bright_green },
+        ["TelescopeSelection"] = { fg = gruvbox.palette.neutral_aqua },
+
         ["GitSignsCurrentLineBlame"] = { fg = gruvbox.palette.dark4 },
         ["SignColumn"] = { bg = gruvbox.palette.dark0_hard },
         ["WinBarNC"] = { bg = gruvbox.palette.dark0_hard, fg = gruvbox.palette.dark4 },
