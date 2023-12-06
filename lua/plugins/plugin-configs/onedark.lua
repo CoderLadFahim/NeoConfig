@@ -45,7 +45,8 @@ onedark.setup({
         ["TelescopePreviewBorder"] = { fg = '$cyan' },
         ["TelescopeResultsBorder"] = { fg = '$cyan' },
         ["TelescopeMatching"] = { fg = '$green' },
-        ["VertSplit"] = { fg = '$cyan' },
+        -- ["VertSplit"] = { fg = '$cyan' },
+        ["WinbarNC"] = { fg = '$grey' },
 
         ["IndentBlanklineChar"] = { fg = '$grey' },
         ["IndentBlanklineContextChar"] = { fg = '$blue' },

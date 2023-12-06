@@ -21,7 +21,6 @@ telescope.setup(
                 'vendor',
                 'public/vendor',
                 'node_modules',
-                'public',
                 'composer.lock',
                 'package-lock.json',
                 'yarn.lock',
