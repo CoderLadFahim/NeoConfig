@@ -146,11 +146,6 @@ local keymaps = {
     { 'v', "K", ":m '<-2<CR>gv=gv" },
     { 'n', "<leader>cn", ":%s///gn<CR>" },
 
-    { 'i', "<LEFT>", "<Nop>" },
-    { 'i', "<DOWN>", "<Nop>" },
-    { 'i', "<RIGHT>", "<Nop>" },
-    { 'i', "<UP>", "<Nop>" },
-
     { 'i', "<C-h>", "<LEFT>" },
     { 'i', "<C-j>", "<DOWN>" },
     { 'i', "<C-l>", "<RIGHT>" },
