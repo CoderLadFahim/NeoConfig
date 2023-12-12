@@ -81,6 +81,8 @@ local keymaps = {
     { 'n', "<leader>gr.", ":G restore ." },
     { 'n', "<leader>gv", ":Gvdiffsplit!<CR>" },
     { 'n', "<leader>gm", ":G blame<CR>" },
+    { 'n', "<leader>gd", ":G pull origin dev" },
+    { 'n', "<leader>gp", ":G push origin -u HEAD" },
 
     -- GtiConflict
     { 'n', "<leader>2", ":GitConflictChooseOurs" },
@@ -145,6 +147,8 @@ local keymaps = {
     { 'v', "J", ":m '>+1<CR>gv=gv" },
     { 'v', "K", ":m '<-2<CR>gv=gv" },
     { 'n', "<leader>cn", ":%s///gn<CR>" },
+    { 'v', "<leader>r", [[:s/\%V]] },
+    { 'v', "<leader>-", [[:s/\%V /_/g<CR>]] },
 
     { 'i', "<C-h>", "<LEFT>" },
     { 'i', "<C-j>", "<DOWN>" },
