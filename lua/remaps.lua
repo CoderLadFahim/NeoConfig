@@ -72,6 +72,8 @@ local keymaps = {
     { 'v', "<leader>fw", ":lua VISUAL_GREP_STRING()<CR>" },
     { 'n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>" },
     { 'n', "<leader>mm", "<cmd>Telescope marks<CR>" },
+    { 'n', "<leader>cc", ":Telescope command_history<CR>" },
+    { 'n', "<leader>tt", ":Telescope builtin<CR>" },
 
     -- Fugitive
     { 'n', "<leader>ga.", ":G add ." },

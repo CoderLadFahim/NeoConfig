@@ -23,7 +23,7 @@ gruvbox.setup({
     overrides = {
         ["@tag"] = { fg = gruvbox.palette.bright_red },
         ["@tag.delimiter"] = { fg = gruvbox.palette.bright_blue },
-        ["@string"] = { fg = gruvbox.palette.bright_yellow },
+        -- ["@string"] = { fg = gruvbox.palette.bright_yellow },
         IndentBlanklineChar = { fg = gruvbox.palette.gray },
         IndentBlanklineContextChar = { fg = gruvbox.palette.bright_green },
 

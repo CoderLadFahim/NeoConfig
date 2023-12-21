@@ -56,7 +56,7 @@ local plugins = {
     'j-morano/buffer_manager.nvim',
 	'lewis6991/gitsigns.nvim',
     'navarasu/onedark.nvim',
-    'ellisonleao/gruvbox.nvim',
+    -- 'ellisonleao/gruvbox.nvim',
 
   	{ 'kylechui/nvim-surround', config = function() require('nvim-surround').setup({ tag = '*', }) end },
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4', dependencies = { {'nvim-lua/plenary.nvim'} } },
@@ -65,6 +65,7 @@ local plugins = {
 	{ 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup {} end },
 	{ 'nvim-tree/nvim-tree.lua', tag = 'nightly' },
    	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    { 'nvim-treesitter/nvim-treesitter-textobjects' },
     { 'glepnir/lspsaga.nvim', event = 'LspAttach' }, 
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
     { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },

@@ -10,12 +10,11 @@ local plugin_configs = {
     'mason',
     'null-ls',
     'prettier',
-    'gruvbox',
     'indent-blankline',
     'leapnvim',
     'buffermanager',
     'gitconflict',
-    'gruvbox',
+    -- 'gruvbox',
     'onedark',
 }
 
