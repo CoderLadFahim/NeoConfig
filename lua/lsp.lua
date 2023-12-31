@@ -53,7 +53,7 @@ local lsp_options = { on_attach = on_attach, flags = lsp_flags }
 
 local macos_ts_tsdk_location = '/usr/local/lib/node_modules/typescript/lib'
 local linux_ts_tsdk_location = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
-local linux_ts_tsdk_location2 = '/home/fahim/.nvm/versions/node/v18.18.2/lib/node_modules/typescript/lib'
+local linux_ts_tsdk_location2 = '/home/fahim/.nvm/versions/node/v20.10.0/lib/node_modules/typescript/lib'
 
 local tsdk_to_use = nil
 
