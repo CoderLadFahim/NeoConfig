@@ -46,7 +46,7 @@ gitsigns.setup({
   	current_line_blame_formatter = '<author>, <author_time:%a-%d-%b-%Y>',
     signs = {
         add          = { text = '+' },
-        change       = { text = '│' },
+        change       = { text = '|' },
         delete       = { text = '_' },
         topdelete    = { text = '‾' },
         changedelete = { text = '~' },

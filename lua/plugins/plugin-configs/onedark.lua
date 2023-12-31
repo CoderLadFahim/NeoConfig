@@ -41,9 +41,9 @@ onedark.setup({
         ["CursorLineNr"] = { fg = '#f1f1f1' },
 
         -- 1f2329
-        ["TelescopePromptBorder"] = { fg = '$cyan' },
-        ["TelescopePreviewBorder"] = { fg = '$cyan' },
-        ["TelescopeResultsBorder"] = { fg = '$cyan' },
+        ["TelescopePromptBorder"] = { fg = '$grey' },
+        ["TelescopePreviewBorder"] = { fg = '$grey' },
+        ["TelescopeResultsBorder"] = { fg = '$grey' },
         ["TelescopeMatching"] = { fg = '$green' },
         -- ["VertSplit"] = { fg = '$cyan' },
         ["WinbarNC"] = { fg = '$grey' },
@@ -60,4 +60,4 @@ onedark.setup({
     },
 })
 
-vim.cmd('colo onedark')
+-- vim.cmd('colo onedark')

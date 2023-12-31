@@ -74,6 +74,7 @@ local keymaps = {
     { 'n', "<leader>mm", "<cmd>Telescope marks<CR>" },
     { 'n', "<leader>cc", ":Telescope command_history<CR>" },
     { 'n', "<leader>tt", ":Telescope builtin<CR>" },
+    { 'n', "<leader>ld", ":Telescope diagnostics<CR>" },
 
     -- Fugitive
     { 'n', "<leader>ga.", ":G add ." },
@@ -94,15 +95,16 @@ local keymaps = {
     { 'n', "[z", ":GitConflictPrevConflict<CR>" },
     { 'n', "<leader>cq", ":GitConflictListQf<CR>" },
 
-    -- LspSaga
-    { 'n', "<leader>dp", ":Lspsaga peek_definition<CR>" },
-    { 'n', "<leader>tp", ":Lspsaga peek_type_definition<CR>" },
-    { 'n', "<leader>ld", ":Lspsaga show_buf_diagnostics<CR>" },
+    -- -- LspSaga
+    -- { 'n', "<leader>dp", ":Lspsaga peek_definition<CR>" },
+    -- { 'n', "<leader>tp", ":Lspsaga peek_type_definition<CR>" },
+    -- { 'n', "<leader>ld", ":Lspsaga show_buf_diagnostics<CR>" },
 
     -- NvimTree
-    { 'n', '<leader>tr', ":lua OPEN_NVIM_TREE('left')<CR>" },
-    { 'n', '<leader>tf', ":lua OPEN_NVIM_TREE('float')<CR>" },
-    { 'n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>" },
+    -- { 'n', '<leader>tr', ":lua OPEN_NVIM_TREE('left')<CR>" },
+    -- { 'n', '<leader>tf', ":lua OPEN_NVIM_TREE('float')<CR>" },
+    -- { 'n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>" },
+    { 'n', '<leader>tr', ":Oil<CR>" },
 
     -- Buffer manager
     { 'n', '<leader>bf', ':lua require("buffer_manager.ui").toggle_quick_menu()<CR>' },

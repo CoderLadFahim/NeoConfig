@@ -1,5 +1,5 @@
 local plugin_configs = {
-    'nvimtree',
+    'oil',
     'treesitter',
     'commentnvim',
     'telescope',
@@ -14,8 +14,8 @@ local plugin_configs = {
     'leapnvim',
     'buffermanager',
     'gitconflict',
-    -- 'gruvbox',
-    'onedark',
+    'gruvbox',
+    -- 'onedark',
 }
 
 for _, value in ipairs(plugin_configs) do
