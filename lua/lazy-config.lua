@@ -35,7 +35,6 @@ local options = {
 local plugins = {
   	'nvim-lua/plenary.nvim',
 	'JoosepAlviste/nvim-ts-context-commentstring',
-	'mg979/vim-visual-multi',
 	'hrsh7th/nvim-cmp',
 	'hrsh7th/cmp-buffer',
 	'hrsh7th/cmp-path',
@@ -50,7 +49,6 @@ local plugins = {
 	'MunifTanjim/prettier.nvim',
    	'tpope/vim-fugitive',
 	'ggandor/leap.nvim',
-    'jwalton512/vim-blade',
     'sindrets/diffview.nvim',
     'akinsho/git-conflict.nvim',
     'j-morano/buffer_manager.nvim',

@@ -38,6 +38,7 @@ NEOVIM
     * LSPs to install:
         * intelephense
         * pyright
+        * tailwindcss
         * volar
             * Make sure the tsdk is pointing to the global typescript installation in the nvm dir for nodejs
 

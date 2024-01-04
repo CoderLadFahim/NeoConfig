@@ -1,10 +1,10 @@
-local status_ok, null_ls = pcall(require, "null-ls")
+local status_ok, none_ls = pcall(require, "none-ls")
 if not status_ok then return end
--- null_ls.setup(astronvim.user_plugin_opts "plugins.null-ls")
+-- null_ls.setup(astronvim.user_plugin_opts "plugins.none-ls")
 
--- local null_ls = require("null-ls")
+-- local null_ls = require("none-ls")
 
-null_ls.setup({
+none_ls.setup({
   	on_attach = function(client, bufnr)
     	if client.server_capabilities.documentFormattingProvider then
       	    vim.cmd("nnoremap <silent><buffer> <Leader>$$ :lua vim.lsp.buf.format()<CR>")

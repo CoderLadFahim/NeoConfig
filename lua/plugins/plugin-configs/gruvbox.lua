@@ -1,4 +1,7 @@
-local gruvbox = require("gruvbox")
+local gruvbox_status_ok, gruvbox = pcall(require, 'gruvbox')
+if not gruvbox_status_ok then
+	return
+end
 
 gruvbox.setup({
     terminal_colors = true, -- add neovim terminal colors

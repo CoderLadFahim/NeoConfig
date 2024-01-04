@@ -8,7 +8,7 @@ local plugin_configs = {
     'gitsigns',
     'cmp',
     'mason',
-    'null-ls',
+    'none-ls',
     'prettier',
     'indent-blankline',
     'leapnvim',

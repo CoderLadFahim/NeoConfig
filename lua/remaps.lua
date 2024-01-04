@@ -75,6 +75,8 @@ local keymaps = {
     { 'n', "<leader>cc", ":Telescope command_history<CR>" },
     { 'n', "<leader>tt", ":Telescope builtin<CR>" },
     { 'n', "<leader>ld", ":Telescope diagnostics<CR>" },
+    { 'n', "<leader>jl", ":Telescope jumplist<CR>" },
+    { 'n', "<leader>rg", ":Telescope registers<CR>" },
 
     -- Fugitive
     { 'n', "<leader>ga.", ":G add ." },
