@@ -14,7 +14,8 @@ local plugin_configs = {
     'leapnvim',
     'buffermanager',
     'gitconflict',
-    'gruvbox',
+    'kanagawa'
+    -- 'gruvbox',
     -- 'onedark',
 }
 
