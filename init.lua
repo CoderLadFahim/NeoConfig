@@ -16,6 +16,9 @@ require('processes');
 
 function SET_COLORSCHEME()
 	vim.cmd('colo ' .. GET_GLOBAL_COLOR_SCHEME())
+
+    vim.cmd("hi WinBar guifg='#c5c9c5'")
+    vim.cmd("hi WinBarNC guifg='#727169'")
 end
 
 SET_COLORSCHEME()

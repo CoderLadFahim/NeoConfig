@@ -15,7 +15,10 @@ kanagawa.setup({
     dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
     colors = {                   -- add/modify theme and palette colors
-        palette = {},
+        palette = {
+            -- dragonYellow = '#7f8fa6',
+            dragonYellow = '#8ea1bd',
+        },
         theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
     },
     overrides = function(colors)
@@ -25,9 +28,8 @@ kanagawa.setup({
             TelescopeMatching = { fg = colors.palette.springGreen, bold = true },
             Search = { bg = colors.palette.carpYellow, fg = colors.palette.sumiInk1 },
             StatusLine = { fg = colors.palette.dragonWhite },
-            WinBar = { fg = colors.palette.dragonWhite, bold = true },
-            WinBarNC = { fg = colors.palette.fujiGray, bold = true },
             CursorLineNr = { fg = colors.palette.dragonWhite },
+            ["@tag"] = { fg = colors.palette.dragonRed },
         }
     end,
     theme = "wave",              -- Load "wave" theme when 'background' option is not set
@@ -36,6 +38,7 @@ kanagawa.setup({
         light = "lotus"
     },
 })
+
 --
 -- sumiInk0 = "#16161D",
 -- sumiInk1 = "#181820",

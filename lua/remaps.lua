@@ -77,6 +77,7 @@ local keymaps = {
     { 'n', "<leader>ld", ":Telescope diagnostics<CR>" },
     { 'n', "<leader>jl", ":Telescope jumplist<CR>" },
     { 'n', "<leader>rg", ":Telescope registers<CR>" },
+    { 'n', "<leader>bb", ":Telescope current_buffer_fuzzy_find<CR>" },
 
     -- Fugitive
     { 'n', "<leader>ga.", ":G add ." },
@@ -116,6 +117,7 @@ local keymaps = {
     -- DiffView
     { 'n', "<leader>do", ":DiffviewOpen " },
     { 'n', "<leader>dc", ":DiffviewClose<CR>" },
+    { 'n', "<leader>df", ":DiffviewFileHistory %" },
 
     -- Misc
     { 't', '<esc>', [[<C-\><C-n>]] },

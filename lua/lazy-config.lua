@@ -51,6 +51,7 @@ local plugins = {
 	'ggandor/leap.nvim',
     'sindrets/diffview.nvim',
     'akinsho/git-conflict.nvim',
+	'mg979/vim-visual-multi',
     'j-morano/buffer_manager.nvim',
 	'lewis6991/gitsigns.nvim',
     -- 'navarasu/onedark.nvim',
