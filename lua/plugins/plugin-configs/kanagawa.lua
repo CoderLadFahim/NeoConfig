@@ -24,7 +24,7 @@ kanagawa.setup({
     overrides = function(colors)
         return {
             LineNr = { fg = colors.palette.dragonGray3, bold = true },
-            IndentBlanklineContextChar = { fg = colors.palette.springGreen, bold = true },
+            IndentBlanklineContextChar = { fg = colors.palette.dragonYellow, bold = true },
             TelescopeMatching = { fg = colors.palette.springGreen, bold = true },
             Search = { bg = colors.palette.carpYellow, fg = colors.palette.sumiInk1 },
             StatusLine = { fg = colors.palette.dragonWhite },
