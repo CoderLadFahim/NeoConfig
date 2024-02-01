@@ -91,9 +91,9 @@ local keymaps = {
     { 'n', "<leader>gp", ":G push origin -u HEAD" },
 
     -- GtiConflict
-    { 'n', "<leader>2", ":GitConflictChooseOurs" },
-    { 'n', "<leader>3", ":GitConflictChooseTheirs" },
-    { 'n', "<leader>1", ":GitConflictChooseBoth" },
+    { 'n', "<leader>go", ":GitConflictChooseOurs" },
+    { 'n', "<leader>gt", ":GitConflictChooseTheirs" },
+    { 'n', "<leader>ga", ":GitConflictChooseBoth" },
     { 'n', "]z", ":GitConflictNextConflict<CR>" },
     { 'n', "[z", ":GitConflictPrevConflict<CR>" },
     { 'n', "<leader>cq", ":GitConflictListQf<CR>" },
@@ -103,21 +103,31 @@ local keymaps = {
     -- { 'n', "<leader>tp", ":Lspsaga peek_type_definition<CR>" },
     -- { 'n', "<leader>ld", ":Lspsaga show_buf_diagnostics<CR>" },
 
-    -- NvimTree
-    -- { 'n', '<leader>tr', ":lua OPEN_NVIM_TREE('left')<CR>" },
-    -- { 'n', '<leader>tf', ":lua OPEN_NVIM_TREE('float')<CR>" },
-    -- { 'n', '<leader>ty', ":lua OPEN_NVIM_TREE('right')<CR>" },
+    -- Oil
     { 'n', '<leader>tr', ":Oil<CR>" },
 
-    -- Buffer manager
-    { 'n', '<leader>bf', ':lua require("buffer_manager.ui").toggle_quick_menu()<CR>' },
-    { 'n', '}', ':lua require("buffer_manager.ui").nav_next()<CR>' },
-    { 'n', '{', ':lua require("buffer_manager.ui").nav_prev()<CR>' },
+    -- -- Buffer manager
+    -- { 'n', '<leader>bf', ':lua require("buffer_manager.ui").toggle_quick_menu()<CR>' },
+    -- { 'n', '}', ':lua require("buffer_manager.ui").nav_next()<CR>' },
+    -- { 'n', '{', ':lua require("buffer_manager.ui").nav_prev()<CR>' },
 
     -- DiffView
     { 'n', "<leader>do", ":DiffviewOpen " },
     { 'n', "<leader>dc", ":DiffviewClose<CR>" },
     { 'n', "<leader>df", ":DiffviewFileHistory %" },
+
+    -- Harpoon
+    { 'n', "<leader>a", ":lua require('harpoon.mark').add_file()<CR>" },
+    { 'n', "<leader>hp", ":lua require('harpoon.ui').toggle_quick_menu()<CR>" },
+    { 'n', "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>"},
+    { 'n', "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>"},
+    { 'n', "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>"},
+    { 'n', "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>"},
+    { 'n', "<leader>5", ":lua require('harpoon.ui').nav_file(5)<CR>"},
+    { 'n', "<leader>6", ":lua require('harpoon.ui').nav_file(6)<CR>"},
+    { 'n', "<leader>7", ":lua require('harpoon.ui').nav_file(7)<CR>"},
+    { 'n', "<leader>8", ":lua require('harpoon.ui').nav_file(8)<CR>"},
+    { 'n', "<leader>9", ":lua require('harpoon.ui').nav_file(9)<CR>"},
 
     -- Misc
     { 't', '<esc>', [[<C-\><C-n>]] },
@@ -135,7 +145,8 @@ local keymaps = {
     { 'n', '<leader>lz', ':Lazy <CR>' },
     { 'n', '<leader>fr', ':%s/' },
     { 'n', '<leader>taa', ':ToggleTermToggleAll<CR>' },
-    { 'n', "<leader>cl", "Oconsole.log('')<LEFT><LEFT>" },
+    { 'n', '<leader>bd', ':%bd|e#' },
+    { 'n', "<leader>cl", "Oconsole.log()<LEFT><LEFT>" },
 
     { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', "n", "nzzzv" },

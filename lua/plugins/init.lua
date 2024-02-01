@@ -12,7 +12,7 @@ local plugin_configs = {
     'prettier',
     'indent-blankline',
     'leapnvim',
-    'buffermanager',
+    -- 'buffermanager',
     'gitconflict',
     'kanagawa',
     -- 'gruvbox',
@@ -24,3 +24,11 @@ for _, value in ipairs(plugin_configs) do
     require(path);
 end
 
+local cols = vim.api.nvim_get_option("columns")
+local float_win_width = math.floor((70 / 100) * cols)
+
+require("harpoon").setup({
+    menu = {
+        width = float_win_width,
+    }
+})
