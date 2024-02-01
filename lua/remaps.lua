@@ -146,7 +146,7 @@ local keymaps = {
     { 'n', '<leader>fr', ':%s/' },
     { 'n', '<leader>taa', ':ToggleTermToggleAll<CR>' },
     { 'n', '<leader>bd', ':%bd|e#' },
-    { 'n', "<leader>cl", "Oconsole.log()<LEFT><LEFT>" },
+    { 'n', "<leader>cl", "Oconsole.log()<LEFT>" },
 
     { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', "n", "nzzzv" },
