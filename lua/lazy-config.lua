@@ -54,10 +54,11 @@ local plugins = {
 	'mg979/vim-visual-multi',
     -- 'j-morano/buffer_manager.nvim',
 	'lewis6991/gitsigns.nvim',
-    -- 'navarasu/onedark.nvim',
+    'navarasu/onedark.nvim',
     -- 'ellisonleao/gruvbox.nvim',
     'rebelot/kanagawa.nvim',
     'ThePrimeagen/harpoon',
+    -- 'rose-pine/neovim',
 
   	{ 'kylechui/nvim-surround', config = function() require('nvim-surround').setup({ tag = '*', }) end },
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4', dependencies = { {'nvim-lua/plenary.nvim'} } },
