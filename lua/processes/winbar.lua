@@ -15,11 +15,9 @@ function SET_WINBAR()
     end
 end
 
--- vim.api.nvim_create_autocmd('ModeChanged', {
---     pattern = '*',
---     callback = function()
---         SET_WINBAR()
---     end
--- })
---
+vim.api.nvim_create_autocmd('ModeChanged', {
+    pattern = '*',
+    callback = SET_WINBAR
+})
+
 SET_WINBAR()
