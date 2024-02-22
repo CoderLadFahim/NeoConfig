@@ -1,5 +1,5 @@
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'kanagawa-dragon'
+	return 'rose-pine'
 end
 
 function ENABLE_ICONS()
@@ -17,8 +17,8 @@ require('processes');
 function SET_COLORSCHEME()
 	vim.cmd('colo ' .. GET_GLOBAL_COLOR_SCHEME())
 
-    vim.cmd("hi WinBar guifg='#c5c9c5'")
-    vim.cmd("hi WinBarNC guifg='#727169'")
+    -- vim.cmd("hi WinBar guifg='#c5c9c5'")
+    -- vim.cmd("hi WinBarNC guifg='#727169'")
 end
 
 SET_COLORSCHEME()

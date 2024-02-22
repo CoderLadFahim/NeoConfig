@@ -1,12 +1,16 @@
-MERCURY
-    * download and install mercury browser
-        ** Link: https://linuxtldr.com/installing-mercury-browser/
+FireFox
     * install betterfox
     * install ublock origin
     * install vue devtools
     * install better youtube shorts
     * install dislike button by KellyC
+    * install tabnumbers
     * install react devtools (optional)
+
+MERCURY BROWSER (optional)
+    * download and install mercury browser
+        ** Link: https://linuxtldr.com/installing-mercury-browser/
+    * same extensions as firefox
 
 GIT
     * Install git
@@ -29,9 +33,30 @@ NODEJS
     * Install the LTS node version
     * Install typescript globally
 
+ALACRITTY
+    * Install alacritty from snap
+        ** `sudo snap install alacritty --classic`
+    * clone the alacritty config
+
+TMUX
+    * Install tmux
+    * clone the tmux config
+
+ZSH
+    * OhMyZsh
+    * clone zshconfig
+    * plugins
+        ** fish like autosuggestions
+        ** syntax higlighting
+        ** command-not-found
+
+FZF
+    * Install fzf
+
 NEOVIM
     * install neovim
         ** Link: https://github.com/neovim/neovim/blob/master/BUILD.md
+        ** git checkout stable
     * Clone NeoConfig
     * Install ripgrep
     * Install g++
@@ -42,26 +67,18 @@ NEOVIM
         * volar
             * Make sure the tsdk is pointing to the global typescript installation in the nvm dir for nodejs
 
-ALACRITTY
-    * Install alacritty from snap
-        ** `sudo snap install alacritty --classic`
-    * clone the alacritty config
-
-ZSH
-    * OhMyZsh
-    * clone zshconfig
-    * plugins
-        ** fish like autosuggestions
-        ** syntax higlighting
-        ** command-not-found
-
 I3
+    * Install FiraCode nerdfont
     * Clone the i3config
 
 VLC
-    * Install vlc
-        ** `sudo snap install vlc`
+    * `sudo snap install vlc`
+
+Brave
+    * sudo snap install brave
+
+Discord
+    * sudo snap install discord
 
 WHATSAPP-FOR-LINUX
-    * Install whatsapp
-        ** `sudo snap install whatsapp-for-linux`
+    * `sudo snap install whatsapp-for-linux`

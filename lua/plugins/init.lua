@@ -15,9 +15,9 @@ local plugin_configs = {
     -- 'buffermanager',
     'gitconflict',
     'kanagawa',
-    -- 'rose-pine',
-    -- 'gruvbox',
-    -- 'onedark',
+    'rose-pine',
+    'gruvbox',
+    'onedark',
 }
 
 for _, value in ipairs(plugin_configs) do
