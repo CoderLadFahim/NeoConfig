@@ -98,18 +98,8 @@ local keymaps = {
     { 'n', "[z", ":GitConflictPrevConflict<CR>" },
     { 'n', "<leader>cq", ":GitConflictListQf<CR>" },
 
-    -- -- LspSaga
-    -- { 'n', "<leader>dp", ":Lspsaga peek_definition<CR>" },
-    -- { 'n', "<leader>tp", ":Lspsaga peek_type_definition<CR>" },
-    -- { 'n', "<leader>ld", ":Lspsaga show_buf_diagnostics<CR>" },
-
     -- Oil
     { 'n', '<leader>tr', ":Oil<CR>" },
-
-    -- -- Buffer manager
-    -- { 'n', '<leader>bf', ':lua require("buffer_manager.ui").toggle_quick_menu()<CR>' },
-    -- { 'n', '}', ':lua require("buffer_manager.ui").nav_next()<CR>' },
-    -- { 'n', '{', ':lua require("buffer_manager.ui").nav_prev()<CR>' },
 
     -- DiffView
     { 'n', "<leader>do", ":DiffviewOpen " },
@@ -128,6 +118,16 @@ local keymaps = {
     { 'n', "<leader>7", ":lua require('harpoon.ui').nav_file(7)<CR>"},
     { 'n', "<leader>8", ":lua require('harpoon.ui').nav_file(8)<CR>"},
     { 'n', "<leader>9", ":lua require('harpoon.ui').nav_file(9)<CR>"},
+
+    { 'n', "1<leader><space>", ":lua require('harpoon.term').gotoTerminal(1)<CR>"},
+    { 'n', "2<leader><space>", ":lua require('harpoon.term').gotoTerminal(2)<CR>"},
+    { 'n', "3<leader><space>", ":lua require('harpoon.term').gotoTerminal(3)<CR>"},
+    { 'n', "4<leader><space>", ":lua require('harpoon.term').gotoTerminal(4)<CR>"},
+    { 'n', "5<leader><space>", ":lua require('harpoon.term').gotoTerminal(5)<CR>"},
+    { 'n', "6<leader><space>", ":lua require('harpoon.term').gotoTerminal(6)<CR>"},
+    { 'n', "7<leader><space>", ":lua require('harpoon.term').gotoTerminal(7)<CR>"},
+    { 'n', "8<leader><space>", ":lua require('harpoon.term').gotoTerminal(8)<CR>"},
+    { 'n', "9<leader><space>", ":lua require('harpoon.term').gotoTerminal(9)<CR>"},
 
     -- Misc
     { 't', '<esc>', [[<C-\><C-n>]] },

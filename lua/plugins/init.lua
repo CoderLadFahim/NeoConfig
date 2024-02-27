@@ -3,7 +3,7 @@ local plugin_configs = {
     'treesitter',
     'commentnvim',
     'telescope',
-    'toggleterm',
+    -- 'toggleterm',
     'auto-pairs',
     'gitsigns',
     'cmp',

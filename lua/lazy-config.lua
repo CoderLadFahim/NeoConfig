@@ -63,7 +63,7 @@ local plugins = {
   	{ 'kylechui/nvim-surround', config = function() require('nvim-surround').setup({ tag = '*', }) end },
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4', dependencies = { {'nvim-lua/plenary.nvim'} } },
 	{ 'numToStr/Comment.nvim', config = function() require('Comment').setup() end },
-	{ 'akinsho/toggleterm.nvim', config = function() require('toggleterm').setup() end },
+	-- { 'akinsho/toggleterm.nvim', config = function() require('toggleterm').setup() end },
 	{ 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup {} end },
 	-- { 'nvim-tree/nvim-tree.lua', tag = 'nightly' },
     { 'stevearc/oil.nvim' },
