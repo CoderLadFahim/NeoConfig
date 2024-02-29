@@ -40,20 +40,3 @@ vim.opt.foldmethod = "manual" -- for folds to work properly
 
 vim.opt.termguicolors = true -- set termguicolors to enable highlight groups
 
-function InsertLeave()
-	vim.opt.timeoutlen = 300
-end
-
-function InsertEnter()
-	vim.opt.timeoutlen = 0
-end
-
-vim.api.nvim_create_autocmd('InsertEnter', {
-    pattern = '*',
-    callback = InsertEnter
-})
-
-vim.api.nvim_create_autocmd('InsertLeave', {
-    pattern = '*',
-    callback = InsertLeave
-})
