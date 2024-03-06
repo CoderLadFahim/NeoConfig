@@ -55,7 +55,10 @@ rose_pine.setup({
     highlight_groups = {
         -- Comment = { fg = "foam" },
         IndentBlanklineContextChar = { fg = 'foam' },
+        LineNr = { fg = 'subtle' },
         WinBar = { fg = 'iris' },
+        GitConflictAncestor = { bg = 'subtle' },
+        GitConflictAncestorLabel = { bg = 'subtle' },
     },
 
     before_highlight = function(group, highlight, palette)
