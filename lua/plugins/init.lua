@@ -20,6 +20,13 @@ local plugin_configs = {
     'onedark',
 }
 
+vim.api.nvim_create_autocmd('TermOpen', {
+    pattern = '*',
+    callback = function()
+        vim.cmd('setlocal nonumber norelativenumber')
+    end
+})
+
 for _, value in ipairs(plugin_configs) do
     local path = 'plugins.plugin-configs.' .. value;
     require(path);
