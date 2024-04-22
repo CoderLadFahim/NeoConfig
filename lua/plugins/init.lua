@@ -18,6 +18,7 @@ local plugin_configs = {
     'rose-pine',
     'gruvbox',
     'onedark',
+    'monokai',
 }
 
 vim.api.nvim_create_autocmd('TermOpen', {
