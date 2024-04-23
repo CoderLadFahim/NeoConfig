@@ -1,4 +1,4 @@
-local file_types = {'jpg', 'jpeg', 'png', 'webp', 'svg', 'pdf', 'doc', 'docx'}
+local file_types = {'jpg', 'jpeg', 'png', 'webp', 'pdf', 'doc', 'docx'}
 
 function get_extensions()
     local extensions = {}
