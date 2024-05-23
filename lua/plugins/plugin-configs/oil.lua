@@ -26,7 +26,9 @@ oil.setup({
     skip_confirm_for_simple_edits = true,
     prompt_save_on_select_new_entry = true,
     cleanup_delay_ms = 2000,
-    lsp_rename_autosave = false,
+    lsp_file_methods = {
+        autosave_changes = false
+    },
     constrain_cursor = "editable",
     keymaps = {
         ["g?"] = "actions.show_help",

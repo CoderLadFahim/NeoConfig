@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd('BufRead', {
 
         vim.cmd('!open ' .. file_path)
         vim.cmd('b#|bd#')
-        vim.cmd('brev')
+        vim.cmd('bprev')
         -- vim.cmd('Oil ' .. file_dir)
     end
 })
