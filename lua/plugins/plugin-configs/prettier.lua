@@ -35,7 +35,7 @@ prettier.setup({
      	prose_wrap = "preserve",
      	quote_props = "as-needed",
      	semi = false,
-     	single_attribute_per_line = false,
+     	single_attribute_per_line = true,
      	single_quote = true,
      	trailing_comma = "es5",
      	config_precedence = "file-override",

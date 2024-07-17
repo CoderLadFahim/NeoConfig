@@ -25,7 +25,7 @@ kanagawa.setup({
         return {
             LineNr = { fg = colors.palette.dragonGray3, bold = true },
             IndentBlanklineContextChar = { fg = colors.palette.dragonYellow, bold = true },
-            TelescopeMatching = { fg = colors.palette.springGreen, bold = true },
+            TelescopeMatching = { fg = colors.palette.dragonRed, bold = true },
             Search = { bg = colors.palette.carpYellow, fg = colors.palette.sumiInk1 },
             StatusLine = { fg = colors.palette.dragonWhite },
             CursorLineNr = { fg = colors.palette.dragonWhite },

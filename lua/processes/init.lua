@@ -7,6 +7,7 @@ local process_modules= {
     'statusline',
     'winbar',
     'non_text_file_previews',
+    'hightlight_overrides',
 }
 
 for _, value in ipairs(process_modules) do

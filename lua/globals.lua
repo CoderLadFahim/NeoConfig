@@ -12,3 +12,8 @@ vim.g.sonokai_diagnostic_virtual_text = 'colored'
 vim.g.sonokai_transparent_background = 0
 
 vim.g.indent_blankline_char = '┊'
+
+vim.g.dbs = {
+    pylon_crm_database = 'mysql://root:password@localhost/pylon_crm_database',
+    portal = 'mysql://root:password@localhost/portal'
+}
