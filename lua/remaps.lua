@@ -155,6 +155,7 @@ local keymaps = {
     { 'n', '<DOWN>', ':lua print("use j")<CR>' },
     { 'n', '<UP>', ':lua print("use k")<CR>' },
     { 'n', '<RIGHT>', ':lua print("use l")<CR>' },
+    { 'i', '<LEFT>', '<esc>' },
     { 'n', "<C-d>", "<C-d>zz" },
     { 'n', "<C-u>", "<C-u>zz" },
     { 'n', "<C-f>", "<C-f>zz" },
@@ -168,7 +169,9 @@ local keymaps = {
     { 'n', "<leader>cn", ":%s///gn<CR>" },
     { 'v', "<leader>r", [[:s/\%V]] },
     { 'v', "<leader>-", [[:s/\%V /_/g<CR>]] },
+    { 'n', "vv", "V" },
 
+    { 'n', "<leader>sq", ":DBUIToggle<CR>" },
     { 'i', "<C-h>", "<LEFT>" },
     { 'i', "<C-l>", "<RIGHT>" },
 

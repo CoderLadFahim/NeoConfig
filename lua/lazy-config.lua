@@ -54,12 +54,30 @@ local plugins = {
 	'mg979/vim-visual-multi',
     -- 'j-morano/buffer_manager.nvim',
 	'lewis6991/gitsigns.nvim',
-    -- 'navarasu/onedark.nvim',
+    'navarasu/onedark.nvim',
     -- 'ellisonleao/gruvbox.nvim',
-    'rebelot/kanagawa.nvim',
+    -- 'rebelot/kanagawa.nvim',
     'ThePrimeagen/harpoon',
-    -- 'rose-pine/neovim',
-    -- 'jwalton512/vim-blade',
+    'jwalton512/vim-blade',
+    -- 'slugbyte/lackluster.nvim',
+
+    {
+        'kristijanhusak/vim-dadbod-ui',
+        dependencies = {
+            { 'tpope/vim-dadbod', lazy = true },
+            { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
+        },
+        cmd = {
+            'DBUI',
+            'DBUIToggle',
+            'DBUIAddConnection',
+            'DBUIFindBuffer',
+        },
+        init = function()
+            -- Your DBUI configuration
+            vim.g.db_ui_use_nerd_fonts = 0
+        end,
+    },
 
   	{ 'kylechui/nvim-surround', config = function() require('nvim-surround').setup({ tag = '*', }) end },
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4', dependencies = { {'nvim-lua/plenary.nvim'} } },

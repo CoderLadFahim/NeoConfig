@@ -69,12 +69,16 @@ else
 	tsdk_to_use = macos_ts_tsdk_location 
 end
 
-local volar_options = {
-  	init_options = {
-    	typescript = {
-      		tsdk = tsdk_to_use
-    	}
-  	},
+local tsserver_options = {
+    init_options = {
+        plugins = {
+            {
+                name = "@vue/typescript-plugin",
+                location = "/home/fahim/.nvm/versions/node/v20.13.1/lib/node_modules/@vue/typescript-plugin",
+                languages = {"javascript", "typescript", "vue"},
+            },
+        },
+    },
   	filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
   	on_attach = on_attach,
   	flags = lsp_flags
@@ -83,11 +87,11 @@ local volar_options = {
 neovim_lsp['intelephense'].setup(lsp_options)
 neovim_lsp['pyright'].setup(lsp_options)
 -- neovim_lsp['tsserver'].setup(lsp_options)
-neovim_lsp['volar'].setup(volar_options)
+neovim_lsp['tsserver'].setup(tsserver_options)
 
 neovim_lsp['tailwindcss'].setup({});
 neovim_lsp['emmet_ls'].setup({
-	filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'javascript', 'typescript', 'php' }
+	filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'javascript', 'typescript', 'php', 'vue' }
 })
 
 
