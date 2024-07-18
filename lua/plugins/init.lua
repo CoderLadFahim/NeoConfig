@@ -19,6 +19,7 @@ local plugin_configs = {
     'gruvbox',
     'onedark',
     'monokai',
+    'harpoon',
 }
 
 vim.api.nvim_create_autocmd('TermOpen', {
