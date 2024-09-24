@@ -32,9 +32,9 @@ vim.opt.tabstop = 4 -- Number of space in a tab
 vim.opt.termguicolors = true -- Enable 24-bit RGB color in the TUI
 vim.opt.undofile = true -- Enable persistent undo
 vim.opt.updatetime = 300 -- Length of time to wait before triggering the plugin
-vim.opt.wrap = false -- Disable wrapping of lines longer than the width of window
+vim.opt.wrap = true -- Disable wrapping of lines longer than the width of window
 vim.opt.writebackup = false -- Disable making a backup before overwriting a file
-vim.opt.guicursor = "" -- Keeps the cursor fat in insert mode
+-- vim.opt.guicursor = "" -- Keeps the cursor fat in insert mode
 vim.opt.cc = "135" -- color column
 vim.opt.foldmethod = "manual" -- for folds to work properly
 

@@ -1,5 +1,5 @@
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'onedark'
+	return 'moonfly'
 end
 
 function ENABLE_ICONS()

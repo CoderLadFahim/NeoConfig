@@ -54,12 +54,22 @@ local plugins = {
 	'mg979/vim-visual-multi',
     -- 'j-morano/buffer_manager.nvim',
 	'lewis6991/gitsigns.nvim',
-    'navarasu/onedark.nvim',
+    -- 'navarasu/onedark.nvim',
     -- 'ellisonleao/gruvbox.nvim',
     -- 'rebelot/kanagawa.nvim',
     'ThePrimeagen/harpoon',
     'jwalton512/vim-blade',
+    'norcalli/nvim-colorizer.lua',
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     -- 'slugbyte/lackluster.nvim',
+    -- { "blazkowolf/gruber-darker.nvim" },
+    -- {
+    --     'ferdinandrau/lavish.nvim',
+    --     priority = 1000,
+    --     config = function()
+    --         require('lavish').apply()
+    --     end
+    -- },
 
     {
         'kristijanhusak/vim-dadbod-ui',

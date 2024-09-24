@@ -27,7 +27,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 local on_attach = function(client, bufnr)
   	-- Mappings.
   	-- See `:help vim.lsp.*` for documentation on any of the below functions
-    vim.diagnostic.config({ virtual_text = false })	
+    vim.diagnostic.config({ virtual_text = true })	
   	local bufopts = { noremap=true, silent=true, buffer=bufnr }
   	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   	vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
@@ -74,7 +74,7 @@ local tsserver_options = {
         plugins = {
             {
                 name = "@vue/typescript-plugin",
-                location = "/home/fahim/.nvm/versions/node/v20.13.1/lib/node_modules/@vue/typescript-plugin",
+                location = "/home/fahim/.config/nvm/versions/node/v20.11.1/lib/node_modules/@vue/typescript-plugin",
                 languages = {"javascript", "typescript", "vue"},
             },
         },
