@@ -35,15 +35,15 @@ prettier.setup({
      	prose_wrap = "preserve",
      	quote_props = "as-needed",
      	semi = false,
-     	single_attribute_per_line = true,
+     	single_attribute_per_line = false,
      	single_quote = true,
      	trailing_comma = "es5",
      	config_precedence = "file-override",
      	-- use_tabs = false,
      	-- tab_width = 4,
      	--
-     	use_tabs = true,
-     	tab_width = 5,
+     	use_tabs = false,
+     	tab_width = 4,
      	vue_indent_script_and_style = false,
   	},
 })

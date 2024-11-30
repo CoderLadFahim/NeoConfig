@@ -15,5 +15,6 @@ vim.g.indent_blankline_char = '┊'
 
 vim.g.dbs = {
     pylon_crm_database = 'mysql://root:password@localhost/pylon_crm_database',
-    portal = 'mysql://root:password@localhost/portal'
+    portal = 'mysql://root:password@localhost/portal',
+    world = 'mysql://root:password@localhost/world'
 }

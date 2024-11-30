@@ -3,6 +3,16 @@ function GET_CURRENT_DIRECTORY()
     return vim.fn.fnamemodify(path, ':t')
 end
 
+function GET_WORK_PERCENTAGE()
+    local starting_hour = 7
+    local ending_hour = 15
+    local target_seconds = (ending_hour - starting_hour) * 3600
+    local current_minute_in_seconds = os.date('%M') * 60
+    local total_seconds_passed = (os.date('%H') - starting_hour) * 3600 + current_minute_in_seconds
+
+    local working_percentage = math.floor(((total_seconds_passed / target_seconds) * 100 ) + 0.5)
+    print(working_percentage .. '%')
+end
 
 local modes = {
     n = "NORMAL",

@@ -133,6 +133,7 @@ local keymaps = {
     { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', '<leader>w', ':lua WRITE_FILE()<CR>' },
     { 'n', '<leader>ss', ':lua SOURCE_FILE()' },
+    { 'n', '<leader>so', ':source ~/.config/nvim/init.lua' },
     { 'n', '<leader>q', ':q!' },
     { 'n', '<leader>v', '<C-v>' },
     { 'n', '<leader>fv', ':file<CR>' },
@@ -170,17 +171,26 @@ local keymaps = {
     { 'v', "<leader>r", [[:s/\%V]] },
     { 'v', "<leader>-", [[:s/\%V /_/g<CR>]] },
     { 'n', "vv", "V" },
+    { 'n', "<f2>", ":lua GET_WORK_PERCENTAGE()<CR>" },
+
+    -- Disabling Ctrl-c
+    { 'v', "<C-c>", "<Nop>" },
+    { 'i', "<C-c>", "<Nop>" },
 
     { 'n', "<leader>sq", ":DBUIToggle<CR>" },
     { 'i', "<C-h>", "<LEFT>" },
     { 'i', "<C-l>", "<RIGHT>" },
+    { 'n', "<leader>x", "*``cgn" },
+    { 'n', "<leader>X", "#``cgn" },
 
     { 'n', "dw", "diw" },
     { 'n', "cw", "ciw" },
     { 'n', "yw", "yiw" },
     { 'n', "vw", "viw" },
-}
 
+    { 'i', "<C-k><C-k>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>" },
+    { 'v', "<C-k><C-k>", "<ESC><Cmd>lua require'better-digraphs'.digraphs('visual')<CR>" },
+}
 
 for _, value in ipairs(keymaps) do
     set_keymap(

@@ -15,7 +15,8 @@ end
 telescope.setup(
     {
         defaults = {
-            borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+            -- borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+            borderchars = { "-", "┆", "-", "┆", "+", "+", "+", "+" },
             layout_strategy = 'vertical',
             file_ignore_patterns = {
                 'package/installer',

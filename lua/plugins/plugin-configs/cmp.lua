@@ -165,3 +165,11 @@ cmp.setup {
     	native_menu = false,
   	},
 }
+
+cmp.setup.filetype({'sql'}, {
+        sources = {
+            {name = 'vim-dadbod-completion'},
+            {name = 'buffer'},
+        }
+    }
+)

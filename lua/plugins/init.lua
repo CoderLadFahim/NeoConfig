@@ -20,6 +20,9 @@ local plugin_configs = {
     'onedark',
     'monokai',
     'harpoon',
+    'catppuccin',
+    'tokyonight',
+    'nvimtree'
 }
 
 vim.api.nvim_create_autocmd('TermOpen', {
@@ -34,3 +37,4 @@ for _, value in ipairs(plugin_configs) do
     require(path);
 end
 
+require'colorizer'.setup()

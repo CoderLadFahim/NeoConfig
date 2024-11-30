@@ -35,7 +35,7 @@ onedark.setup({
     colors = {}, -- Override default colors
     highlights = {
         ["@tag.delimiter"] = {fg = '$blue'},
-        ["@tag"] = {fg = '$purple'},
+        ["@tag"] = {fg = '$red'},
         ["Visual"] = {bg = '#f1f1f1'},
         ["LineNr"] = { fg = '#7f8c8d' },
         ["CursorLineNr"] = { fg = '#f1f1f1' },
@@ -44,8 +44,8 @@ onedark.setup({
         ["TelescopePromptBorder"] = { fg = '$grey' },
         ["TelescopePreviewBorder"] = { fg = '$grey' },
         ["TelescopeResultsBorder"] = { fg = '$grey' },
-        ["TelescopeMatching"] = { fg = '$green' },
-        -- ["VertSplit"] = { fg = '$cyan' },
+        ["TelescopeMatching"] = { fg = '$red' },
+        -- ["VertSplit"] = { bg = '$cyan' },
         ["WinbarNC"] = { fg = '#a0a8b7', bg = '#1f2329' },
         ["Winbar"] = { bg = '#30363f' },
 

@@ -59,6 +59,7 @@ rose_pine.setup({
         WinBar = { fg = 'iris' },
         GitConflictAncestor = { bg = 'subtle' },
         GitConflictAncestorLabel = { bg = 'subtle' },
+        TelescopeMatching = { fg = '#31748f' },
     },
 
     before_highlight = function(group, highlight, palette)

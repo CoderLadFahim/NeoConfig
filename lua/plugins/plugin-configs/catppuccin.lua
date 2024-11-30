@@ -44,6 +44,10 @@ require("catppuccin").setup({
             TelescopePreviewBorder = { fg = colors.surface1 },
             TelescopeResultsBorder = { fg = colors.surface1 },
             TelescopeMatching = { fg = colors.green },
+            Winbar = { bg = colors.surface1 },
+            WinbarNc = { bg = colors.surface1, fg = colors.overlay2 },
+            StatusLine = { bg = colors.surface1 },
+            -- ColorColumn = { bg = colors.surface1 }
         }
     end,
     default_integrations = true,

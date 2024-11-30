@@ -18,3 +18,13 @@
 -- vim.cmd("hi WinBar guifg='NvimLightGrey1'")
 -- vim.cmd("hi WinBarNC guifg='NvimLightGrey4'")
 -- vim.cmd("hi @keyword guifg='NvimLightRed'")
+--
+--
+--
+--
+--
+-- Habamax
+vim.cmd("hi WinBar guifg='NvimLightGrey4' guibg='#444444'")
+vim.cmd("hi WinBarNC guifg='NvimLightGrey4'")
+vim.cmd("hi StatusLine guifg='NvimLightGrey4' guibg='#444444'")
+-- vim.cmd("hi TelescopeMatching guifg='#f1f1f1'")
