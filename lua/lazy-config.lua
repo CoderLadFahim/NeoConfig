@@ -56,6 +56,7 @@ local plugins = {
     'navarasu/onedark.nvim',
     'ThePrimeagen/harpoon',
     'norcalli/nvim-colorizer.lua',
+    'protex/better-digraphs.nvim',
     -- "ibhagwan/fzf-lua",
 
     {

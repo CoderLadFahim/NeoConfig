@@ -51,6 +51,17 @@ function VISUAL_GREP_STRING()
     })
 end
 
+function GET_WORK_PERCENTAGE()
+    local starting_hour = 8
+    local ending_hour = 17
+    local target_seconds = (ending_hour - starting_hour) * 3600
+    local current_minute_in_seconds = os.date('%M') * 60
+    local total_seconds_passed = (os.date('%H') - starting_hour) * 3600 + current_minute_in_seconds
+
+    local working_percentage = math.floor(((total_seconds_passed / target_seconds) * 100 ) + 0.5)
+    print(working_percentage .. '%')
+end
+
 local keymaps = {
 
     -- Telescope
@@ -133,6 +144,7 @@ local keymaps = {
     { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', '<leader>w', ':lua WRITE_FILE()<CR>' },
     { 'n', '<leader>ss', ':lua SOURCE_FILE()' },
+    { 'n', '<leader>so', ':source ~/.config/nvim/init.lua' },
     { 'n', '<leader>q', ':q!' },
     { 'n', '<leader>v', '<C-v>' },
     { 'n', '<leader>fv', ':file<CR>' },
@@ -170,17 +182,26 @@ local keymaps = {
     { 'v', "<leader>r", [[:s/\%V]] },
     { 'v', "<leader>-", [[:s/\%V /_/g<CR>]] },
     { 'n', "vv", "V" },
+    { 'n', "<f2>", ":lua GET_WORK_PERCENTAGE()<CR>" },
+
+    -- Disabling Ctrl-c
+    { 'v', "<C-c>", "<Nop>" },
+    { 'i', "<C-c>", "<Nop>" },
 
     { 'n', "<leader>sq", ":DBUIToggle<CR>" },
     { 'i', "<C-h>", "<LEFT>" },
     { 'i', "<C-l>", "<RIGHT>" },
+    { 'n', "<leader>x", "*``cgn" },
+    { 'n', "<leader>X", "#``cgn" },
 
     { 'n', "dw", "diw" },
     { 'n', "cw", "ciw" },
     { 'n', "yw", "yiw" },
     { 'n', "vw", "viw" },
-}
 
+    { 'i', "<C-k><C-k>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>" },
+    { 'v', "<C-k><C-k>", "<ESC><Cmd>lua require'better-digraphs'.digraphs('visual')<CR>" },
+}
 
 for _, value in ipairs(keymaps) do
     set_keymap(

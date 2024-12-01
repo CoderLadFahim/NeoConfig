@@ -39,4 +39,3 @@ for _, value in ipairs(plugin_configs) do
     require(path);
 end
 
-require'colorizer'.setup()
