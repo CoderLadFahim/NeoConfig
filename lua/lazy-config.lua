@@ -52,24 +52,11 @@ local plugins = {
     'sindrets/diffview.nvim',
     'akinsho/git-conflict.nvim',
 	'mg979/vim-visual-multi',
-    -- 'j-morano/buffer_manager.nvim',
 	'lewis6991/gitsigns.nvim',
-    -- 'navarasu/onedark.nvim',
-    -- 'ellisonleao/gruvbox.nvim',
-    -- 'rebelot/kanagawa.nvim',
+    'navarasu/onedark.nvim',
     'ThePrimeagen/harpoon',
-    'jwalton512/vim-blade',
     'norcalli/nvim-colorizer.lua',
-    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-    -- 'slugbyte/lackluster.nvim',
-    -- { "blazkowolf/gruber-darker.nvim" },
-    -- {
-    --     'ferdinandrau/lavish.nvim',
-    --     priority = 1000,
-    --     config = function()
-    --         require('lavish').apply()
-    --     end
-    -- },
+    -- "ibhagwan/fzf-lua",
 
     {
         'kristijanhusak/vim-dadbod-ui',
@@ -90,17 +77,18 @@ local plugins = {
     },
 
   	{ 'kylechui/nvim-surround', config = function() require('nvim-surround').setup({ tag = '*', }) end },
-	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4', dependencies = { {'nvim-lua/plenary.nvim'} } },
 	{ 'numToStr/Comment.nvim', config = function() require('Comment').setup() end },
-	-- { 'akinsho/toggleterm.nvim', config = function() require('toggleterm').setup() end },
 	{ 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup {} end },
-	-- { 'nvim-tree/nvim-tree.lua', tag = 'nightly' },
     { 'stevearc/oil.nvim' },
    	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    -- { 'glepnir/lspsaga.nvim', event = 'LspAttach' }, 
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
     { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
+	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
+    -- 'ellisonleao/gruvbox.nvim',
+    -- 'rebelot/kanagawa.nvim',
+    -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+    -- 'jwalton512/vim-blade',
 
 }
 

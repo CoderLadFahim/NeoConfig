@@ -47,8 +47,6 @@ gruvbox.setup({
     transparent_mode = false,
 })
 
-vim.cmd('colo gruvbox')
-
   -- dark0_hard = "#1d2021",
   -- dark0 = "#282828",
   -- dark0_soft = "#32302f",

@@ -18,6 +18,11 @@ telescope.setup(
             -- borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
             borderchars = { "-", "|", "-", "|", "+", "+", "+", "+" },
             layout_strategy = 'vertical',
+            layout_config = {
+                vertical = {
+                    preview_cutoff = 10,
+                }
+            },
             file_ignore_patterns = {
                 'package/installer',
                 'vendor',

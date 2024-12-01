@@ -84,7 +84,7 @@ local tsserver_options = {
   	flags = lsp_flags
 }
 
-neovim_lsp['intelephense'].setup(lsp_options)
+neovim_lsp['phpactor'].setup(lsp_options)
 neovim_lsp['pyright'].setup(lsp_options)
 -- neovim_lsp['tsserver'].setup(lsp_options)
 neovim_lsp['tsserver'].setup(tsserver_options)
