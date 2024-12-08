@@ -34,11 +34,11 @@ onedark.setup({
     -- Custom Highlights --
     colors = {}, -- Override default colors
     highlights = {
-        ["@tag.delimiter"] = {fg = '$blue'},
+        ["@tag.delimiter"] = { fg = '$blue' },
         ["@tag"] = {fg = '$red'},
-        ["Visual"] = {bg = '#f1f1f1'},
+        ["Visual"] = { bg = '#f1f1f1' },
         ["LineNr"] = { fg = '#7f8c8d' },
-        ["CursorLineNr"] = { fg = '#f1f1f1' },
+        ["CursorLineNr"] = { fg = '$red', fmt = 'bold' },
 
         -- 1f2329
         ["TelescopePromptBorder"] = { fg = '$grey' },
