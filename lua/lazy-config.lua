@@ -57,6 +57,8 @@ local plugins = {
     'ThePrimeagen/harpoon',
     'norcalli/nvim-colorizer.lua',
     'protex/better-digraphs.nvim',
+    'vimwiki/vimwiki',
+    'Pocco81/auto-save.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
     -- 'slugbyte/lackluster.nvim',
     -- "ibhagwan/fzf-lua",
