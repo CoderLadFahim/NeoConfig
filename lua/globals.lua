@@ -12,6 +12,8 @@ vim.g.sonokai_diagnostic_virtual_text = 'colored'
 vim.g.sonokai_transparent_background = 0
 
 vim.g.indent_blankline_char = '┊'
+vim.g.indent_blankline_use_treesitter = true
+vim.g.indent_blankline_show_current_context = true
 
 vim.g.dbs = {
     classic_models = 'mysql://newuser:password@localhost/classicmodels'

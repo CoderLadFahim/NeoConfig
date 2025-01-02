@@ -53,15 +53,15 @@ local plugins = {
     'akinsho/git-conflict.nvim',
 	'mg979/vim-visual-multi',
 	'lewis6991/gitsigns.nvim',
-    -- 'navarasu/onedark.nvim',
+    'navarasu/onedark.nvim',
     'ThePrimeagen/harpoon',
     'norcalli/nvim-colorizer.lua',
     'protex/better-digraphs.nvim',
     'vimwiki/vimwiki',
-    'Pocco81/auto-save.nvim',
+    -- 'Pocco81/auto-save.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
     -- 'slugbyte/lackluster.nvim',
-    -- "ibhagwan/fzf-lua",
+    "ibhagwan/fzf-lua",
 
     {
         'kristijanhusak/vim-dadbod-ui',
@@ -92,8 +92,9 @@ local plugins = {
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
     -- 'ellisonleao/gruvbox.nvim',
     -- 'rebelot/kanagawa.nvim',
-    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-    -- 'jwalton512/vim-blade',
+    -- 'marko-cerovac/material.nvim',
+    -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+    'jwalton512/vim-blade',
 
 }
 

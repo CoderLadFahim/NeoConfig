@@ -1,6 +1,5 @@
 local plugin_configs = {
     -- 'monokai',
-    -- 'kanagawa',
     -- 'rose-pine',
     -- 'gruvbox',
     --
@@ -25,6 +24,7 @@ local plugin_configs = {
     'harpoon',
     'colorizer',
     'fzflua',
+    'kanagawa',
 }
 
 vim.api.nvim_create_autocmd('TermOpen', {

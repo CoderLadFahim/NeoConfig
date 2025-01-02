@@ -87,7 +87,7 @@ local tsserver_options = {
 neovim_lsp['phpactor'].setup(lsp_options)
 neovim_lsp['pyright'].setup(lsp_options)
 -- neovim_lsp['tsserver'].setup(lsp_options)
-neovim_lsp['tsserver'].setup(tsserver_options)
+neovim_lsp['ts_ls'].setup(tsserver_options)
 
 neovim_lsp['tailwindcss'].setup({});
 neovim_lsp['emmet_ls'].setup({

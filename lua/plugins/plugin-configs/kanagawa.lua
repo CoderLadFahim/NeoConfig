@@ -23,12 +23,14 @@ kanagawa.setup({
     },
     overrides = function(colors)
         return {
-            LineNr = { fg = colors.palette.dragonGray3, bold = true },
+            LineNr = { fg = colors.palette.dragonGray3, bold = false },
             IndentBlanklineContextChar = { fg = colors.palette.dragonYellow, bold = true },
             TelescopeMatching = { fg = colors.palette.dragonRed, bold = true },
             Search = { bg = colors.palette.carpYellow, fg = colors.palette.sumiInk1 },
-            StatusLine = { fg = colors.palette.dragonWhite },
+            StatusLine = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
             CursorLineNr = { fg = colors.palette.dragonWhite },
+            CursorColumn = { bg = colors.palette.dragonBlack4 },
+            ColorColumn = { bg = colors.palette.dragonBlack4 },
             ["@tag"] = { fg = colors.palette.dragonRed },
         }
     end,

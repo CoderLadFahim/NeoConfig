@@ -130,15 +130,15 @@ local keymaps = {
     { 'n', "<leader>8", ":lua require('harpoon.ui').nav_file(8)<CR>"},
     { 'n', "<leader>9", ":lua require('harpoon.ui').nav_file(9)<CR>"},
 
-    { 'n', "<CR>1", ":lua require('harpoon.term').gotoTerminal(1)<CR>"},
-    { 'n', "<CR>2", ":lua require('harpoon.term').gotoTerminal(2)<CR>"},
-    { 'n', "<CR>3", ":lua require('harpoon.term').gotoTerminal(3)<CR>"},
-    { 'n', "<CR>4", ":lua require('harpoon.term').gotoTerminal(4)<CR>"},
-    { 'n', "<CR>5", ":lua require('harpoon.term').gotoTerminal(5)<CR>"},
-    { 'n', "<CR>6", ":lua require('harpoon.term').gotoTerminal(6)<CR>"},
-    { 'n', "<CR>7", ":lua require('harpoon.term').gotoTerminal(7)<CR>"},
-    { 'n', "<CR>8", ":lua require('harpoon.term').gotoTerminal(8)<CR>"},
-    { 'n', "<CR>9", ":lua require('harpoon.term').gotoTerminal(9)<CR>"},
+    { 'n', "1<space>", ":lua require('harpoon.term').gotoTerminal(1)<CR>"},
+    { 'n', "2<space>", ":lua require('harpoon.term').gotoTerminal(2)<CR>"},
+    { 'n', "3<space>", ":lua require('harpoon.term').gotoTerminal(3)<CR>"},
+    { 'n', "4<space>", ":lua require('harpoon.term').gotoTerminal(4)<CR>"},
+    { 'n', "5<space>", ":lua require('harpoon.term').gotoTerminal(5)<CR>"},
+    { 'n', "6<space>", ":lua require('harpoon.term').gotoTerminal(6)<CR>"},
+    { 'n', "7<space>", ":lua require('harpoon.term').gotoTerminal(7)<CR>"},
+    { 'n', "8<space>", ":lua require('harpoon.term').gotoTerminal(8)<CR>"},
+    { 'n', "9<space>", ":lua require('harpoon.term').gotoTerminal(9)<CR>"},
 
     -- Misc
     { 't', '<esc>', [[<C-\><C-n>]] },
@@ -183,14 +183,16 @@ local keymaps = {
     { 'v', "<leader>-", [[:s/\%V /_/g<CR>]] },
     { 'n', "vv", "V" },
     { 'n', "<f2>", ":lua GET_WORK_PERCENTAGE()<CR>" },
+    { 'x', "p", "P" },
+    { 'n', "<C-l>", "mmyyp`mj" },
 
     -- Disabling Ctrl-c
     { 'v', "<C-c>", "<Nop>" },
     { 'i', "<C-c>", "<Nop>" },
 
     { 'n', "<leader>sq", ":DBUIToggle<CR>" },
-    { 'i', "<C-h>", "<LEFT>" },
-    { 'i', "<C-l>", "<RIGHT>" },
+    -- { 'i', "<C-h>", "<LEFT>" },
+    -- { 'i', "<C-l>", "<RIGHT>" },
     { 'n', "<leader>x", "*``cgn" },
     { 'n', "<leader>X", "#``cgn" },
 

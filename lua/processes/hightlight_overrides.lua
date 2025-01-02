@@ -23,3 +23,12 @@
 -- vim.cmd("hi WinBar guifg='#c5c9c5' guibg='#0d0c0c'")
 -- vim.cmd("hi WinBarNC guifg='#c5c9c5'")
 -- vim.cmd("hi ColorColumn guibg='#0d0c0c'")
+--
+--
+--
+--
+-- for moonfly
+-- vim.cmd("hi WinBarNC guifg='#555555'")
+-- vim.cmd("hi ColorColumn guibg='#262626'")
+-- vim.cmd("hi CursorLineNr guibg='#080808'")
+-- vim.cmd("hi IndentBlanklineChar guifg='#555555'")

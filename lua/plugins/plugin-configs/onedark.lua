@@ -47,7 +47,18 @@ onedark.setup({
         ["TelescopeMatching"] = { fg = '$red' },
         -- ["VertSplit"] = { fg = '$cyan' },
         ["WinbarNC"] = { fg = '#a0a8b7', bg = '#1f2329' },
-        ["Winbar"] = { bg = '#30363f' },
+        ["Winbar"] = { bg = '#30363f', fmt='None' },
+        ["Winbar"] = { bg = '#30363f', fmt='None' },
+        ["VimwikiLink"] = { fg='$cyan', fmt='Underline' },
+
+        ["VimwikiHeader1"] = { fg = '$purple', fmt='Bold' },
+        ["VimwikiHeader2"] = { fg = '$green', fmt='Bold' },
+        ["VimwikiHeader3"] = { fg = '$blue', fmt='Bold' },
+        ["VimwikiHeader4"] = { fg = '$yellow', fmt='Bold' },
+        ["VimwikiHeader5"] = { fg = '$cyan', fmt='Bold' },
+        ["VimwikiHeader6"] = { fmt='Bold' },
+
+        ["VimwikiHeaderChar"] = { fg='$grey' },
 
         ["IndentBlanklineChar"] = { fg = '$grey' },
         ["IndentBlanklineContextChar"] = { fg = '$blue' },

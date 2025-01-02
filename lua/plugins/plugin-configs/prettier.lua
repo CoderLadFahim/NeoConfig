@@ -38,7 +38,7 @@ prettier.setup({
      	single_attribute_per_line = true,
      	single_quote = true,
      	trailing_comma = "es5",
-     	config_precedence = "file-override",
+     	config_precedence = "prefer-file",
      	-- use_tabs = false,
      	-- tab_width = 4,
      	--
