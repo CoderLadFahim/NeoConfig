@@ -17,7 +17,7 @@ telescope.setup(
         defaults = {
             -- borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
             borderchars = { "-", "┇", "-", "┇", "+", "+", "+", "+" },
-            layout_strategy = 'bottom_pane',
+            layout_strategy = 'vertical',
             layout_config = {
                 vertical = {
                     preview_cutoff = 10,

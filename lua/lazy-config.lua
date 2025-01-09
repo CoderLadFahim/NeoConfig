@@ -61,7 +61,7 @@ local plugins = {
     -- 'Pocco81/auto-save.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
     -- 'slugbyte/lackluster.nvim',
-    "ibhagwan/fzf-lua",
+    -- "ibhagwan/fzf-lua",
 
     {
         'kristijanhusak/vim-dadbod-ui',

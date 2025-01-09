@@ -4,12 +4,12 @@ function set_keymap(mode, seq, cmd)
 end
 
 function WRITE_FILE()
-  	local modified = vim.api.nvim_buf_get_option(0, 'modified')
-  	if modified then
-		vim.cmd('w')
-	else
-		print("File written")
-	end
+  local modified = vim.api.nvim_buf_get_option(0, 'modified')
+  if modified then
+	vim.cmd('w')
+  else
+	print("File written")
+  end
 end
 
 function SEARCH_GIT_FILES()

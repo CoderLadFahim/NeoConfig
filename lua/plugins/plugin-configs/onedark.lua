@@ -19,7 +19,7 @@ onedark.setup({
     -- Options are italic, bold, underline, none
     -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
     code_style = {
-        comments = 'italic',
+        comments = 'none',
         keywords = 'none',
         functions = 'none',
         strings = 'none',
@@ -36,9 +36,10 @@ onedark.setup({
     highlights = {
         ["@tag.delimiter"] = { fg = '$blue' },
         ["@tag"] = {fg = '$red'},
-        ["Visual"] = { bg = '#f1f1f1' },
+
+        -- ["Visual"] = { bg = '#f1f1f1' },
         ["LineNr"] = { fg = '#7f8c8d' },
-        ["CursorLineNr"] = { fg = '$red', fmt = 'bold' },
+        ["CursorLineNr"] = { fg = '$blue', fmt = 'bold' },
 
         -- 1f2329
         ["TelescopePromptBorder"] = { fg = '$grey' },
@@ -46,10 +47,19 @@ onedark.setup({
         ["TelescopeResultsBorder"] = { fg = '$grey' },
         ["TelescopeMatching"] = { fg = '$red' },
         -- ["VertSplit"] = { fg = '$cyan' },
+    -- Darkmode
         ["WinbarNC"] = { fg = '#a0a8b7', bg = '#1f2329' },
         ["Winbar"] = { bg = '#30363f', fmt='None' },
-        ["Winbar"] = { bg = '#30363f', fmt='None' },
+
+    -- lightmode
+        -- ["WinbarNC"] = { fg = '#a0a8b7', bg = '#f6f6f6' },
+        -- ["Winbar"] = { fg = '#383a42', bg ='#e6e6e6' , fmt='None' },
+
         ["VimwikiLink"] = { fg='$cyan', fmt='Underline' },
+        ["LeapLabelPrimary"] = { bg='$cyan', fg='$black' },
+        ["Search"] = { bg='$blue', fg='$black' },
+        ["IncSearch"] = { bg='$blue', fg='$black' },
+        ["CurSearch"] = { bg='$yellow', fg='$black' },
 
         ["VimwikiHeader1"] = { fg = '$purple', fmt='Bold' },
         ["VimwikiHeader2"] = { fg = '$green', fmt='Bold' },
