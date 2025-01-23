@@ -1,6 +1,6 @@
 local plugin_configs = {
     -- 'monokai',
-    -- 'rose-pine',
+    'rose-pine',
     -- 'gruvbox',
     --
     'oil',
@@ -25,6 +25,7 @@ local plugin_configs = {
     'colorizer',
     'fzflua',
     'kanagawa',
+    'vscode',
 }
 
 vim.api.nvim_create_autocmd('TermOpen', {

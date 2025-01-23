@@ -90,6 +90,10 @@ local plugins = {
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
     { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
+    'Mofiqul/vscode.nvim',
+    -- "nyoom-engineering/oxocarbon.nvim",
+    -- 'michaeldyrynda/carbon.vim',
+
     -- 'ellisonleao/gruvbox.nvim',
     -- 'rebelot/kanagawa.nvim',
     -- 'marko-cerovac/material.nvim',

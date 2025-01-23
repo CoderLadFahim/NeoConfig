@@ -18,3 +18,5 @@ vim.g.indent_blankline_show_current_context = true
 vim.g.dbs = {
     classic_models = 'mysql://newuser:password@localhost/classicmodels'
 }
+
+vim.g.vimwiki_listsyms = ' ○◐●✓'
