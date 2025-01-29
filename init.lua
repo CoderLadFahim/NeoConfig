@@ -1,5 +1,5 @@
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'vscode'
+	return 'onedark'
 end
 
 function ENABLE_ICONS()

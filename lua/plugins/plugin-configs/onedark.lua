@@ -61,10 +61,10 @@ onedark.setup({
         ["IncSearch"] = { bg='$blue', fg='$black' },
         ["CurSearch"] = { bg='$yellow', fg='$black' },
 
-        ["VimwikiHeader1"] = { fg = '$purple', fmt='Bold' },
+        ["VimwikiHeader1"] = { fg = '$yellow', fmt='Bold' },
         ["VimwikiHeader2"] = { fg = '$green', fmt='Bold' },
         ["VimwikiHeader3"] = { fg = '$blue', fmt='Bold' },
-        ["VimwikiHeader4"] = { fg = '$yellow', fmt='Bold' },
+        ["VimwikiHeader4"] = { fg = '$purple', fmt='Bold' },
         ["VimwikiHeader5"] = { fg = '$cyan', fmt='Bold' },
         ["VimwikiHeader6"] = { fmt='Bold' },
 

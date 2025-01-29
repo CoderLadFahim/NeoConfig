@@ -19,4 +19,12 @@ vim.g.dbs = {
     classic_models = 'mysql://newuser:password@localhost/classicmodels'
 }
 
-vim.g.vimwiki_listsyms = ' ○◐●✓'
+vim.g.vimwiki_list = {
+  {
+    path = '~/vimwiki/',
+    listsyms = ' ○◐●✓',
+    cycle_bullets = 1,
+    bullet_types = { '●', '*', '-' },
+  }
+}
+

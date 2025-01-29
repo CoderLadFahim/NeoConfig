@@ -184,7 +184,7 @@ local keymaps = {
     { 'n', "vv", "V" },
     { 'n', "<f2>", ":lua GET_WORK_PERCENTAGE()<CR>" },
     { 'x', "p", "P" },
-    { 'n', "<C-l>", "mmyyp`mj" },
+    -- { 'n', "<C-l>", "mmyyp`mj" },
 
     -- Disabling Ctrl-c
     { 'v', "<C-c>", "<Nop>" },

@@ -40,3 +40,12 @@ for _, value in ipairs(plugin_configs) do
     require(path);
 end
 
+require('better-digraphs')
+
+vim.g.BetterDigraphsAdditions = {
+  {
+    digraph = "l1",
+    symbol = "●",
+    name = "list item 1"
+  }
+}
