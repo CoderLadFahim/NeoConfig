@@ -90,9 +90,11 @@ local plugins = {
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
     { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
-    -- 'Mofiqul/vscode.nvim',
+    'Mofiqul/vscode.nvim',
+    'sainnhe/sonokai',
 
     -- 'ellisonleao/gruvbox.nvim',
+    -- 'rose-pine/neovim',
     -- 'rebelot/kanagawa.nvim',
     -- 'marko-cerovac/material.nvim',
     -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },

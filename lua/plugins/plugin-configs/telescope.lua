@@ -32,6 +32,7 @@ telescope.setup(
                 'public/vendor',
                 'public/install',
                 'public/illumine-admin',
+                'public/scripts',
                 'node_modules',
                 'composer.lock',
                 'package-lock.json',

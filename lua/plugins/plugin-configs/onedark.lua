@@ -37,7 +37,7 @@ onedark.setup({
         ["@tag.delimiter"] = { fg = '$blue' },
         ["@tag"] = {fg = '$red'},
 
-        -- ["Visual"] = { bg = '#f1f1f1' },
+        ["Visual"] = { bg = '#f1f1f1' },
         ["LineNr"] = { fg = '#7f8c8d' },
         ["CursorLineNr"] = { fg = '$blue', fmt = 'bold' },
 
