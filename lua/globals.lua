@@ -7,9 +7,10 @@ vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
 vim.g.gruvbox_material_background = 'hard'
 vim.g.gruvbox_material_transparent_background = 0
 
-vim.g.sonokai_style = 'atlantis'
+vim.g.sonokai_style = 'andromeda'
 vim.g.sonokai_diagnostic_virtual_text = 'colored'
 vim.g.sonokai_transparent_background = 0
+vim.g.sonokai_disable_italic_comment = 1
 
 vim.g.indent_blankline_char = '┊'
 vim.g.indent_blankline_use_treesitter = true

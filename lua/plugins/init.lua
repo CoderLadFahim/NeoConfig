@@ -16,7 +16,6 @@ local plugin_configs = {
     'indent-blankline',
     'leapnvim',
     'gitconflict',
-    'kanagawa',
     'rose-pine',
     'gruvbox',
     'onedark',

@@ -20,9 +20,8 @@
 -- vim.cmd("hi @keyword guifg='NvimLightRed'")
 --
 -- for kanagawa-dragon
--- vim.cmd("hi WinBar guifg='#c5c9c5' guibg='#0d0c0c'")
--- vim.cmd("hi WinBarNC guifg='#c5c9c5'")
--- vim.cmd("hi ColorColumn guibg='#0d0c0c'")
+-- vim.cmd("hi WinBar guifg='#c5c9c5' guibg='#282727'")
+-- vim.cmd("hi WinBarNC guifg='#999999'")
 --
 --
 --

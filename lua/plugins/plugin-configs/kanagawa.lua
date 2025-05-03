@@ -6,7 +6,7 @@ end
 kanagawa.setup({
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
-    commentStyle = { italic = true },
+    commentStyle = { italic = false },
     functionStyle = {},
     keywordStyle = { italic = false },
     statementStyle = { bold = true },
@@ -29,6 +29,7 @@ kanagawa.setup({
             Search = { bg = colors.palette.carpYellow, fg = colors.palette.sumiInk1 },
             StatusLine = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
             CursorLineNr = { fg = colors.palette.dragonWhite },
+            CursorLine = { bg = colors.palette.dragonBlack4 },
             CursorColumn = { bg = colors.palette.dragonBlack4 },
             ColorColumn = { bg = colors.palette.dragonBlack4 },
             ["@tag"] = { fg = colors.palette.dragonRed },

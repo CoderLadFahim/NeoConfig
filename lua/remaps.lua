@@ -201,6 +201,8 @@ local keymaps = {
     { 'n', "yw", "yiw" },
     { 'n', "vw", "viw" },
 
+    { 'n', "<leader>tn", ":tabnew<CR>" },
+
     { 'i', "<C-k><C-k>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>" },
     { 'v', "<C-k><C-k>", "<ESC><Cmd>lua require'better-digraphs'.digraphs('visual')<CR>" },
 }

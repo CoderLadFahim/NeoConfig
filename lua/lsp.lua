@@ -91,7 +91,7 @@ neovim_lsp['ts_ls'].setup(tsserver_options)
 
 neovim_lsp['tailwindcss'].setup({});
 neovim_lsp['emmet_ls'].setup({
-	filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'javascript', 'typescript', 'php', 'vue' }
+	filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'javascript', 'typescript', 'blade', 'vue' }
 })
 
 
