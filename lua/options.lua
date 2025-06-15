@@ -19,7 +19,7 @@ vim.opt.preserveindent = true -- Preserve indent structure as much as possible
 vim.opt.pumheight = 10 -- Height of the pop up menu
 vim.opt.relativenumber = true -- Show relative numberline
 vim.opt.scrolloff = 5 -- Number of lines to keep above and below the cursor
-vim.opt.shiftwidth = 2 -- Number of space inserted for indentation
+vim.opt.shiftwidth = 4 -- Number of space inserted for indentation
 vim.opt.showmode = false -- Disable showing modes in command line
 vim.opt.sidescrolloff = 8 -- Number of columns to keep at the sides of the cursor
 vim.opt.signcolumn = "yes" -- Always show the sign column
@@ -38,7 +38,6 @@ vim.opt.writebackup = false -- Disable making a backup before overwriting a file
 vim.opt.foldmethod = "manual" -- for folds to work properly
 vim.opt.mouse = "a" -- for folds to work properly
 vim.opt.cc = "100" -- color column
-vim.opt.textwidth = 100 -- for folds to work properly
 
 vim.opt.termguicolors = true -- set termguicolors to enable highlight groups
 

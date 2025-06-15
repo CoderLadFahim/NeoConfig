@@ -19,6 +19,7 @@ local plugin_configs = {
     'rose-pine',
     'gruvbox',
     'onedark',
+    'tokyonight',
     'monokai',
     'harpoon',
     'colorizer',

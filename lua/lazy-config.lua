@@ -53,7 +53,8 @@ local plugins = {
     'akinsho/git-conflict.nvim',
 	'mg979/vim-visual-multi',
 	'lewis6991/gitsigns.nvim',
-    'navarasu/onedark.nvim',
+    -- 'navarasu/onedark.nvim',
+    -- 'folke/tokyonight.nvim',
     -- 'rose-pine/neovim',
     'ThePrimeagen/harpoon',
     'norcalli/nvim-colorizer.lua',
@@ -88,6 +89,7 @@ local plugins = {
     { 'stevearc/oil.nvim' },
    	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
+    { 'nvim-treesitter/nvim-treesitter-context' },
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
     { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
@@ -96,7 +98,20 @@ local plugins = {
     -- 'marko-cerovac/material.nvim',
     -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     'jwalton512/vim-blade',
-
+    {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            require("copilot").setup({})
+        end,
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+        config = function ()
+            require("copilot_cmp").setup()
+        end
+    }
 }
 
 if ENABLE_ICONS() then
