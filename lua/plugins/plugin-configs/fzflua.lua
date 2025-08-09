@@ -4,15 +4,13 @@ if not fzf_status_ok then
 end
 
 fzf.setup({
-    prompt = '=>',
+    -- 'telescope',
     winopts = {
-        fzf_opts = {
-            layout = 'reverse-list'
-        },
         preview = {
-            layout = 'horizontal'
+            layout = 'vertical',
+            scrollbar = false,
+            vertical = 'up:60%',
         },
-        split = "botright new"
     },
     keymap = {
         fzf = {

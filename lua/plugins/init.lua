@@ -1,8 +1,6 @@
 local plugin_configs = {
     -- 'monokai',
     'rose-pine',
-    -- 'gruvbox',
-    --
     'oil',
     'treesitter',
     'commentnvim',

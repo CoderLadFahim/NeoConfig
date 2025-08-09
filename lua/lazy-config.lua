@@ -50,38 +50,45 @@ local plugins = {
    	'tpope/vim-fugitive',
 	'ggandor/leap.nvim',
     'sindrets/diffview.nvim',
-    'akinsho/git-conflict.nvim',
 	'mg979/vim-visual-multi',
 	'lewis6991/gitsigns.nvim',
-    -- 'navarasu/onedark.nvim',
-    -- 'folke/tokyonight.nvim',
-    -- 'rose-pine/neovim',
     'ThePrimeagen/harpoon',
     'norcalli/nvim-colorizer.lua',
-    'protex/better-digraphs.nvim',
     'vimwiki/vimwiki',
+    'protex/better-digraphs.nvim',
+
+
+    -- 'akinsho/git-conflict.nvim',
+    'navarasu/onedark.nvim',
+    -- 'mofiqul/vscode.nvim',
+    -- 'folke/tokyonight.nvim',
+    -- 'rose-pine/neovim',
+    -- 'EdenEast/nightfox.nvim',
     -- 'Pocco81/auto-save.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
     -- 'slugbyte/lackluster.nvim',
-    -- "ibhagwan/fzf-lua",
-
-    {
-        'kristijanhusak/vim-dadbod-ui',
-        dependencies = {
-            { 'tpope/vim-dadbod', lazy = true },
-            { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
-        },
-        cmd = {
-            'DBUI',
-            'DBUIToggle',
-            'DBUIAddConnection',
-            'DBUIFindBuffer',
-        },
-        init = function()
-            -- Your DBUI configuration
-            vim.g.db_ui_use_nerd_fonts = 0
-        end,
-    },
+    "ibhagwan/fzf-lua",
+    -- {
+    --     'kristijanhusak/vim-dadbod-ui',
+    --     dependencies = {
+    --         { 'tpope/vim-dadbod', lazy = true },
+    --         { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
+    --     },
+    --     cmd = {
+    --         'DBUI',
+    --         'DBUIToggle',
+    --         'DBUIAddConnection',
+    --         'DBUIFindBuffer',
+    --     },
+    --     init = function()
+    --         -- Your DBUI configuration
+    --         vim.g.db_ui_use_nerd_fonts = 0
+    --     end,
+    -- },
+    -- { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
+    -- 'ellisonleao/gruvbox.nvim',
+    -- 'marko-cerovac/material.nvim',
+    -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
   	{ 'kylechui/nvim-surround', config = function() require('nvim-surround').setup({ tag = '*', }) end },
 	{ 'numToStr/Comment.nvim', config = function() require('Comment').setup() end },
@@ -91,27 +98,23 @@ local plugins = {
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
     { 'nvim-treesitter/nvim-treesitter-context' },
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
-    { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
-    -- 'ellisonleao/gruvbox.nvim',
     'rebelot/kanagawa.nvim',
-    -- 'marko-cerovac/material.nvim',
-    -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     'jwalton512/vim-blade',
-    {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require("copilot").setup({})
-        end,
-    },
-    {
-        "zbirenbaum/copilot-cmp",
-        config = function ()
-            require("copilot_cmp").setup()
-        end
-    }
+    -- {
+    --     "zbirenbaum/copilot.lua",
+    --     cmd = "Copilot",
+    --     event = "InsertEnter",
+    --     config = function()
+    --         require("copilot").setup({})
+    --     end,
+    -- },
+    -- {
+    --     "zbirenbaum/copilot-cmp",
+    --     config = function ()
+    --         require("copilot_cmp").setup()
+    --     end
+    -- }
 }
 
 if ENABLE_ICONS() then

@@ -29,10 +29,14 @@ kanagawa.setup({
             Search = { bg = colors.palette.carpYellow, fg = colors.palette.sumiInk1 },
             StatusLine = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
             CursorLineNr = { fg = colors.palette.dragonWhite },
-            CursorLine = { bg = colors.palette.dragonBlack4 },
+            -- CursorLine = { bg = colors.palette.dragonBlack4 },
             CursorColumn = { bg = colors.palette.dragonBlack4 },
             ColorColumn = { bg = colors.palette.dragonBlack4 },
             ["@tag"] = { fg = colors.palette.dragonRed },
+
+            WinBar = { bg = colors.palette.dragonBlack4, fg = colors.palette.dragonWhite },
+            WinBarNC = { fg = '#999999' },
+            -- ["LeapLabelPrimary"] = { bg=colors.palette.waveBlue2, fg=colors.palette.dragonWhite },
         }
     end,
     theme = "wave",              -- Load "wave" theme when 'background' option is not set

@@ -60,6 +60,14 @@ onedark.setup({
         ["Search"] = { bg='$blue', fg='$black' },
         ["IncSearch"] = { bg='$blue', fg='$black' },
         ["CurSearch"] = { bg='$yellow', fg='$black' },
+        ["HarpoonInactive"] = { bg='#1f2329' },
+        ["HarpoonNumberInactive"] = { bg='#1f2329' },
+
+        -- ["HarpoonInactive"] = { bg='#282c34' },
+        -- ["HarpoonNumberInactive"] = { bg='#282c34' },
+
+        ["HarpoonActive"] = { bg='#30363f' },
+        ["HarpoonNumberActive"] = { bg='#30363f' },
 
         ["VimwikiHeader1"] = { fg = '$yellow', fmt='Bold' },
         ["VimwikiHeader2"] = { fg = '$green', fmt='Bold' },

@@ -55,7 +55,7 @@ local keymaps = {
     { 'n', "<leader>ld", ":FzfLua diagnostics_workspace<CR>" },
     { 'n', "<leader>jl", ":FzfLua jumps<CR>" },
     { 'n', "<leader>rg", ":FzfLua registers<CR>" },
-    -- { 'n', "<leader>bb", ":FzfLua current_buffer_fuzzy_find<CR>" },
+    { 'n', "<leader>bb", ":FzfLua blines<CR>" },
 
     -- Fugitive
     { 'n', "<leader>ga.", ":G add ." },

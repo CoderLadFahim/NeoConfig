@@ -15,9 +15,12 @@ end
 telescope.setup(
     {
         defaults = {
+            preview = false,
+            -- prompt_prefix = ' ',
+            -- selection_caret = ' ',
             borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
             -- borderchars = { "-", "|", "-", "|", "+", "+", "+", "+" },
-            layout_strategy = 'vertical',
+            layout_strategy = 'bottom_pane',
             layout_config = {
                 vertical = {
                     preview_cutoff = 10,
@@ -60,3 +63,4 @@ telescope.setup(
     }
 )
 
+telescope.load_extension('harpoon')

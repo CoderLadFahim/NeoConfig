@@ -74,7 +74,7 @@ local tsserver_options = {
         plugins = {
             {
                 name = "@vue/typescript-plugin",
-                location = "/home/fahim/.config/nvm/versions/node/v20.11.1/lib/node_modules/@vue/typescript-plugin",
+                location = "/home/jouleslabs/.config/nvm/versions/node/v20.10.0/lib/node_modules/@vue/typescript-plugin",
                 languages = {"javascript", "typescript", "vue"},
             },
         },

@@ -47,7 +47,17 @@ function VISUAL_GREP_STRING()
     local visual_selection = GET_VISUAL_SELECTION()
     require('telescope.builtin').grep_string({
         search = visual_selection,
-        disable_devicons = ENABLE_ICONS() == false 
+        disable_devicons = ENABLE_ICONS() == false,
+        preview = true,
+        layout_strategy = 'vertical',
+    })
+end
+
+function LIVE_GREP() 
+    require('telescope.builtin').live_grep({
+        disable_devicons = ENABLE_ICONS() == false,
+        preview = true,
+        layout_strategy = 'vertical',
     })
 end
 
@@ -67,9 +77,8 @@ local keymaps = {
     -- Telescope
     { 'n', "<leader>p", "<cmd>Telescope buffers disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>" },
     { 'n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>" },
-    { 'n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>" },
+    { 'n', "<leader>fw", ":lua LIVE_GREP()<CR>"},
     { 'n', "<leader>gb", "<cmd>Telescope git_branches<CR>" },
-    { 'n', "<leader>glo", "<cmd>Telescope git_commits<CR>" },
     { 'n', "<leader>gs", "<cmd>Telescope git_status<CR>" },
     { 'n', "<leader>hh", "<cmd>Telescope help_tags<CR>" },
     { 'n', "<leader>cs", "<cmd>Telescope colorscheme<CR>" },
@@ -82,6 +91,7 @@ local keymaps = {
     { 'n', "<leader>ft", ":lua require('telescope.builtin').live_grep({type_filter = 'js'})" },
     { 'v', "<leader>fw", ":lua VISUAL_GREP_STRING()<CR>" },
     { 'n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>" },
+    { 'n', "<M-f>", ":lua SEARCH_GIT_FILES()<CR>" },
     { 'n', "<leader>mm", "<cmd>Telescope marks<CR>" },
     { 'n', "<leader>cc", ":Telescope command_history<CR>" },
     { 'n', "<leader>tt", ":Telescope builtin<CR>" },
@@ -100,6 +110,7 @@ local keymaps = {
     { 'n', "<leader>gm", ":G blame<CR>" },
     { 'n', "<leader>gd", ":G pull origin dev" },
     { 'n', "<leader>gp", ":G push origin -u HEAD" },
+    { 'n', "<leader>glo", ":G log --oneline<CR>" },
 
     -- GtiConflict
     { 'n', "<leader>go", ":GitConflictChooseOurs" },
@@ -120,15 +131,15 @@ local keymaps = {
     -- Harpoon
     { 'n', "<leader>a", ":lua require('harpoon.mark').add_file()<CR>" },
     { 'n', "<leader>hp", ":lua require('harpoon.ui').toggle_quick_menu()<CR>" },
-    { 'n', "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>"},
-    { 'n', "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>"},
-    { 'n', "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>"},
-    { 'n', "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>"},
-    { 'n', "<leader>5", ":lua require('harpoon.ui').nav_file(5)<CR>"},
-    { 'n', "<leader>6", ":lua require('harpoon.ui').nav_file(6)<CR>"},
-    { 'n', "<leader>7", ":lua require('harpoon.ui').nav_file(7)<CR>"},
-    { 'n', "<leader>8", ":lua require('harpoon.ui').nav_file(8)<CR>"},
-    { 'n', "<leader>9", ":lua require('harpoon.ui').nav_file(9)<CR>"},
+    { 'n', "<M-1>", ":lua require('harpoon.ui').nav_file(1)<CR>"},
+    { 'n', "<M-2>", ":lua require('harpoon.ui').nav_file(2)<CR>"},
+    { 'n', "<M-3>", ":lua require('harpoon.ui').nav_file(3)<CR>"},
+    { 'n', "<M-4>", ":lua require('harpoon.ui').nav_file(4)<CR>"},
+    { 'n', "<M-5>", ":lua require('harpoon.ui').nav_file(5)<CR>"},
+    { 'n', "<M-6>", ":lua require('harpoon.ui').nav_file(6)<CR>"},
+    { 'n', "<M-7>", ":lua require('harpoon.ui').nav_file(7)<CR>"},
+    { 'n', "<M-8>", ":lua require('harpoon.ui').nav_file(8)<CR>"},
+    { 'n', "<M-9>", ":lua require('harpoon.ui').nav_file(9)<CR>"},
 
     { 'n', "1<space>", ":lua require('harpoon.term').gotoTerminal(1)<CR>"},
     { 'n', "2<space>", ":lua require('harpoon.term').gotoTerminal(2)<CR>"},
@@ -159,6 +170,9 @@ local keymaps = {
     { 'n', '<leader>taa', ':ToggleTermToggleAll<CR>' },
     { 'n', '<leader>bd', ':%bd|e#' },
     { 'n', "<leader>cl", "Oconsole.log()<LEFT>" },
+    { 'n', "<M-j>", ":cnext<CR>zz" },
+    { 'n', "<M-k>", ":cprev<CR>zz" },
+    { 'n', "<leader>e", "dd" },
 
     { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', "n", "nzzzv" },
@@ -172,6 +186,8 @@ local keymaps = {
     { 'n', "<C-u>", "<C-u>zz" },
     { 'n', "<C-f>", "<C-f>zz" },
     { 'n', "<C-b>", "<C-b>zz" },
+    { 'n', "<C-i>", "<C-i>zz" },
+    { 'n', "<C-o>", "<C-o>zz" },
     { 'n', "(", "<cmd>vertical resize +4<CR>" },
     { 'n', "+", "<cmd>resize +4<CR>" },
     { 'n', "-", "<cmd>resize -4<CR>" },
@@ -185,6 +201,9 @@ local keymaps = {
     { 'n', "<f2>", ":lua GET_WORK_PERCENTAGE()<CR>" },
     { 'x', "p", "P" },
     { 'n', "<C-l>", "mmyyp`mj" },
+    { 'n', "<leader><space>", ":<C-f>i!" },
+    { 'n', "<leader>e", ":e!<CR>" },
+    { 'n', "<M-t>", "df<space>ea <C-[>px2B" },
 
     -- Disabling Ctrl-c
     { 'v', "<C-c>", "<Nop>" },
