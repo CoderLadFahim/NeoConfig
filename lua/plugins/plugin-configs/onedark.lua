@@ -80,6 +80,10 @@ onedark.setup({
 
         ["IndentBlanklineChar"] = { fg = '$grey' },
         ["IndentBlanklineContextChar"] = { fg = '$blue' },
+
+        ["StatusLineMode"] = { bg = '$blue', fmt='None', fg='$black' },
+        ["StatusLineBranch"] = { bg = '#30363f', fmt='None' },
+        ["StatusLineTime"] = { bg = '#30363f', fmt='None' },
     }, -- Override highlight groups
 
     -- Plugins Config --
@@ -89,5 +93,19 @@ onedark.setup({
         background = true,    -- use background color for virtual text
     },
 })
+
+-- {
+--     background = "#282c34",
+--     foreground = "#abb2bf",
+--     comment    = "#5c6370",
+--     red        = "#e06c75",
+--     orange     = "#d19a66",
+--     yellow     = "#e5c07b",
+--     green      = "#98c379",
+--     cyan       = "#56b6c2",
+--     blue       = "#4fa6ed",
+--     purple     = "#c678dd",
+--     gutter     = "#636d83",
+-- }
 
 -- vim.cmd('colo onedark')

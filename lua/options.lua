@@ -39,4 +39,7 @@ vim.opt.mouse = "a" -- for folds to work properly
 vim.opt.cc = "100" -- color column
 
 vim.opt.termguicolors = true -- set termguicolors to enable highlight groups
+vim.opt.listchars = 'space:·' -- 
+
+-- set listchars=space: ·
 

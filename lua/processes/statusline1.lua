@@ -3,9 +3,10 @@ function GET_CURRENT_DIRECTORY()
     return vim.fn.fnamemodify(path, ':t')
 end
 
-vim.api.nvim_set_hl(0, 'StatusLineMode', { bg = '', fg = '' })
-vim.api.nvim_set_hl(0, 'StatusLineBranch', { bg = '', fg = '' })
-vim.api.nvim_set_hl(0, 'StatusLineTime', { bg = '', fg = '' })
+local onedark_status_ok, onedark = pcall(require, 'onedark')
+if not onedark_status_ok then
+	return
+end
 
 local modes = {
     n = "NORMAL",
@@ -28,7 +29,7 @@ function UPDATE_STATUS_LINE()
     if (current_branch) then last_known_branch = current_branch end
 
     vim.opt.statusline = string.format(
-        "%%#StatusLineMode# %s %%#StatusLineBranch# %s %s %s",
+        "%s %s %s %s",
         vim_mode and modes[vim_mode] or '_', 
         current_branch and 'git:' .. current_branch or last_known_branch,
         '%=',
@@ -49,55 +50,10 @@ vim.api.nvim_create_autocmd('User', {
     callback = UPDATE_STATUS_LINE
 })
 
-local StatusLineModeCol = {
-    n = {
-        kanagawa = '#2D4F67',
-        onedark = '#4fa6ed',
-    },
-    i = {
-        kanagawa = '#C34043',
-        onedark = '#e06c75',
-    },
-    v = {
-        kanagawa = '#5d57a3',
-        onedark = '#e5c07b',
-    },
-    V = {
-        kanagawa = '#5d57a3',
-        onedark = '#e5c07b',
-    },
-    c = {
-        kanagawa = '#43436c',
-        onedark = '#98c379',
-    },
-    s = {
-        kanagawa = '',
-        onedark = '',
-    },
-    R = {
-        kanagawa = '',
-        onedark = '#636d83',
-    },
-    t = {
-        kanagawa = '#658594',
-        onedark = '#c678dd',
-    },
-}
-
 vim.api.nvim_create_autocmd('ModeChanged', {
     pattern = '*',
     callback = function()
         UPDATE_STATUS_LINE()
-
-        local vim_mode = vim.api.nvim_get_mode().mode 
-        local current_theme = vim.g.colors_name
-        local mode = StatusLineModeCol[vim_mode]
-        local selected_colour = mode and mode[current_theme] or '#232323'
-
-        vim.api.nvim_set_hl(0, "StatusLineMode", {
-            bg = selected_colour,
-            fg = current_theme == 'kanagawa' and '' or '#222222'
-        })
     end
 })
 

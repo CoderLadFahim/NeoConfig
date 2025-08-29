@@ -172,7 +172,8 @@ local keymaps = {
     { 'n', "<leader>cl", "Oconsole.log()<LEFT>" },
     { 'n', "<M-j>", ":cnext<CR>zz" },
     { 'n', "<M-k>", ":cprev<CR>zz" },
-    { 'n', "<leader>e", "dd" },
+    { 'n', "<M-x>", ":call setqflist([])" },
+    { 'n', "<leader>fz", ":FzfLua " },
 
     { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', "n", "nzzzv" },

@@ -59,6 +59,7 @@ local plugins = {
 
 
     -- 'akinsho/git-conflict.nvim',
+    -- 'zacanger/angr.vim',
     'navarasu/onedark.nvim',
     -- 'mofiqul/vscode.nvim',
     -- 'folke/tokyonight.nvim',
@@ -67,7 +68,7 @@ local plugins = {
     -- 'Pocco81/auto-save.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
     -- 'slugbyte/lackluster.nvim',
-    "ibhagwan/fzf-lua",
+    -- "ibhagwan/fzf-lua",
     -- {
     --     'kristijanhusak/vim-dadbod-ui',
     --     dependencies = {
@@ -85,11 +86,18 @@ local plugins = {
     --         vim.g.db_ui_use_nerd_fonts = 0
     --     end,
     -- },
-    -- { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
     -- 'ellisonleao/gruvbox.nvim',
     -- 'marko-cerovac/material.nvim',
     -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        build = "cd app && yarn install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" },
+    },
   	{ 'kylechui/nvim-surround', config = function() require('nvim-surround').setup({ tag = '*', }) end },
 	{ 'numToStr/Comment.nvim', config = function() require('Comment').setup() end },
 	{ 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup {} end },

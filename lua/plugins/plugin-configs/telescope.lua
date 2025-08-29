@@ -19,7 +19,6 @@ telescope.setup(
             -- prompt_prefix = ' ',
             -- selection_caret = ' ',
             borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-            -- borderchars = { "-", "|", "-", "|", "+", "+", "+", "+" },
             layout_strategy = 'bottom_pane',
             layout_config = {
                 vertical = {
