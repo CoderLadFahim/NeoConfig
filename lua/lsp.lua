@@ -69,12 +69,14 @@ else
 	tsdk_to_use = macos_ts_tsdk_location 
 end
 
+local env = require('env')
+
 local tsserver_options = {
     init_options = {
         plugins = {
             {
                 name = "@vue/typescript-plugin",
-                location = "/home/jouleslabs/.config/nvm/versions/node/v20.10.0/lib/node_modules/@vue/typescript-plugin",
+                location = env.vue_plugin_path,
                 languages = {"javascript", "typescript", "vue"},
             },
         },
