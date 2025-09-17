@@ -56,10 +56,16 @@ rose_pine.setup({
         -- Comment = { fg = "foam" },
         IndentBlanklineContextChar = { fg = 'foam' },
         LineNr = { fg = 'subtle' },
-        WinBar = { fg = 'iris' },
+        WinBar = { fg = 'iris', bg='Overlay' },
         GitConflictAncestor = { bg = 'subtle' },
         GitConflictAncestorLabel = { bg = 'subtle' },
         TelescopeMatching = { fg = 'love' },
+
+        ["StatusLineBranch"] = { bg='Overlay' },
+        ["StatusLineTime"] = { bg='Overlay' },
+
+        -- ["HarpoonActive"] = { bold = false },
+        -- ["HarpoonNumberActive"] = { bold = false },
     },
 
     before_highlight = function(group, highlight, palette)

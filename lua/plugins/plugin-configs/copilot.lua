@@ -4,8 +4,8 @@ if not copilot_status_ok then
 end
 
 copilot.setup({
-  suggestion = { enabled = false },
-  panel = { enabled = false },
+    suggestion = { enabled = false },
+    panel = { enabled = false },
 })
 
 -- You've reached your monthly code completion limit. Upgrade your plan to Copilot Pro (30-day Free Trial) or wait until 2025-07-19

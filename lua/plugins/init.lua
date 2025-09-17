@@ -7,6 +7,7 @@ local plugin_configs = {
     'telescope',
     'auto-pairs',
     'gitsigns',
+    'copilot',
     'cmp',
     'mason',
     'none-ls',

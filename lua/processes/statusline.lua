@@ -51,36 +51,44 @@ vim.api.nvim_create_autocmd('User', {
 
 local StatusLineModeCol = {
     n = {
-        kanagawa = '#2D4F67',
-        onedark = '#4fa6ed',
+        ['kanagawa'] = { bg = '#2D4F67', fg = '#c5c9c5' },
+        ['onedark'] = { bg = '#4fa6ed', fg = '#222222' },
+        ['rose-pine'] = { bg = '#31748f', fg = '#e0def4' },
     },
     i = {
-        kanagawa = '#C34043',
-        onedark = '#e06c75',
+        ['kanagawa'] = { bg = '#C34043', fg = '#c5c9c5' },
+        ['onedark'] = { bg = '#e06c75', fg = '#222222' },
+        ['rose-pine'] = { bg = '#eb6f92', fg = '#26233a' },
     },
     v = {
-        kanagawa = '#5d57a3',
-        onedark = '#e5c07b',
+        ['kanagawa'] = { bg = '#5d57a3', fg = '#c5c9c5' },
+        ['onedark'] = { bg = '#e5c07b', fg = '#222222' },
+        ['rose-pine'] = { bg = '#ebbcba', fg = '#26233a' },
     },
     V = {
-        kanagawa = '#5d57a3',
-        onedark = '#e5c07b',
+        ['kanagawa'] = { bg = '#5d57a3', fg = '#c5c9c5' },
+        ['onedark'] = { bg = '#e5c07b', fg = '#222222' },
+        ['rose-pine'] = { bg = '#ebbcba', fg = '#26233a' },
     },
     c = {
-        kanagawa = '#43436c',
-        onedark = '#98c379',
+        ['kanagawa'] = { bg = '#43436c', fg = '#c5c9c5' },
+        ['onedark'] = { bg = '#98c379', fg = '#222222' },
+        ['rose-pine'] = { bg = '#c4a7e7', fg = '#26233a' },
     },
     s = {
-        kanagawa = '',
-        onedark = '',
+        ['kanagawa'] = { bg = '', fg = '' },
+        ['onedark'] = { bg = '', fg = '' },
+        ['rose-pine'] = { bg = '', fg = '' },
     },
     R = {
-        kanagawa = '',
-        onedark = '#636d83',
+        ['kanagawa'] = { bg = '', fg = '#c5c9c5' },
+        ['onedark'] = { bg = '#636d83', fg = '#f1f1f1' },
+        ['rose-pine'] = { bg = '#9ccfd8', fg = '#26233a' },
     },
     t = {
-        kanagawa = '#658594',
-        onedark = '#c678dd',
+        ['kanagawa'] = { bg = '#658594', fg = '#c5c9c5' },
+        ['onedark'] = { bg = '#c678dd', fg = '#222222' },
+        ['rose-pine'] = { bg = '#f6c177', fg = '#26233a' },
     },
 }
 
@@ -91,12 +99,12 @@ vim.api.nvim_create_autocmd('ModeChanged', {
 
         local vim_mode = vim.api.nvim_get_mode().mode 
         local current_theme = vim.g.colors_name
-        local mode = StatusLineModeCol[vim_mode]
-        local selected_colour = mode and mode[current_theme] or '#232323'
+        local mode = StatusLineModeCol[vim_mode] and  StatusLineModeCol[vim_mode] or 'i'
+        local selected_colour = mode[current_theme] and mode[current_theme] or '#f1f1f1'
 
         vim.api.nvim_set_hl(0, "StatusLineMode", {
-            bg = selected_colour,
-            fg = current_theme == 'kanagawa' and '' or '#222222'
+            bg = selected_colour['bg'] and selected_colour['bg'] or '#f1f1f1',
+            fg = selected_colour['fg'] and selected_colour['fg'] or '#222222',
         })
     end
 })

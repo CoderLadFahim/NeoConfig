@@ -39,7 +39,7 @@ kanagawa.setup({
             WinBar = { bg = colors.palette.dragonBlack4, fg = colors.palette.dragonWhite },
             WinBarNC = { fg = '#999999' },
 
-            ["StatusLineMode"] = { bg = colors.palette.waveBlue2, fg = colors.palette.dragonWhite },
+            -- ["StatusLineMode"] = { bg = colors.palette.waveBlue2, fg = colors.palette.dragonWhite },
             ["StatusLineBranch"] = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
             ["StatusLineTime"] = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
 
