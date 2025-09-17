@@ -55,20 +55,6 @@ end
 local lsp_flags = { debounce_text_changes = 150 }
 local lsp_options = { on_attach = on_attach, flags = lsp_flags }
 
-local macos_ts_tsdk_location = '/usr/local/lib/node_modules/typescript/lib'
-local linux_ts_tsdk_location = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
-local linux_ts_tsdk_location2 = '/home/fahim/.nvm/versions/node/v20.10.0/lib/node_modules/typescript/lib'
-
-local tsdk_to_use = nil
-
-if (directoryExists(linux_ts_tsdk_location2)) then
-	tsdk_to_use = linux_ts_tsdk_location2 
-elseif (directoryExists(linux_ts_tsdk_location)) then
-	tsdk_to_use = linux_ts_tsdk_location 
-else
-	tsdk_to_use = macos_ts_tsdk_location 
-end
-
 local env = require('env')
 
 local tsserver_options = {
