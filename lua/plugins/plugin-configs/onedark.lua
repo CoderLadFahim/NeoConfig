@@ -5,7 +5,7 @@ end
 
 onedark.setup({
     -- Main options --
-    style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+    style = 'darker', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     transparent = false,  -- Show/hide background
     term_colors = true, -- Change terminal color as per the selected theme style
     ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
@@ -66,8 +66,8 @@ onedark.setup({
         -- ["HarpoonInactive"] = { bg='#282c34' },
         -- ["HarpoonNumberInactive"] = { bg='#282c34' },
 
-        ["HarpoonActive"] = { bg='#30363f' },
-        ["HarpoonNumberActive"] = { bg='#30363f' },
+        ["HarpoonActive"] = { bg='#30363f', fg='#a0a8b7' },
+        ["HarpoonNumberActive"] = { bg='#30363f', fg='#a0a8b7' },
 
         ["VimwikiHeader1"] = { fg = '$yellow', fmt='Bold' },
         ["VimwikiHeader2"] = { fg = '$green', fmt='Bold' },

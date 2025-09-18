@@ -104,7 +104,7 @@ local plugins = {
     { 'stevearc/oil.nvim' },
    	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    { 'nvim-treesitter/nvim-treesitter-context' },
+    -- { 'nvim-treesitter/nvim-treesitter-context' },
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
     'rebelot/kanagawa.nvim',
