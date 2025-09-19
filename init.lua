@@ -1,5 +1,5 @@
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'kanagawa-dragon'
+	return 'rose-pine'
 end
 
 function ENABLE_ICONS()

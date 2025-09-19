@@ -66,8 +66,8 @@ onedark.setup({
         -- ["HarpoonInactive"] = { bg='#282c34' },
         -- ["HarpoonNumberInactive"] = { bg='#282c34' },
 
-        ["HarpoonActive"] = { bg='#30363f' },
-        ["HarpoonNumberActive"] = { bg='#30363f' },
+        ["HarpoonActive"] = { bg='#30363f', fg='#a0a8b7' },
+        ["HarpoonNumberActive"] = { bg='#30363f', fg='#a0a8b7' },
 
         ["VimwikiHeader1"] = { fg = '$yellow', fmt='Bold' },
         ["VimwikiHeader2"] = { fg = '$green', fmt='Bold' },

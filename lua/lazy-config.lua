@@ -63,7 +63,7 @@ local plugins = {
     'navarasu/onedark.nvim',
     -- 'mofiqul/vscode.nvim',
     -- 'folke/tokyonight.nvim',
-    -- 'rose-pine/neovim',
+    'rose-pine/neovim',
     -- 'EdenEast/nightfox.nvim',
     -- 'Pocco81/auto-save.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
@@ -104,25 +104,35 @@ local plugins = {
     { 'stevearc/oil.nvim' },
    	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    { 'nvim-treesitter/nvim-treesitter-context' },
+    -- { 'nvim-treesitter/nvim-treesitter-context' },
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
     'rebelot/kanagawa.nvim',
     'jwalton512/vim-blade',
-    -- {
-    --     "zbirenbaum/copilot.lua",
-    --     cmd = "Copilot",
-    --     event = "InsertEnter",
-    --     config = function()
-    --         require("copilot").setup({})
-    --     end,
-    -- },
-    -- {
-    --     "zbirenbaum/copilot-cmp",
-    --     config = function ()
-    --         require("copilot_cmp").setup()
-    --     end
-    -- }
+    {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        -- config = function()
+        --     require("copilot").setup({})
+        -- end,
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+        config = function ()
+            require("copilot_cmp").setup()
+        end
+    },
+    {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        dependencies = {
+            { "nvim-lua/plenary.nvim", branch = "master" },
+        },
+        build = "make tiktoken",
+        opts = {
+            -- See Configuration section for options
+        },
+    }
 }
 
 if ENABLE_ICONS() then
