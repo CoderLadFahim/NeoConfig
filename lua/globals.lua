@@ -18,9 +18,22 @@ vim.g.indent_blankline_char = '┊'
 vim.g.indent_blankline_use_treesitter = true
 vim.g.indent_blankline_show_current_context = true
 
-vim.g.dbs = {
-    educare = 'postgresql://educare:secret@database/educare'
-}
+-- Import environment configuration
+local env = require('env')
+
+-- Build database connection strings from env configuration
+vim.g.dbs = {}
+for _, db in ipairs(env.databases or {}) do
+    local connection_string = string.format(
+        '%s://%s:%s@%s/%s',
+        db.type,
+        db.user,
+        db.password,
+        db.host,
+        db.database
+    )
+    vim.g.dbs[db.name] = connection_string
+end
 
 vim.g.vimwiki_list = {
   {
