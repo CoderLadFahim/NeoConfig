@@ -6,9 +6,9 @@ end
 kanagawa.setup({
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
-    commentStyle = { italic = true },
+    commentStyle = { italic = false },
     functionStyle = {},
-    keywordStyle = { italic = true},
+    keywordStyle = { italic = false },
     statementStyle = { bold = true },
     typeStyle = {},
     transparent = false,         -- do not set background color
@@ -23,13 +23,33 @@ kanagawa.setup({
     },
     overrides = function(colors)
         return {
-            LineNr = { fg = colors.palette.dragonGray3, bold = true },
+            LeapLabel = { bg = colors.palette.lotusBlue4, fg = colors.palette.dragonWhite },
+
+            LineNr = { fg = colors.palette.dragonGray3, bold = false },
             IndentBlanklineContextChar = { fg = colors.palette.dragonYellow, bold = true },
             TelescopeMatching = { fg = colors.palette.dragonRed, bold = true },
             Search = { bg = colors.palette.carpYellow, fg = colors.palette.sumiInk1 },
-            StatusLine = { fg = colors.palette.dragonWhite },
+            StatusLine = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
             CursorLineNr = { fg = colors.palette.dragonWhite },
+            -- CursorLine = { bg = colors.palette.dragonBlack4 },
+            CursorColumn = { bg = colors.palette.dragonBlack4 },
+            ColorColumn = { bg = colors.palette.dragonBlack4 },
             ["@tag"] = { fg = colors.palette.dragonRed },
+
+            WinBar = { bg = colors.palette.dragonBlack4, fg = colors.palette.dragonWhite },
+            WinBarNC = { fg = '#999999' },
+
+            -- ["StatusLineMode"] = { bg = colors.palette.waveBlue2, fg = colors.palette.dragonWhite },
+            ["StatusLineBranch"] = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
+            ["StatusLineTime"] = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
+
+            ["StatusLineTime"] = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
+
+            HarpoonActive = { bg = colors.palette.dragonBlack4, fg = colors.palette.dragonWhite },
+            HarpoonNumberActive = { bg = colors.palette.dragonBlack4, fg = colors.palette.dragonWhite },
+
+            HarpoonInactive = { fg = colors.palette.dragonAsh },
+            HarpoonNumberInactive = { fg = colors.palette.dragonAsh },
         }
     end,
     theme = "wave",              -- Load "wave" theme when 'background' option is not set

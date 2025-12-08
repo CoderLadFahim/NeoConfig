@@ -13,7 +13,6 @@ vim.opt.laststatus = 3 -- globalstatus
 vim.opt.winbar= "%f" -- globalstatus
 -- vim.opt.statusline = ""
 vim.opt.lazyredraw = true -- lazily redraw screen
-vim.opt.mouse = "" -- Enable mouse support
 vim.opt.number = true -- Show numberline
 vim.opt.preserveindent = true -- Preserve indent structure as much as possible
 vim.opt.pumheight = 10 -- Height of the pop up menu
@@ -35,8 +34,12 @@ vim.opt.updatetime = 300 -- Length of time to wait before triggering the plugin
 vim.opt.wrap = true -- Disable wrapping of lines longer than the width of window
 vim.opt.writebackup = false -- Disable making a backup before overwriting a file
 -- vim.opt.guicursor = "" -- Keeps the cursor fat in insert mode
-vim.opt.cc = "100" -- color column
 vim.opt.foldmethod = "manual" -- for folds to work properly
+vim.opt.mouse = "a" -- for folds to work properly
+vim.opt.cc = "100" -- color column
 
 vim.opt.termguicolors = true -- set termguicolors to enable highlight groups
+vim.opt.listchars = 'space:·' -- 
+
+-- set listchars=space: ·
 

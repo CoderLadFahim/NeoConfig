@@ -50,19 +50,24 @@ local plugins = {
    	'tpope/vim-fugitive',
 	'ggandor/leap.nvim',
     'sindrets/diffview.nvim',
-    'akinsho/git-conflict.nvim',
 	'mg979/vim-visual-multi',
 	'lewis6991/gitsigns.nvim',
-    -- 'navarasu/onedark.nvim',
     'ThePrimeagen/harpoon',
     'norcalli/nvim-colorizer.lua',
-    'protex/better-digraphs.nvim',
     'vimwiki/vimwiki',
-    'Pocco81/auto-save.nvim',
-    -- 'blazkowolf/gruber-darker.nvim',
-    -- 'slugbyte/lackluster.nvim',
-    -- "ibhagwan/fzf-lua",
+    'protex/better-digraphs.nvim',
 
+
+    -- 'akinsho/git-conflict.nvim',
+    -- 'zacanger/angr.vim',
+    'navarasu/onedark.nvim',
+    -- 'mofiqul/vscode.nvim',
+    -- 'folke/tokyonight.nvim',
+    'rose-pine/neovim',
+    -- 'EdenEast/nightfox.nvim',
+    -- 'Pocco81/auto-save.nvim',
+    -- 'blazkowolf/gruber-darker.nvim',
+    -- "ibhagwan/fzf-lua",
     {
         'kristijanhusak/vim-dadbod-ui',
         dependencies = {
@@ -80,21 +85,53 @@ local plugins = {
             vim.g.db_ui_use_nerd_fonts = 0
         end,
     },
-
+    -- 'ellisonleao/gruvbox.nvim',
+    -- 'marko-cerovac/material.nvim',
+    -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        build = "cd app && npm install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" },
+    },
   	{ 'kylechui/nvim-surround', config = function() require('nvim-surround').setup({ tag = '*', }) end },
 	{ 'numToStr/Comment.nvim', config = function() require('Comment').setup() end },
 	{ 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup {} end },
     { 'stevearc/oil.nvim' },
    	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
+    { 'nvim-treesitter/nvim-treesitter-context' },
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
-    { 'iamcco/markdown-preview.nvim', build = function() vim.fn['mkdp#util#install']() end },
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
-    -- 'ellisonleao/gruvbox.nvim',
-    -- 'rebelot/kanagawa.nvim',
-    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-    -- 'jwalton512/vim-blade',
-
+    'rebelot/kanagawa.nvim',
+    'jwalton512/vim-blade',
+    {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        -- config = function()
+        --     require("copilot").setup({})
+        -- end,
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+        config = function ()
+            require("copilot_cmp").setup()
+        end
+    },
+    {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        dependencies = {
+            { "nvim-lua/plenary.nvim", branch = "master" },
+        },
+        build = "make tiktoken",
+        opts = {
+            -- See Configuration section for options
+        },
+    }
 }
 
 if ENABLE_ICONS() then

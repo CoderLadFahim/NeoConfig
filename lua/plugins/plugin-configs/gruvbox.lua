@@ -9,7 +9,7 @@ gruvbox.setup({
     underline = true,
     bold = true,
     italic = {
-        strings = true,
+        strings = false,
         emphasis = true,
         comments = true,
         operators = false,
@@ -46,6 +46,8 @@ gruvbox.setup({
     dim_inactive = false,
     transparent_mode = false,
 })
+
+vim.cmd('colorscheme gruvbox')
 
   -- dark0_hard = "#1d2021",
   -- dark0 = "#282828",

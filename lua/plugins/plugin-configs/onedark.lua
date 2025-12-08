@@ -19,7 +19,7 @@ onedark.setup({
     -- Options are italic, bold, underline, none
     -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
     code_style = {
-        comments = 'italic',
+        comments = 'none',
         keywords = 'none',
         functions = 'none',
         strings = 'none',
@@ -36,9 +36,10 @@ onedark.setup({
     highlights = {
         ["@tag.delimiter"] = { fg = '$blue' },
         ["@tag"] = {fg = '$red'},
+
         ["Visual"] = { bg = '#f1f1f1' },
         ["LineNr"] = { fg = '#7f8c8d' },
-        ["CursorLineNr"] = { fg = '$red', fmt = 'bold' },
+        ["CursorLineNr"] = { fg = '$blue', fmt = 'bold' },
 
         -- 1f2329
         ["TelescopePromptBorder"] = { fg = '$grey' },
@@ -46,11 +47,43 @@ onedark.setup({
         ["TelescopeResultsBorder"] = { fg = '$grey' },
         ["TelescopeMatching"] = { fg = '$red' },
         -- ["VertSplit"] = { fg = '$cyan' },
+    -- Darkmode
         ["WinbarNC"] = { fg = '#a0a8b7', bg = '#1f2329' },
-        ["Winbar"] = { bg = '#30363f' },
+        ["Winbar"] = { bg = '#30363f', fmt='None' },
+
+    -- lightmode
+        -- ["WinbarNC"] = { fg = '#a0a8b7', bg = '#f6f6f6' },
+        -- ["Winbar"] = { fg = '#383a42', bg ='#e6e6e6' , fmt='None' },
+
+        ["VimwikiLink"] = { fg='$cyan', fmt='Underline' },
+        ["LeapLabelPrimary"] = { bg='$cyan', fg='$black' },
+        ["Search"] = { bg='$blue', fg='$black' },
+        ["IncSearch"] = { bg='$blue', fg='$black' },
+        ["CurSearch"] = { bg='$yellow', fg='$black' },
+        ["HarpoonInactive"] = { bg='#1f2329', fg='#a0a8b7' },
+        ["HarpoonNumberInactive"] = { bg='#1f2329', fg='#a0a8b7' },
+
+        -- ["HarpoonInactive"] = { bg='#282c34' },
+        -- ["HarpoonNumberInactive"] = { bg='#282c34' },
+
+        ["HarpoonActive"] = { bg='$blue', fg='$black' },
+        ["HarpoonNumberActive"] = { bg='$blue', fg='$black' },
+
+        ["VimwikiHeader1"] = { fg = '$yellow', fmt='Bold' },
+        ["VimwikiHeader2"] = { fg = '$green', fmt='Bold' },
+        ["VimwikiHeader3"] = { fg = '$blue', fmt='Bold' },
+        ["VimwikiHeader4"] = { fg = '$purple', fmt='Bold' },
+        ["VimwikiHeader5"] = { fg = '$cyan', fmt='Bold' },
+        ["VimwikiHeader6"] = { fmt='Bold' },
+
+        ["VimwikiHeaderChar"] = { fg='$grey' },
 
         ["IndentBlanklineChar"] = { fg = '$grey' },
         ["IndentBlanklineContextChar"] = { fg = '$blue' },
+
+        ["StatusLineMode"] = { bg = '$blue', fmt='None', fg='$black' },
+        ["StatusLineBranch"] = { bg = '#30363f', fmt='None' },
+        ["StatusLineTime"] = { bg = '#30363f', fmt='None' },
     }, -- Override highlight groups
 
     -- Plugins Config --
@@ -60,5 +93,19 @@ onedark.setup({
         background = true,    -- use background color for virtual text
     },
 })
+
+-- {
+--     background = "#282c34",
+--     foreground = "#abb2bf",
+--     comment    = "#5c6370",
+--     red        = "#e06c75",
+--     orange     = "#d19a66",
+--     yellow     = "#e5c07b",
+--     green      = "#98c379",
+--     cyan       = "#56b6c2",
+--     blue       = "#4fa6ed",
+--     purple     = "#c678dd",
+--     gutter     = "#636d83",
+-- }
 
 -- vim.cmd('colo onedark')

@@ -1,15 +1,13 @@
 local plugin_configs = {
-    -- 'monokai',
-    -- 'kanagawa',
-    -- 'rose-pine',
-    -- 'gruvbox',
-    --
+    'monokai',
+    'rose-pine',
     'oil',
     'treesitter',
     'commentnvim',
     'telescope',
     'auto-pairs',
     'gitsigns',
+    'copilot',
     'cmp',
     'mason',
     'none-ls',
@@ -17,14 +15,16 @@ local plugin_configs = {
     'indent-blankline',
     'leapnvim',
     'gitconflict',
-    'kanagawa',
     'rose-pine',
     'gruvbox',
     'onedark',
+    'tokyonight',
     'monokai',
     'harpoon',
     'colorizer',
     'fzflua',
+    'kanagawa',
+    'vscode',
 }
 
 vim.api.nvim_create_autocmd('TermOpen', {
@@ -39,3 +39,12 @@ for _, value in ipairs(plugin_configs) do
     require(path);
 end
 
+require('better-digraphs')
+
+vim.g.BetterDigraphsAdditions = {
+  {
+    digraph = "l1",
+    symbol = "●",
+    name = "list item 1"
+  }
+}

@@ -17,7 +17,7 @@ rose_pine.setup({
 
     styles = {
         bold = true,
-        italic = true,
+        italic = false,
         transparency = false,
     },
 
@@ -56,9 +56,16 @@ rose_pine.setup({
         -- Comment = { fg = "foam" },
         IndentBlanklineContextChar = { fg = 'foam' },
         LineNr = { fg = 'subtle' },
-        WinBar = { fg = 'iris' },
+        WinBar = { fg = 'iris', bg='Overlay' },
         GitConflictAncestor = { bg = 'subtle' },
         GitConflictAncestorLabel = { bg = 'subtle' },
+        TelescopeMatching = { fg = 'love' },
+
+        StatusLineBranch = { bg='Overlay', fg='Subtle' },
+        StatusLineTime =   { bg='Overlay', fg='Subtle' },
+
+        ["HarpoonActive"] = { bg = 'Pine', fg = 'Text' },
+        ["HarpoonNumberActive"] = { bg = 'Pine', fg = 'Text' },
     },
 
     before_highlight = function(group, highlight, palette)
@@ -74,3 +81,20 @@ rose_pine.setup({
     end,
 })
 
+-- | Name           | Hex       | Description                   |
+-- | -------------- | --------- | ----------------------------- |
+-- | Base           | `#191724` | Background                    |
+-- | Surface        | `#1f1d2e` | Panel/background surface      |
+-- | Overlay        | `#26233a` | Lighter surface               |
+-- | Muted          | `#6e6a86` | Comments, less important text |
+-- | Subtle         | `#908caa` | Secondary text                |
+-- | Text           | `#e0def4` | Main text                     |
+-- | Love           | `#eb6f92` | Red/pink                      |
+-- | Gold           | `#f6c177` | Yellow/gold                   |
+-- | Rose           | `#ebbcba` | Pink                          |
+-- | Pine           | `#31748f` | Teal/blue-green               |
+-- | Foam           | `#9ccfd8` | Cyan/light blue               |
+-- | Iris           | `#c4a7e7` | Purple                        |
+-- | Highlight Low  | `#21202e` | Low emphasis highlight        |
+-- | Highlight Med  | `#403d52` | Medium emphasis highlight     |
+-- | Highlight High | `#524f67` | High emphasis highlight       |

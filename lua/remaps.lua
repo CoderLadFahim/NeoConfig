@@ -3,15 +3,6 @@ function set_keymap(mode, seq, cmd)
 	vim.api.nvim_set_keymap(mode, seq, cmd, opts)
 end
 
-function WRITE_FILE()
-  	local modified = vim.api.nvim_buf_get_option(0, 'modified')
-  	if modified then
-		vim.cmd('w')
-	else
-		print("File written")
-	end
-end
-
 function SEARCH_GIT_FILES()
 	if vim.fn.isdirectory('.git') == 1 then
   		vim.cmd('Telescope git_files disable_devicons=' .. tostring(ENABLE_ICONS() == false))
@@ -19,6 +10,12 @@ function SEARCH_GIT_FILES()
 		print('Not a git repository, searching all files');
   		vim.cmd('Telescope find_files disable_devicons=' .. tostring(ENABLE_ICONS() == false))
   	end
+end
+
+function OPEN_TERMINAL(terminal_number)
+	vim.cmd('sv')
+    require('harpoon.term').gotoTerminal(terminal_number)
+    vim.api.nvim_feedkeys('i', 'n', false)
 end
 
 function SOURCE_FILE()
@@ -47,19 +44,18 @@ function VISUAL_GREP_STRING()
     local visual_selection = GET_VISUAL_SELECTION()
     require('telescope.builtin').grep_string({
         search = visual_selection,
-        disable_devicons = ENABLE_ICONS() == false 
+        disable_devicons = ENABLE_ICONS() == false,
+        preview = true,
+        layout_strategy = 'vertical',
     })
 end
 
-function GET_WORK_PERCENTAGE()
-    local starting_hour = 8
-    local ending_hour = 17
-    local target_seconds = (ending_hour - starting_hour) * 3600
-    local current_minute_in_seconds = os.date('%M') * 60
-    local total_seconds_passed = (os.date('%H') - starting_hour) * 3600 + current_minute_in_seconds
-
-    local working_percentage = math.floor(((total_seconds_passed / target_seconds) * 100 ) + 0.5)
-    print(working_percentage .. '%')
+function LIVE_GREP() 
+    require('telescope.builtin').live_grep({
+        disable_devicons = ENABLE_ICONS() == false,
+        preview = true,
+        layout_strategy = 'vertical',
+    })
 end
 
 local keymaps = {
@@ -67,9 +63,8 @@ local keymaps = {
     -- Telescope
     { 'n', "<leader>p", "<cmd>Telescope buffers disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>" },
     { 'n', "<leader>FF", "<cmd>Telescope find_files disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>" },
-    { 'n', "<leader>fw", "<cmd>Telescope live_grep disable_devicons=" .. tostring(ENABLE_ICONS() == false) .."<CR>" },
+    { 'n', "<leader>fw", ":lua LIVE_GREP()<CR>"},
     { 'n', "<leader>gb", "<cmd>Telescope git_branches<CR>" },
-    { 'n', "<leader>glo", "<cmd>Telescope git_commits<CR>" },
     { 'n', "<leader>gs", "<cmd>Telescope git_status<CR>" },
     { 'n', "<leader>hh", "<cmd>Telescope help_tags<CR>" },
     { 'n', "<leader>cs", "<cmd>Telescope colorscheme<CR>" },
@@ -82,6 +77,7 @@ local keymaps = {
     { 'n', "<leader>ft", ":lua require('telescope.builtin').live_grep({type_filter = 'js'})" },
     { 'v', "<leader>fw", ":lua VISUAL_GREP_STRING()<CR>" },
     { 'n', "<leader>ff", ":lua SEARCH_GIT_FILES()<CR>" },
+    { 'n', "<M-f>", ":lua SEARCH_GIT_FILES()<CR>" },
     { 'n', "<leader>mm", "<cmd>Telescope marks<CR>" },
     { 'n', "<leader>cc", ":Telescope command_history<CR>" },
     { 'n', "<leader>tt", ":Telescope builtin<CR>" },
@@ -100,6 +96,7 @@ local keymaps = {
     { 'n', "<leader>gm", ":G blame<CR>" },
     { 'n', "<leader>gd", ":G pull origin dev" },
     { 'n', "<leader>gp", ":G push origin -u HEAD" },
+    { 'n', "<leader>glo", ":G log --oneline<CR>" },
 
     -- GtiConflict
     { 'n', "<leader>go", ":GitConflictChooseOurs" },
@@ -120,25 +117,25 @@ local keymaps = {
     -- Harpoon
     { 'n', "<leader>a", ":lua require('harpoon.mark').add_file()<CR>" },
     { 'n', "<leader>hp", ":lua require('harpoon.ui').toggle_quick_menu()<CR>" },
-    { 'n', "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>"},
-    { 'n', "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>"},
-    { 'n', "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>"},
-    { 'n', "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>"},
-    { 'n', "<leader>5", ":lua require('harpoon.ui').nav_file(5)<CR>"},
-    { 'n', "<leader>6", ":lua require('harpoon.ui').nav_file(6)<CR>"},
-    { 'n', "<leader>7", ":lua require('harpoon.ui').nav_file(7)<CR>"},
-    { 'n', "<leader>8", ":lua require('harpoon.ui').nav_file(8)<CR>"},
-    { 'n', "<leader>9", ":lua require('harpoon.ui').nav_file(9)<CR>"},
+    { 'n', "<M-1>", ":lua require('harpoon.ui').nav_file(1)<CR>"},
+    { 'n', "<M-2>", ":lua require('harpoon.ui').nav_file(2)<CR>"},
+    { 'n', "<M-3>", ":lua require('harpoon.ui').nav_file(3)<CR>"},
+    { 'n', "<M-4>", ":lua require('harpoon.ui').nav_file(4)<CR>"},
+    { 'n', "<M-5>", ":lua require('harpoon.ui').nav_file(5)<CR>"},
+    { 'n', "<M-6>", ":lua require('harpoon.ui').nav_file(6)<CR>"},
+    { 'n', "<M-7>", ":lua require('harpoon.ui').nav_file(7)<CR>"},
+    { 'n', "<M-8>", ":lua require('harpoon.ui').nav_file(8)<CR>"},
+    { 'n', "<M-9>", ":lua require('harpoon.ui').nav_file(9)<CR>"},
 
-    { 'n', "<CR>1", ":lua require('harpoon.term').gotoTerminal(1)<CR>"},
-    { 'n', "<CR>2", ":lua require('harpoon.term').gotoTerminal(2)<CR>"},
-    { 'n', "<CR>3", ":lua require('harpoon.term').gotoTerminal(3)<CR>"},
-    { 'n', "<CR>4", ":lua require('harpoon.term').gotoTerminal(4)<CR>"},
-    { 'n', "<CR>5", ":lua require('harpoon.term').gotoTerminal(5)<CR>"},
-    { 'n', "<CR>6", ":lua require('harpoon.term').gotoTerminal(6)<CR>"},
-    { 'n', "<CR>7", ":lua require('harpoon.term').gotoTerminal(7)<CR>"},
-    { 'n', "<CR>8", ":lua require('harpoon.term').gotoTerminal(8)<CR>"},
-    { 'n', "<CR>9", ":lua require('harpoon.term').gotoTerminal(9)<CR>"},
+    { 'n', "1<space>", ":lua OPEN_TERMINAL(1)<CR>"},
+    { 'n', "2<space>", ":lua OPEN_TERMINAL(2)<CR>"},
+    { 'n', "3<space>", ":lua OPEN_TERMINAL(3)<CR>"},
+    { 'n', "4<space>", ":lua OPEN_TERMINAL(4)<CR>"},
+    { 'n', "5<space>", ":lua OPEN_TERMINAL(5)<CR>"},
+    { 'n', "6<space>", ":lua OPEN_TERMINAL(6)<CR>"},
+    { 'n', "7<space>", ":lua OPEN_TERMINAL(7)<CR>"},
+    { 'n', "8<space>", ":lua OPEN_TERMINAL(8)<CR>"},
+    { 'n', "9<space>", ":lua OPEN_TERMINAL(9)<CR>"},
 
     -- Misc
     { 't', '<esc>', [[<C-\><C-n>]] },
@@ -159,6 +156,10 @@ local keymaps = {
     { 'n', '<leader>taa', ':ToggleTermToggleAll<CR>' },
     { 'n', '<leader>bd', ':%bd|e#' },
     { 'n', "<leader>cl", "Oconsole.log()<LEFT>" },
+    { 'n', "<M-j>", ":cnext<CR>zz" },
+    { 'n', "<M-k>", ":cprev<CR>zz" },
+    { 'n', "<M-x>", ":call setqflist([])" },
+    { 'n', "<leader>fz", ":FzfLua " },
 
     { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', "n", "nzzzv" },
@@ -172,6 +173,8 @@ local keymaps = {
     { 'n', "<C-u>", "<C-u>zz" },
     { 'n', "<C-f>", "<C-f>zz" },
     { 'n', "<C-b>", "<C-b>zz" },
+    { 'n', "<C-i>", "<C-i>zz" },
+    { 'n', "<C-o>", "<C-o>zz" },
     { 'n', "(", "<cmd>vertical resize +4<CR>" },
     { 'n', "+", "<cmd>resize +4<CR>" },
     { 'n', "-", "<cmd>resize -4<CR>" },
@@ -182,15 +185,19 @@ local keymaps = {
     { 'v', "<leader>r", [[:s/\%V]] },
     { 'v', "<leader>-", [[:s/\%V /_/g<CR>]] },
     { 'n', "vv", "V" },
-    { 'n', "<f2>", ":lua GET_WORK_PERCENTAGE()<CR>" },
+    { 'x', "p", "P" },
+    { 'n', "<C-l>", "mmyyp`mj" },
+    { 'n', "<leader><space>", ":<C-f>i!" },
+    { 'n', "<leader>e", ":e!<CR>" },
+    { 'n', "<M-t>", "df<space>ea <C-[>px2B" },
 
     -- Disabling Ctrl-c
     { 'v', "<C-c>", "<Nop>" },
     { 'i', "<C-c>", "<Nop>" },
 
     { 'n', "<leader>sq", ":DBUIToggle<CR>" },
-    { 'i', "<C-h>", "<LEFT>" },
-    { 'i', "<C-l>", "<RIGHT>" },
+    -- { 'i', "<C-h>", "<LEFT>" },
+    -- { 'i', "<C-l>", "<RIGHT>" },
     { 'n', "<leader>x", "*``cgn" },
     { 'n', "<leader>X", "#``cgn" },
 
@@ -198,6 +205,8 @@ local keymaps = {
     { 'n', "cw", "ciw" },
     { 'n', "yw", "yiw" },
     { 'n', "vw", "viw" },
+
+    { 'n', "<leader>tn", ":tabnew<CR>" },
 
     { 'i', "<C-k><C-k>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>" },
     { 'v', "<C-k><C-k>", "<ESC><Cmd>lua require'better-digraphs'.digraphs('visual')<CR>" },

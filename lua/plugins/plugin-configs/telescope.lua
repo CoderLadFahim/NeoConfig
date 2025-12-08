@@ -15,12 +15,17 @@ end
 telescope.setup(
     {
         defaults = {
-            -- borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-            borderchars = { "-", "┇", "-", "┇", "+", "+", "+", "+" },
-            layout_strategy = 'vertical',
+            preview = false,
+            -- prompt_prefix = ' ',
+            -- selection_caret = ' ',
+            borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+            layout_strategy = 'bottom_pane',
             layout_config = {
                 vertical = {
                     preview_cutoff = 10,
+                },
+                bottom_pane = {
+                    prompt_position = 'bottom',
                 }
             },
             file_ignore_patterns = {
@@ -28,6 +33,8 @@ telescope.setup(
                 'vendor',
                 'public/vendor',
                 'public/install',
+                'public/illumine-admin',
+                'public/scripts',
                 'node_modules',
                 'composer.lock',
                 'package-lock.json',
@@ -55,3 +62,4 @@ telescope.setup(
     }
 )
 
+telescope.load_extension('harpoon')

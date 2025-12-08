@@ -55,26 +55,14 @@ end
 local lsp_flags = { debounce_text_changes = 150 }
 local lsp_options = { on_attach = on_attach, flags = lsp_flags }
 
-local macos_ts_tsdk_location = '/usr/local/lib/node_modules/typescript/lib'
-local linux_ts_tsdk_location = '/mnt/c/Users/Fahim al Emroz/AppData/Roaming/npm/node_modules/typescript/lib'
-local linux_ts_tsdk_location2 = '/home/fahim/.nvm/versions/node/v20.10.0/lib/node_modules/typescript/lib'
-
-local tsdk_to_use = nil
-
-if (directoryExists(linux_ts_tsdk_location2)) then
-	tsdk_to_use = linux_ts_tsdk_location2 
-elseif (directoryExists(linux_ts_tsdk_location)) then
-	tsdk_to_use = linux_ts_tsdk_location 
-else
-	tsdk_to_use = macos_ts_tsdk_location 
-end
+local env = require('env')
 
 local tsserver_options = {
     init_options = {
         plugins = {
             {
                 name = "@vue/typescript-plugin",
-                location = "/home/fahim/.config/nvm/versions/node/v20.11.1/lib/node_modules/@vue/typescript-plugin",
+                location = env.vue_plugin_path,
                 languages = {"javascript", "typescript", "vue"},
             },
         },
@@ -84,14 +72,14 @@ local tsserver_options = {
   	flags = lsp_flags
 }
 
-neovim_lsp['phpactor'].setup(lsp_options)
+neovim_lsp['intelephense'].setup(lsp_options)
 neovim_lsp['pyright'].setup(lsp_options)
 -- neovim_lsp['tsserver'].setup(lsp_options)
-neovim_lsp['tsserver'].setup(tsserver_options)
+neovim_lsp['ts_ls'].setup(tsserver_options)
 
 neovim_lsp['tailwindcss'].setup({});
 neovim_lsp['emmet_ls'].setup({
-	filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'javascript', 'typescript', 'php', 'vue' }
+	filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'javascript', 'typescript', 'blade', 'vue' }
 })
 
 

@@ -135,8 +135,8 @@ cmp.setup {
       	    -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       	    -- vim_item.kind = string.format('', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       	    vim_item.menu = ({
-        		-- nvim_lsp = "[LSP]",
-        		nvim_lsp = "[" .. kind_icons[vim_item.kind] .. "]",
+        		nvim_lsp = "[LSP]",
+        		-- nvim_lsp = "[" .. kind_icons[vim_item.kind] .. "]",
         		luasnip = "[Snippet]",
         		buffer = "[Buffer]",
         		path = "[Path]",
@@ -146,10 +146,12 @@ cmp.setup {
     	end,
   	},
   	sources = {
-    	{ name = "nvim_lsp" },
-    	{ name = "luasnip" },
-    	{ name = "buffer" },
-    	{ name = "path" },
+    	{ name = "copilot", group_index = 2 },
+    	{ name = "nvim_lsp", group_index = 2 },
+    	{ name = "luasnip", group_index = 2 },
+    	{ name = "buffer", group_index = 2 },
+    	{ name = "path", group_index = 2 },
+    	{ name = "vim-dadbod-completion", group_index = 2 },
   	},
   	confirm_opts = {
     	behavior = cmp.ConfirmBehavior.Replace,
@@ -165,3 +167,15 @@ cmp.setup {
     	native_menu = false,
   	},
 }
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'sql', 'mysql', 'plsql' },
+    callback = function()
+        require('cmp').setup.buffer({
+            sources = {
+                { name = 'vim-dadbod-completion' },
+                { name = 'buffer' },
+            },
+        })
+    end,
+})
