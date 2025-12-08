@@ -1,5 +1,5 @@
 local plugin_configs = {
-    -- 'monokai',
+    'monokai',
     'rose-pine',
     'oil',
     'treesitter',

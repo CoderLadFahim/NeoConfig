@@ -191,7 +191,6 @@ local keymaps = {
     { 'v', "<leader>r", [[:s/\%V]] },
     { 'v', "<leader>-", [[:s/\%V /_/g<CR>]] },
     { 'n', "vv", "V" },
-    { 'n', "<f2>", ":lua GET_WORK_PERCENTAGE()<CR>" },
     { 'x', "p", "P" },
     { 'n', "<C-l>", "mmyyp`mj" },
     { 'n', "<leader><space>", ":<C-f>i!" },

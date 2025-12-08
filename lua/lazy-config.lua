@@ -66,32 +66,31 @@ local plugins = {
     -- 'EdenEast/nightfox.nvim',
     -- 'Pocco81/auto-save.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
-    -- 'slugbyte/lackluster.nvim',
     -- "ibhagwan/fzf-lua",
-    -- {
-    --     'kristijanhusak/vim-dadbod-ui',
-    --     dependencies = {
-    --         { 'tpope/vim-dadbod', lazy = true },
-    --         { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
-    --     },
-    --     cmd = {
-    --         'DBUI',
-    --         'DBUIToggle',
-    --         'DBUIAddConnection',
-    --         'DBUIFindBuffer',
-    --     },
-    --     init = function()
-    --         -- Your DBUI configuration
-    --         vim.g.db_ui_use_nerd_fonts = 0
-    --     end,
-    -- },
+    {
+        'kristijanhusak/vim-dadbod-ui',
+        dependencies = {
+            { 'tpope/vim-dadbod', lazy = true },
+            { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
+        },
+        cmd = {
+            'DBUI',
+            'DBUIToggle',
+            'DBUIAddConnection',
+            'DBUIFindBuffer',
+        },
+        init = function()
+            -- Your DBUI configuration
+            vim.g.db_ui_use_nerd_fonts = 0
+        end,
+    },
     -- 'ellisonleao/gruvbox.nvim',
     -- 'marko-cerovac/material.nvim',
     -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && yarn install",
+        build = "cd app && npm install",
         init = function()
             vim.g.mkdp_filetypes = { "markdown" }
         end,

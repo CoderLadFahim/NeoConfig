@@ -60,6 +60,7 @@ onedark.setup({
         ["Search"] = { bg='$blue', fg='$black' },
         ["IncSearch"] = { bg='$blue', fg='$black' },
         ["CurSearch"] = { bg='$yellow', fg='$black' },
+
         ["HarpoonInactive"] = { bg='#1f2329', fg = 'foreground' },
         ["HarpoonNumberInactive"] = { bg='#1f2329', fg = 'foreground' },
 
