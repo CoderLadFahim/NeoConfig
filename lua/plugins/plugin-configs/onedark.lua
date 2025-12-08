@@ -49,7 +49,7 @@ onedark.setup({
         -- ["VertSplit"] = { fg = '$cyan' },
     -- Darkmode
         ["WinbarNC"] = { fg = '#a0a8b7', bg = '#1f2329' },
-        ["Winbar"] = { bg = '#30363f', fmt='None' },
+        ["Winbar"] = { bg = '#30363f', fmt='None', fg='#a0a8b7' },
 
     -- lightmode
         -- ["WinbarNC"] = { fg = '#a0a8b7', bg = '#f6f6f6' },
@@ -60,14 +60,11 @@ onedark.setup({
         ["Search"] = { bg='$blue', fg='$black' },
         ["IncSearch"] = { bg='$blue', fg='$black' },
         ["CurSearch"] = { bg='$yellow', fg='$black' },
-        ["HarpoonInactive"] = { bg='#1f2329' },
-        ["HarpoonNumberInactive"] = { bg='#1f2329' },
+        ["HarpoonInactive"] = { bg='#1f2329', fg = 'foreground' },
+        ["HarpoonNumberInactive"] = { bg='#1f2329', fg = 'foreground' },
 
-        -- ["HarpoonInactive"] = { bg='#282c34' },
-        -- ["HarpoonNumberInactive"] = { bg='#282c34' },
-
-        ["HarpoonActive"] = { bg='#30363f', fg='#a0a8b7' },
-        ["HarpoonNumberActive"] = { bg='#30363f', fg='#a0a8b7' },
+        ["HarpoonActive"] = { bg = '$blue', fg='$black' },
+        ["HarpoonNumberActive"] = { bg = '$blue', fg='$black' },
 
         ["VimwikiHeader1"] = { fg = '$yellow', fmt='Bold' },
         ["VimwikiHeader2"] = { fg = '$green', fmt='Bold' },

@@ -110,10 +110,10 @@ cmp.setup {
       	    else
         		fallback()
       	    end
-    	    end, {
+    	end, {
       		    "i",
       		    "s",
-    	}),
+    	    }),
     	["<S-Tab>"] = cmp.mapping(function(fallback)
       	    if cmp.visible() then
         		cmp.select_prev_item()
@@ -122,10 +122,10 @@ cmp.setup {
       	    else
         		fallback()
       	    end
-    	    end, {
+    	end, {
       		    "i",
       		    "s",
-    	}),
+    	    }),
   	},
   	formatting = {
     	fields = { "kind", "abbr", "menu" },

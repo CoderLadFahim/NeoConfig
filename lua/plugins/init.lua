@@ -8,6 +8,7 @@ local plugin_configs = {
     'auto-pairs',
     'gitsigns',
     'copilot',
+    'copilot-chat',
     'cmp',
     'mason',
     'none-ls',

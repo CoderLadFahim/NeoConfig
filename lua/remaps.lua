@@ -3,15 +3,6 @@ function set_keymap(mode, seq, cmd)
 	vim.api.nvim_set_keymap(mode, seq, cmd, opts)
 end
 
-function WRITE_FILE()
-    local modified = vim.api.nvim_buf_get_option(0, 'modified')
-    if modified then
-	    vim.cmd('w')
-    else
-	    print("File written")
-    end
-end
-
 function SEARCH_GIT_FILES()
 	if vim.fn.isdirectory('.git') == 1 then
   		vim.cmd('Telescope git_files disable_devicons=' .. tostring(ENABLE_ICONS() == false))
@@ -19,6 +10,12 @@ function SEARCH_GIT_FILES()
 		print('Not a git repository, searching all files');
   		vim.cmd('Telescope find_files disable_devicons=' .. tostring(ENABLE_ICONS() == false))
   	end
+end
+
+function OPEN_TERMINAL(n)
+	vim.cmd('sv')
+    require('harpoon.term').gotoTerminal(n)
+    vim.api.nvim_feedkeys('i', 'n', false)
 end
 
 function SOURCE_FILE()
@@ -59,17 +56,6 @@ function LIVE_GREP()
         preview = true,
         layout_strategy = 'vertical',
     })
-end
-
-function GET_WORK_PERCENTAGE()
-    local starting_hour = 8
-    local ending_hour = 17
-    local target_seconds = (ending_hour - starting_hour) * 3600
-    local current_minute_in_seconds = os.date('%M') * 60
-    local total_seconds_passed = (os.date('%H') - starting_hour) * 3600 + current_minute_in_seconds
-
-    local working_percentage = math.floor(((total_seconds_passed / target_seconds) * 100 ) + 0.5)
-    print(working_percentage .. '%')
 end
 
 local keymaps = {
@@ -141,15 +127,20 @@ local keymaps = {
     { 'n', "<M-8>", ":lua require('harpoon.ui').nav_file(8)<CR>"},
     { 'n', "<M-9>", ":lua require('harpoon.ui').nav_file(9)<CR>"},
 
-    { 'n', "1<space>", ":lua require('harpoon.term').gotoTerminal(1)<CR>"},
-    { 'n', "2<space>", ":lua require('harpoon.term').gotoTerminal(2)<CR>"},
-    { 'n', "3<space>", ":lua require('harpoon.term').gotoTerminal(3)<CR>"},
-    { 'n', "4<space>", ":lua require('harpoon.term').gotoTerminal(4)<CR>"},
-    { 'n', "5<space>", ":lua require('harpoon.term').gotoTerminal(5)<CR>"},
-    { 'n', "6<space>", ":lua require('harpoon.term').gotoTerminal(6)<CR>"},
-    { 'n', "7<space>", ":lua require('harpoon.term').gotoTerminal(7)<CR>"},
-    { 'n', "8<space>", ":lua require('harpoon.term').gotoTerminal(8)<CR>"},
-    { 'n', "9<space>", ":lua require('harpoon.term').gotoTerminal(9)<CR>"},
+    { 'n', "1<space>", ":lua OPEN_TERMINAL(1)<CR>"},
+    { 'n', "2<space>", ":lua OPEN_TERMINAL(2)<CR>"},
+    { 'n', "3<space>", ":lua OPEN_TERMINAL(3)<CR>"},
+    { 'n', "4<space>", ":lua OPEN_TERMINAL(4)<CR>"},
+    { 'n', "5<space>", ":lua OPEN_TERMINAL(5)<CR>"},
+    { 'n', "6<space>", ":lua OPEN_TERMINAL(6)<CR>"},
+    { 'n', "7<space>", ":lua OPEN_TERMINAL(7)<CR>"},
+    { 'n', "8<space>", ":lua OPEN_TERMINAL(8)<CR>"},
+    { 'n', "9<space>", ":lua OPEN_TERMINAL(9)<CR>"},
+
+    -- Create remaps for the CopilotChat plugin
+    { 'n', '<leader>zc', '<cmd>CopilotChatToggle<CR>' },
+    { 'v', '<leader>ze', '<cmd>CopilotChatOptimize<CR>' },
+    { 'n', '<leader>zp', '<cmd>CopilotChatPrompts<CR>' },
 
     -- Misc
     { 't', '<esc>', [[<C-\><C-n>]] },
@@ -170,6 +161,7 @@ local keymaps = {
     { 'n', '<leader>taa', ':ToggleTermToggleAll<CR>' },
     { 'n', '<leader>bd', ':%bd|e#' },
     { 'n', "<leader>cl", "Oconsole.log()<LEFT>" },
+    { 'n', "<leader>fl", "O#file: " },
     { 'n', "<M-j>", ":cnext<CR>zz" },
     { 'n', "<M-k>", ":cprev<CR>zz" },
     { 'n', "<M-x>", ":call setqflist([])" },
@@ -207,8 +199,8 @@ local keymaps = {
     { 'n', "<M-t>", "df<space>ea <C-[>px2B" },
 
     -- Disabling Ctrl-c
-    { 'v', "<C-c>", "<Nop>" },
-    { 'i', "<C-c>", "<Nop>" },
+    -- { 'v', "<C-c>", "<Nop>" },
+    -- { 'i', "<C-c>", "<Nop>" },
 
     { 'n', "<leader>sq", ":DBUIToggle<CR>" },
     -- { 'i', "<C-h>", "<LEFT>" },

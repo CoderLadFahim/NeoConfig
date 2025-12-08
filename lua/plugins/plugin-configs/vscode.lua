@@ -23,6 +23,9 @@ vscode.setup({
     VimwikiHeader5 = { fg = c.vscPink, bold = true },
     VimwikiHeader6 = { fg = c.vscDarkYellow, bold = true },
 
+    ["HarpoonActive"] = { bg = '#007ACC', fg = '#ffffff' },
+    ["HarpoonNumberActive"] = { bg = '#007ACC', fg = '#ffffff' },
+
     VimwikiHeaderChar = { fg=c.vscSplitDark },
 
     ["LineNr"] = { fg = c.vscGray },

@@ -57,7 +57,6 @@ local plugins = {
     'vimwiki/vimwiki',
     'protex/better-digraphs.nvim',
 
-
     -- 'akinsho/git-conflict.nvim',
     -- 'zacanger/angr.vim',
     'navarasu/onedark.nvim',
@@ -104,18 +103,14 @@ local plugins = {
     { 'stevearc/oil.nvim' },
    	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    -- { 'nvim-treesitter/nvim-treesitter-context' },
+    { 'nvim-treesitter/nvim-treesitter-context' },
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
-    'rebelot/kanagawa.nvim',
-    'jwalton512/vim-blade',
+    'kiyoon/telescope-insert-path.nvim',
     {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
         event = "InsertEnter",
-        -- config = function()
-        --     require("copilot").setup({})
-        -- end,
     },
     {
         "zbirenbaum/copilot-cmp",
