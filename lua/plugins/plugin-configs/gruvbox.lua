@@ -21,7 +21,7 @@ gruvbox.setup({
     invert_tabline = false,
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "soft", -- can be "hard", "soft" or empty string
+    contrast = "hard", -- can be "hard", "soft" or empty string
     palette_overrides = {},
     overrides = {
         ["@tag"] = { fg = gruvbox.palette.bright_red },
@@ -46,6 +46,8 @@ gruvbox.setup({
     dim_inactive = false,
     transparent_mode = false,
 })
+
+vim.cmd('colorscheme gruvbox')
 
   -- dark0_hard = "#1d2021",
   -- dark0 = "#282828",
