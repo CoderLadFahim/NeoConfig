@@ -61,11 +61,11 @@ rose_pine.setup({
         GitConflictAncestorLabel = { bg = 'subtle' },
         TelescopeMatching = { fg = 'love' },
 
-        StatusLineBranch = { bg='Overlay', fg='Subtle' },
-        StatusLineTime =   { bg='Overlay', fg='Subtle' },
+        ["StatusLineBranch"] = { bg='Overlay', fg='Subtle'},
+        ["StatusLineTime"] = { bg='Overlay', fg='Subtle' },
 
-        ["HarpoonActive"] = { bg = 'Pine', fg = 'Text' },
-        ["HarpoonNumberActive"] = { bg = 'Pine', fg = 'Text' },
+        ["HarpoonActive"] = { bg = 'Pine' },
+        ["HarpoonNumberActive"] = { bg = 'Pine' },
     },
 
     before_highlight = function(group, highlight, palette)

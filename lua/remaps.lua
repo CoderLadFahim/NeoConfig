@@ -12,9 +12,9 @@ function SEARCH_GIT_FILES()
   	end
 end
 
-function OPEN_TERMINAL(terminal_number)
+function OPEN_TERMINAL(n)
 	vim.cmd('sv')
-    require('harpoon.term').gotoTerminal(terminal_number)
+    require('harpoon.term').gotoTerminal(n)
     vim.api.nvim_feedkeys('i', 'n', false)
 end
 
@@ -137,6 +137,11 @@ local keymaps = {
     { 'n', "8<space>", ":lua OPEN_TERMINAL(8)<CR>"},
     { 'n', "9<space>", ":lua OPEN_TERMINAL(9)<CR>"},
 
+    -- Create remaps for the CopilotChat plugin
+    { 'n', '<leader>zc', '<cmd>CopilotChatToggle<CR>' },
+    { 'v', '<leader>ze', '<cmd>CopilotChatOptimize<CR>' },
+    { 'n', '<leader>zp', '<cmd>CopilotChatPrompts<CR>' },
+
     -- Misc
     { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', '<leader>w<leader>w', ':lua print("use :w")<CR>' },
@@ -156,6 +161,7 @@ local keymaps = {
     { 'n', '<leader>taa', ':ToggleTermToggleAll<CR>' },
     { 'n', '<leader>bd', ':%bd|e#' },
     { 'n', "<leader>cl", "Oconsole.log()<LEFT>" },
+    { 'n', "<leader>fl", "O#file: " },
     { 'n', "<M-j>", ":cnext<CR>zz" },
     { 'n', "<M-k>", ":cprev<CR>zz" },
     { 'n', "<M-x>", ":call setqflist([])" },
@@ -192,8 +198,8 @@ local keymaps = {
     { 'n', "<M-t>", "df<space>ea <C-[>px2B" },
 
     -- Disabling Ctrl-c
-    { 'v', "<C-c>", "<Nop>" },
-    { 'i', "<C-c>", "<Nop>" },
+    -- { 'v', "<C-c>", "<Nop>" },
+    -- { 'i', "<C-c>", "<Nop>" },
 
     { 'n', "<leader>sq", ":DBUIToggle<CR>" },
     -- { 'i', "<C-h>", "<LEFT>" },
