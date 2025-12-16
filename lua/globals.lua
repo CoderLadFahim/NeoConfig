@@ -25,11 +25,12 @@ local env = require('env')
 vim.g.dbs = {}
 for _, db in ipairs(env.databases or {}) do
     local connection_string = string.format(
-        '%s://%s:%s@%s/%s',
+        "%s://%s:%s@%s:%s/%s",
         db.type,
         db.user,
         db.password,
         db.host,
+        db.port,
         db.database
     )
     vim.g.dbs[db.name] = connection_string

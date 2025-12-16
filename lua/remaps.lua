@@ -214,6 +214,8 @@ local keymaps = {
 
     { 'n', "<leader>tn", ":tabnew<CR>" },
 
+    { 'n', "<C-j>", "o<esc>" },
+
     { 'i', "<C-k><C-k>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>" },
     { 'v', "<C-k><C-k>", "<ESC><Cmd>lua require'better-digraphs'.digraphs('visual')<CR>" },
 }
