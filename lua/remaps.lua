@@ -139,11 +139,13 @@ local keymaps = {
 
     -- Create remaps for the CopilotChat plugin
     { 'n', '<leader>zc', '<cmd>CopilotChatToggle<CR>' },
-    { 'v', '<leader>ze', '<cmd>CopilotChatOptimize<CR>' },
+    { 'v', '<leader>ze', '<cmd>CopilotChatExplain<CR>' },
+    { 'v', '<leader>zo', '<cmd>CopilotChatOptimize<CR>' },
+    { 'n', '<leader>zx', '<cmd>CopilotChatStop<CR>' },
     { 'n', '<leader>zp', '<cmd>CopilotChatPrompts<CR>' },
+    { 'n', '<leader>zl', '<cmd>CopilotChatLoad<CR>' },
 
     -- Misc
-    { 't', '<esc>', [[<C-\><C-n>]] },
     { 'n', '<leader>w<leader>w', ':lua print("use :w")<CR>' },
     { 'n', '<leader>ss', ':lua SOURCE_FILE()' },
     { 'n', '<leader>so', ':source ~/.config/nvim/init.lua' },
@@ -197,7 +199,8 @@ local keymaps = {
     { 'n', "<leader>e", ":e!<CR>" },
     { 'n', "<M-t>", "df<space>ea <C-[>px2B" },
 
-    -- Disabling Ctrl-c
+    { 'n', "<M-j>", "mmo<C-[>`m" },
+    { 'n', "<M-k>", "mmO<C-[>`m" },
     -- { 'v', "<C-c>", "<Nop>" },
     -- { 'i', "<C-c>", "<Nop>" },
 
@@ -216,6 +219,8 @@ local keymaps = {
 
     { 'i', "<C-k><C-k>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>" },
     { 'v', "<C-k><C-k>", "<ESC><Cmd>lua require'better-digraphs'.digraphs('visual')<CR>" },
+
+    { 'n', "<leader>sh", ":set shiftwidth=" },
 }
 
 for _, value in ipairs(keymaps) do
