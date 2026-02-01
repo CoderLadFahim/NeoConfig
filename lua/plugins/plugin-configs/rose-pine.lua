@@ -64,6 +64,12 @@ rose_pine.setup({
         ["StatusLineBranch"] = { bg='Overlay', fg='Subtle'},
         ["StatusLineTime"] = { bg='Overlay', fg='Subtle' },
 
+        ["LeapLabel"] = { bg='Pine', fg='Text' },
+
+        ["IncSearch"] = { bg='Pine', fg='Text' },
+        ["CurSearch"] = { bg='Gold', fg='Base' },
+        ["Search"] = { bg='Foam', fg='Gold' },
+
         ["HarpoonActive"] = { bg = 'Pine' },
         ["HarpoonNumberActive"] = { bg = 'Pine' },
     },
