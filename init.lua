@@ -8,9 +8,9 @@ end
 
 require('options');
 require('globals');
-require('remaps');
 require('lazy-config');
 require('plugins');
+require('remaps');
 require('lsp');
 require('processes');
 

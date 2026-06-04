@@ -1,6 +1,5 @@
 local plugin_configs = {
     'monokai',
-    'rose-pine',
     'oil',
     'treesitter',
     'commentnvim',
@@ -15,7 +14,6 @@ local plugin_configs = {
     'prettier',
     'indent-blankline',
     'leapnvim',
-    'gitconflict',
     'rose-pine',
     'gruvbox',
     'onedark',
@@ -26,6 +24,7 @@ local plugin_configs = {
     'fzflua',
     'kanagawa',
     'vscode',
+    'gitconflict'
 }
 
 vim.api.nvim_create_autocmd('TermOpen', {

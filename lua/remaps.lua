@@ -137,13 +137,13 @@ local keymaps = {
     { 'n', "8<space>", ":lua OPEN_TERMINAL(8)<CR>"},
     { 'n', "9<space>", ":lua OPEN_TERMINAL(9)<CR>"},
 
-    -- Create remaps for the CopilotChat plugin
-    { 'n', '<leader>zc', '<cmd>CopilotChatToggle<CR>' },
-    { 'v', '<leader>ze', '<cmd>CopilotChatExplain<CR>' },
-    { 'v', '<leader>zo', '<cmd>CopilotChatOptimize<CR>' },
-    { 'n', '<leader>zx', '<cmd>CopilotChatStop<CR>' },
-    { 'n', '<leader>zp', '<cmd>CopilotChatPrompts<CR>' },
-    { 'n', '<leader>zl', '<cmd>CopilotChatLoad<CR>' },
+    -- -- Create remaps for the CopilotChat plugin
+    -- { 'n', '<leader>zc', '<cmd>CopilotChatToggle<CR>' },
+    -- { 'v', '<leader>ze', '<cmd>CopilotChatExplain<CR>' },
+    -- { 'v', '<leader>zo', '<cmd>CopilotChatOptimize<CR>' },
+    -- { 'n', '<leader>zx', '<cmd>CopilotChatStop<CR>' },
+    -- { 'n', '<leader>zp', '<cmd>CopilotChatPrompts<CR>' },
+    -- { 'n', '<leader>zl', '<cmd>CopilotChatLoad<CR>' },
 
     -- Misc
     { 'n', '<leader>w<leader>w', ':lua print("use :w")<CR>' },
@@ -196,19 +196,17 @@ local keymaps = {
     { 'x', "p", "P" },
     { 'n', "<C-l>", "mmyyp`mj" },
     { 'n', "<leader><space>", ":<C-f>i!" },
-    { 'n', "<leader>e", ":e!<CR>" },
+    { 'n', "<leader>e", ":e!" },
     { 'n', "<M-t>", "df<space>ea <C-[>px2B" },
 
-    { 'n', "<M-j>", "mmo<C-[>`m" },
-    { 'n', "<M-k>", "mmO<C-[>`m" },
-    -- { 'v', "<C-c>", "<Nop>" },
-    -- { 'i', "<C-c>", "<Nop>" },
+    { 'n', "<C-M-j>", "mmo<C-[>`m" },
+    { 'n', "<C-M-k>", "mmO<C-[>`m" },
 
     { 'n', "<leader>sq", ":DBUIToggle<CR>" },
-    -- { 'i', "<C-h>", "<LEFT>" },
-    -- { 'i', "<C-l>", "<RIGHT>" },
     { 'n', "<leader>x", "*``cgn" },
     { 'n', "<leader>X", "#``cgn" },
+
+    { 'n', "<M-c>", ":TSContext toggle<CR>" },
 
     { 'n', "dw", "diw" },
     { 'n', "cw", "ciw" },
@@ -221,6 +219,7 @@ local keymaps = {
     { 'v', "<C-k><C-k>", "<ESC><Cmd>lua require'better-digraphs'.digraphs('visual')<CR>" },
 
     { 'n', "<leader>sh", ":set shiftwidth=" },
+    { 'n', "<leader>op", ":e!<CR>" },
 }
 
 for _, value in ipairs(keymaps) do
@@ -230,3 +229,4 @@ for _, value in ipairs(keymaps) do
         value[3]
     )
 end
+

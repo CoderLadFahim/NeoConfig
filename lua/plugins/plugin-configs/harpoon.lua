@@ -7,5 +7,7 @@ harpoon.setup({
     menu = {
         width = math.floor((70 / 100) * vim.api.nvim_get_option("columns")),
     },
+    tabline_prefix = "  ",
+    tabline_suffix = "  ",
     tabline = true
 })

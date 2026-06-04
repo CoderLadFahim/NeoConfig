@@ -70,8 +70,8 @@ rose_pine.setup({
         ["CurSearch"] = { bg='Gold', fg='Base' },
         ["Search"] = { bg='Foam', fg='Gold' },
 
-        ["HarpoonActive"] = { bg = 'Pine' },
-        ["HarpoonNumberActive"] = { bg = 'Pine' },
+        ["HarpoonActive"] = { bg = 'Pine', fg = "#f1f1f1" },
+        ["HarpoonNumberActive"] = { bg = 'Pine', fg = "#f1f1f1" },
     },
 
     before_highlight = function(group, highlight, palette)

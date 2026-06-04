@@ -45,8 +45,8 @@ kanagawa.setup({
 
             ["StatusLineTime"] = { fg = colors.palette.dragonWhite, bg=colors.palette.dragonBlack4 },
 
-            HarpoonActive = { bg = colors.palette.dragonBlack4, fg = colors.palette.dragonWhite },
-            HarpoonNumberActive = { bg = colors.palette.dragonBlack4, fg = colors.palette.dragonWhite },
+            HarpoonActive = { bg = colors.palette.waveBlue2, fg = colors.palette.dragonWhite },
+            HarpoonNumberActive = { bg = colors.palette.waveBlue2, fg = colors.palette.dragonWhite },
 
             HarpoonInactive = { fg = colors.palette.dragonAsh },
             HarpoonNumberInactive = { fg = colors.palette.dragonAsh },
