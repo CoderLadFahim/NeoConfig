@@ -36,12 +36,26 @@ gruvbox.setup({
         ["TelescopeMatching"] = { fg = gruvbox.palette.bright_red },
         ["TelescopeSelection"] = { fg = gruvbox.palette.bright_aqua },
 
+        ["HarpoonInactive"] = { bg = gruvbox.palette.dark2, fg = gruvbox.palette.light4 },
+        ["HarpoonNumberInactive"] = { bg = gruvbox.palette.dark2, fg = gruvbox.palette.light4 },
+        ["HarpoonActive"] = { bg = gruvbox.palette.neutral_blue, fg = gruvbox.palette.light1 },
+        ["HarpoonNumberActive"] = { bg = gruvbox.palette.neutral_blue, fg = gruvbox.palette.light1 },
+
         ["GitSignsCurrentLineBlame"] = { fg = gruvbox.palette.dark4 },
         ["SignColumn"] = { bg = gruvbox.palette.dark0_hard },
         ["WinBarNC"] = { bg = gruvbox.palette.dark2, fg = gruvbox.palette.light4 },
         ["WinBar"] = { bg = gruvbox.palette.dark2, fg = gruvbox.palette.light0_soft },
         ["GitConflictCurrent"] = { bg = gruvbox.palette.dark0_soft },
         ["GitConflictCurrentLabel"] = { fg = gruvbox.palette.dark0_hard, bg = gruvbox.palette.bright_yellow },
+
+        -- Vimwiki Headers
+        ["VimwikiHeader1"] = { fg = gruvbox.palette.bright_yellow, bold = true },
+        ["VimwikiHeader2"] = { fg = gruvbox.palette.bright_green, bold = true },
+        ["VimwikiHeader3"] = { fg = gruvbox.palette.bright_blue, bold = true },
+        ["VimwikiHeader4"] = { fg = gruvbox.palette.bright_purple, bold = true },
+        ["VimwikiHeader5"] = { fg = gruvbox.palette.bright_aqua, bold = true },
+        ["VimwikiHeader6"] = { bold = true },
+        ["VimwikiHeaderChar"] = { fg = gruvbox.palette.gray },
     },
     dim_inactive = false,
     transparent_mode = false,
