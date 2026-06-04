@@ -24,7 +24,9 @@ local plugin_configs = {
     'fzflua',
     'kanagawa',
     'vscode',
-    'gitconflict'
+    'gitconflict',
+    'nightfly',
+    'solarized',
 }
 
 vim.api.nvim_create_autocmd('TermOpen', {
@@ -38,13 +40,3 @@ for _, value in ipairs(plugin_configs) do
     local path = 'plugins.plugin-configs.' .. value;
     require(path);
 end
-
-require('better-digraphs')
-
-vim.g.BetterDigraphsAdditions = {
-  {
-    digraph = "l1",
-    symbol = "●",
-    name = "list item 1"
-  }
-}

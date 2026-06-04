@@ -47,9 +47,8 @@ kanagawa.setup({
 
             HarpoonActive = { bg = colors.palette.waveBlue2, fg = colors.palette.dragonWhite },
             HarpoonNumberActive = { bg = colors.palette.waveBlue2, fg = colors.palette.dragonWhite },
-
-            HarpoonInactive = { fg = colors.palette.dragonAsh },
-            HarpoonNumberInactive = { fg = colors.palette.dragonAsh },
+            HarpoonInactive = { fg = colors.palette.dragonAqua },
+            HarpoonNumberInactive = { fg = colors.palette.dragonAqua },
         }
     end,
     theme = "wave",              -- Load "wave" theme when 'background' option is not set

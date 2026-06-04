@@ -68,7 +68,8 @@ rose_pine.setup({
 
         ["IncSearch"] = { bg='Pine', fg='Text' },
         ["CurSearch"] = { bg='Gold', fg='Base' },
-        ["Search"] = { bg='Foam', fg='Gold' },
+        ["Search"] = { bg='Foam', fg='Love' },
+        ["Visual"] = { bg = 'Iris' },
 
         ["HarpoonActive"] = { bg = 'Pine', fg = "#f1f1f1" },
         ["HarpoonNumberActive"] = { bg = 'Pine', fg = "#f1f1f1" },

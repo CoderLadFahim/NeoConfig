@@ -87,7 +87,7 @@ local keymaps = {
     { 'n', "<leader>bb", ":Telescope current_buffer_fuzzy_find<CR>" },
 
     -- Fugitive
-    { 'n', "<leader>ga.", ":G add ." },
+    -- { 'n', "<leader>ga.", ":G add ." },
     { 'n', "<leader>gcm", ':G commit -m ""<LEFT>' },
     { 'n', "<leader>gcam", ':G commit --amend -m ""<LEFT>' },
     { 'n', "<leader>gcan", ':G commit --amend --no-edit' },
@@ -137,17 +137,18 @@ local keymaps = {
     { 'n', "8<space>", ":lua OPEN_TERMINAL(8)<CR>"},
     { 'n', "9<space>", ":lua OPEN_TERMINAL(9)<CR>"},
 
-    -- -- Create remaps for the CopilotChat plugin
-    -- { 'n', '<leader>zc', '<cmd>CopilotChatToggle<CR>' },
-    -- { 'v', '<leader>ze', '<cmd>CopilotChatExplain<CR>' },
-    -- { 'v', '<leader>zo', '<cmd>CopilotChatOptimize<CR>' },
-    -- { 'n', '<leader>zx', '<cmd>CopilotChatStop<CR>' },
-    -- { 'n', '<leader>zp', '<cmd>CopilotChatPrompts<CR>' },
-    -- { 'n', '<leader>zl', '<cmd>CopilotChatLoad<CR>' },
+    --[[ -- Create remaps for the CopilotChat plugin
+    { 'n', '<leader>zc', '<cmd>CopilotChatToggle<CR>' },
+    { 'v', '<leader>ze', '<cmd>CopilotChatExplain<CR>' },
+    { 'v', '<leader>zo', '<cmd>CopilotChatOptimize<CR>' },
+    { 'n', '<leader>zx', '<cmd>CopilotChatStop<CR>' },
+    { 'n', '<leader>zp', '<cmd>CopilotChatPrompts<CR>' },
+    { 'n', '<leader>zl', '<cmd>CopilotChatLoad<CR>' }, ]]
 
     -- Misc
     { 'n', '<leader>w<leader>w', ':lua print("use :w")<CR>' },
     { 'n', '<leader>ss', ':lua SOURCE_FILE()' },
+    { 'n', '<leader>xx', ':!source ~/.zshrc' },
     { 'n', '<leader>so', ':source ~/.config/nvim/init.lua' },
     { 'n', '<leader>q', ':q!' },
     { 'n', '<leader>v', '<C-v>' },
@@ -195,12 +196,13 @@ local keymaps = {
     { 'n', "vv", "V" },
     { 'x', "p", "P" },
     { 'n', "<C-l>", "mmyyp`mj" },
+    { 'n', "<M-l>", "mmyyP`mk" },
     { 'n', "<leader><space>", ":<C-f>i!" },
-    { 'n', "<leader>e", ":e!" },
+    { 'n', "<leader>op", ":e!<CR>" },
     { 'n', "<M-t>", "df<space>ea <C-[>px2B" },
 
-    { 'n', "<C-M-j>", "mmo<C-[>`m" },
-    { 'n', "<C-M-k>", "mmO<C-[>`m" },
+    { 'n', "<C-M-j>", "mmo`m" },
+    { 'n', "<C-M-k>", "mmO`m" },
 
     { 'n', "<leader>sq", ":DBUIToggle<CR>" },
     { 'n', "<leader>x", "*``cgn" },
@@ -213,10 +215,10 @@ local keymaps = {
     { 'n', "yw", "yiw" },
     { 'n', "vw", "viw" },
 
-    { 'n', "<leader>tn", ":tabnew<CR>" },
+    { 'n', "<M-c>", ":TSContext toggle<CR>" },
 
-    { 'i', "<C-k><C-k>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>" },
-    { 'v', "<C-k><C-k>", "<ESC><Cmd>lua require'better-digraphs'.digraphs('visual')<CR>" },
+    -- { 'i', "<C-k><C-k>", "<Cmd>lua require'better-digraphs'.digraphs('insert')<CR>" },
+    -- { 'v', "<C-k><C-k>", "<ESC><Cmd>lua require'better-digraphs'.digraphs('visual')<CR>" },
 
     { 'n', "<leader>sh", ":set shiftwidth=" },
     { 'n', "<leader>op", ":e!<CR>" },
