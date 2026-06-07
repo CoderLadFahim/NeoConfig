@@ -108,6 +108,7 @@ local plugins = {
     { 'nvim-treesitter/nvim-treesitter-context' },
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
 	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
+	'vague-theme/vague.nvim',
     -- 'kiyoon/telescope-insert-path.nvim',
     {
         "zbirenbaum/copilot.lua",

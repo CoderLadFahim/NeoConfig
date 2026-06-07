@@ -57,6 +57,8 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#458588', fg = '#ebdbb2' },
         ['nightfly'] = { bg = '#82aaff', fg = '#222222' },
         ['solarized'] = { bg = '#268bd2', fg = '#fdf6e3' },
+        -- ['vague'] = { bg = '#6e94b2', fg = '#1c1c24' },
+        ['vague'] = { bg = '#6e94b2', fg = '#1c1c24' },
     },
     i = {
         ['kanagawa'] = { bg = '#C34043', fg = '#c5c9c5' },
@@ -65,6 +67,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#b8bb26', fg = '#282828' },
         ['nightfly'] = { bg = '#c792ea', fg = '#011627' },
         ['solarized'] = { bg = '#2aa198', fg = '#fdf6e3' },
+        ['vague'] = { bg = '#e8b589', fg = '#141415' },
     },
     v = {
         ['kanagawa'] = { bg = '#5d57a3', fg = '#c5c9c5' },
@@ -73,6 +76,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#fabd2f', fg = '#282828' },
         ['nightfly'] = { bg = '#7fdbca', fg = '#011627' },
         ['solarized'] = { bg = '#b58900', fg = '#fdf6e3' },
+        ['vague'] = { bg = '#333738', fg = '#cdcdcd' },
     },
     V = {
         ['kanagawa'] = { bg = '#5d57a3', fg = '#c5c9c5' },
@@ -81,6 +85,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#fabd2f', fg = '#282828' },
         ['nightfly'] = { bg = '#7fdbca', fg = '#011627' },
         ['solarized'] = { bg = '#b58900', fg = '#fdf6e3' },
+        ['vague'] = { bg = '#333738', fg = '#cdcdcd' },
     },
     c = {
         ['kanagawa'] = { bg = '#43436c', fg = '#c5c9c5' },
@@ -89,6 +94,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#fe8019', fg = '#282828' },
         ['nightfly'] = { bg = '#ecc48d', fg = '#011627' },
         ['solarized'] = { bg = '#859900', fg = '#fdf6e3' },
+        ['vague'] = { bg = '#90a0b5', fg = '#141415' },
     },
     s = {
         ['kanagawa'] = { bg = '', fg = '' },
@@ -97,6 +103,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '', fg = '' },
         ['nightfly'] = { bg = '', fg = '' },
         ['solarized'] = { bg = '', fg = '' },
+        ['vague'] = { bg = '#405065', fg = '#cdcdcd' },
     },
     R = {
         ['kanagawa'] = { bg = '', fg = '#c5c9c5' },
@@ -105,6 +112,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#d3869b', fg = '#282828' },
         ['nightfly'] = { bg = '#fc514e', fg = '#011627' },
         ['solarized'] = { bg = '#dc322f', fg = '#fdf6e3' },
+        ['vague'] = { bg = '#d8647e', fg = '#141415' },
     },
     t = {
         ['kanagawa'] = { bg = '#658594', fg = '#c5c9c5' },
@@ -113,6 +121,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#8ec07c', fg = '#282828' },
         ['nightfly'] = { bg = '#21c7a8', fg = '#011627' },
         ['solarized'] = { bg = '#6c71c4', fg = '#fdf6e3' },
+        ['vague'] = { bg = '#b4d4cf', fg = '#141415' },
     },
 }
 

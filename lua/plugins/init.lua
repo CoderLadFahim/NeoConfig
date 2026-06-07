@@ -24,6 +24,7 @@ local plugin_configs = {
     'fzflua',
     'kanagawa',
     'vscode',
+    'vague',
     'gitconflict',
     'nightfly',
     'solarized',
