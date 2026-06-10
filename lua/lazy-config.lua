@@ -55,6 +55,7 @@ local plugins = {
     'ThePrimeagen/harpoon',
     'norcalli/nvim-colorizer.lua',
     'vimwiki/vimwiki',
+    'jidn/vim-dbml',
     -- 'protex/better-digraphs.nvim',
     -- { 'maxmx03/solarized.nvim', lazy = true,},
 

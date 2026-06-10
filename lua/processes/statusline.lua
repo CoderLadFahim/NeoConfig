@@ -28,21 +28,12 @@ function UPDATE_STATUS_LINE()
     if (current_branch) then last_known_branch = current_branch end
 
     vim.opt.statusline = string.format(
-        "%%#StatusLineMode# %s %%#StatusLineBranch# %s %s %s",
+        "%%#StatusLineMode# %s %%#StatusLineBranch# %s %s",
         vim_mode and modes[vim_mode] or '_', 
         current_branch and 'git:' .. current_branch or last_known_branch,
-        '%=',
-        time
+        '| dir:' .. current_dir
     ) 
 end
-
--- local interval = 1000 * 60 -- Interval in milliseconds (1 minute)
-local interval = 1000
-local timer_id
-
--- Start the timer
-timer_id = vim.loop.new_timer()
-timer_id:start(interval, interval, vim.schedule_wrap(UPDATE_STATUS_LINE))
 
 vim.api.nvim_create_autocmd('User', {
     pattern = 'GitSignsUpdate',

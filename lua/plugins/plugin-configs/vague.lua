@@ -8,11 +8,12 @@ vague.setup({
     bold = true, -- Disable bold globally
     italic = false, -- Disable italic globally
     on_highlights = function(hl, colors) 
-        -- ["HarpoonActive"] = { bg = 'Pine', fg = "#f1f1f1" },
-        -- ["HarpoonNumberActive"] = { bg = 'Pine', fg = "#f1f1f1" },
         hl.HarpoonActive = { bg = colors.search, fg = colors.fg }
         hl.HarpoonNumberActive = { bg = colors.search, fg = colors.fg }
         hl.LeapLabel = { bg = colors.hint, fg = colors.bg }
+        hl.DiffviewDiffText = { bg = colors.visual }
+        hl.DiffChange = { bg = colors.alt_visual }
+        hl.IndentBlanklineChar = { fg = colors.comment }
     end,
     colors = {
         bg = '#141415',
@@ -29,6 +30,7 @@ vague.setup({
         constant = '#aeaed1',
         parameter = '#bb9dbd',
         visual = '#333738',
+        alt_visual = '#3b3a30',
         error = '#d8647e',
         warning = '#f3be7c',
         hint = '#7e98e8',
