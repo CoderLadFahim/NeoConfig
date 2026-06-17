@@ -3,6 +3,10 @@ function GET_CURRENT_DIRECTORY()
     return vim.fn.fnamemodify(path, ':t')
 end
 
+function GET_FULL_PATH()
+    return vim.loop.cwd()
+end
+
 vim.api.nvim_set_hl(0, 'StatusLineMode', { bg = '', fg = '' })
 vim.api.nvim_set_hl(0, 'StatusLineBranch', { bg = '', fg = '' })
 vim.api.nvim_set_hl(0, 'StatusLineTime', { bg = '', fg = '' })
@@ -22,6 +26,7 @@ local last_known_branch = ''
 function UPDATE_STATUS_LINE()
     local vim_mode = vim.api.nvim_get_mode().mode 
     local current_dir =  GET_CURRENT_DIRECTORY()
+    local full_path = GET_FULL_PATH()
     local current_branch = vim.b.gitsigns_head
     local time = os.date('%A %d %b %Y %I:%M:%S %p')
 
@@ -31,7 +36,7 @@ function UPDATE_STATUS_LINE()
         "%%#StatusLineMode# %s %%#StatusLineBranch# %s %s",
         vim_mode and modes[vim_mode] or '_', 
         current_branch and 'git:' .. current_branch or last_known_branch,
-        '| dir:' .. current_dir
+        '| dir:' .. current_dir .. ' | pwd:' .. full_path
     ) 
 end
 
@@ -67,7 +72,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#fabd2f', fg = '#282828' },
         ['nightfly'] = { bg = '#7fdbca', fg = '#011627' },
         ['solarized'] = { bg = '#b58900', fg = '#fdf6e3' },
-        ['vague'] = { bg = '#333738', fg = '#cdcdcd' },
+        ['vague'] = { bg = '#7e98e8', fg = '#1c1c24' },
     },
     V = {
         ['kanagawa'] = { bg = '#5d57a3', fg = '#c5c9c5' },
@@ -76,7 +81,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#fabd2f', fg = '#282828' },
         ['nightfly'] = { bg = '#7fdbca', fg = '#011627' },
         ['solarized'] = { bg = '#b58900', fg = '#fdf6e3' },
-        ['vague'] = { bg = '#333738', fg = '#cdcdcd' },
+        ['vague'] = { bg = '#7e98e8', fg = '#1c1c24' },
     },
     c = {
         ['kanagawa'] = { bg = '#43436c', fg = '#c5c9c5' },
@@ -85,7 +90,7 @@ local StatusLineModeCol = {
         ['gruvbox'] = { bg = '#fe8019', fg = '#282828' },
         ['nightfly'] = { bg = '#ecc48d', fg = '#011627' },
         ['solarized'] = { bg = '#859900', fg = '#fdf6e3' },
-        ['vague'] = { bg = '#90a0b5', fg = '#141415' },
+        ['vague'] = { bg = '#90a0b5', fg = '#1c1c24' },
     },
     s = {
         ['kanagawa'] = { bg = '', fg = '' },
