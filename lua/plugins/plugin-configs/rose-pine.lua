@@ -64,8 +64,15 @@ rose_pine.setup({
         ["StatusLineBranch"] = { bg='Overlay', fg='Subtle'},
         ["StatusLineTime"] = { bg='Overlay', fg='Subtle' },
 
-        ["HarpoonActive"] = { bg = 'Pine' },
-        ["HarpoonNumberActive"] = { bg = 'Pine' },
+        ["LeapLabel"] = { bg='Pine', fg='Text' },
+
+        ["IncSearch"] = { bg='Pine', fg='Text' },
+        ["CurSearch"] = { bg='Gold', fg='Base' },
+        ["Search"] = { bg='Foam', fg='Love' },
+        ["Visual"] = { bg = 'Iris' },
+
+        ["HarpoonActive"] = { bg = 'Pine', fg = "#f1f1f1" },
+        ["HarpoonNumberActive"] = { bg = 'Pine', fg = "#f1f1f1" },
     },
 
     before_highlight = function(group, highlight, palette)

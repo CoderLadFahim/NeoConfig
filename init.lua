@@ -1,5 +1,5 @@
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'rose-pine'
+	return 'vague'
 end
 
 function ENABLE_ICONS()
@@ -8,9 +8,9 @@ end
 
 require('options');
 require('globals');
-require('remaps');
 require('lazy-config');
 require('plugins');
+require('remaps');
 require('lsp');
 require('processes');
 

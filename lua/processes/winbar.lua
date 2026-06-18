@@ -3,11 +3,10 @@ function SET_WINBAR()
     if (vim_mode ~= 't') then
         -- vim.opt.winbar= "%f %y %m %= %p%% (%L lines)" -- globalstatus
         vim.opt.winbar= string.format(
-            "%s %s %s [%s]",
+            "%s %s %s",
             "%f",
             "%=",
-            "%m",
-            GET_CURRENT_DIRECTORY()
+            "%m"
         )
     else 
         vim.opt.winbar=" " -- globalstatus

@@ -14,23 +14,20 @@ for _, value in ipairs(process_modules) do
     local path = 'processes.' .. value;
     require(path);
 end
---
--- local frontend = { 'javascript', 'vue', 'vimwiki', 'telescope' }
---
--- local group = vim.api.nvim_create_augroup('CheckFiletypesGroup', { clear = true })
---
--- vim.api.nvim_create_autocmd('BufEnter', {
---     group = group,
---     callback = function()
---         local ft = vim.bo.filetype
---         for _, frontend_file in ipairs(frontend) do
---             if ft == frontend_file then
---                 vim.cmd('colo onedark')
---                 return
---             end
---         end
---
---         vim.cmd('colo kanagawa-dragon')
---     end,
--- })
---
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
+	pattern = "*",
+	desc = "highlight selection on yank",
+	callback = function()
+		vim.highlight.on_yank({ timeout = 200, visual = true })
+	end,
+})
+
+vim.api.nvim_create_autocmd("BufRead", {
+	group = vim.api.nvim_create_augroup("dotenv_ft", { clear = true }),
+	pattern = { ".env", ".env.*" },
+	callback = function()
+		vim.bo.filetype = "dosini"
+	end,
+})

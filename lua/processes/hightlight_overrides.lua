@@ -31,3 +31,4 @@
 -- vim.cmd("hi ColorColumn guibg='#262626'")
 -- vim.cmd("hi CursorLineNr guibg='#080808'")
 -- vim.cmd("hi IndentBlanklineChar guifg='#555555'")
+
