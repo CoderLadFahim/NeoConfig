@@ -13,6 +13,21 @@ fzf.setup({
             hidden = true,
         },
     },
+    defaults = {
+        file_ignore_patterns = {
+            'package/installer',
+            'vendor',
+            'public/illumine-admin',
+            'public/illumine-admin/',
+            'public/vendor',
+            'public/install',
+            'public/scripts',
+            'node_modules',
+            'composer.lock',
+            'package-lock.json',
+            'yarn.lock',
+        },
+    },
     keymap = {
         builtin = {
             ["<C-d>"] = "preview-page-down",
