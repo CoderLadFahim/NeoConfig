@@ -4,14 +4,22 @@ if not copilot_chat_status_ok then
 end
 
 copilot_chat.setup {
-    model = 'claude-sonnet-4.5',           -- AI model to use
+    model = 'gpt-5-mini',           -- AI model to use
     temperature = 0.1,           -- Lower = focused, higher = creative
+    -- model = 'gpt-5-mini',              -- OpenAI model name
+    prompts = {
+        Explain = {
+            prompt = '> /COPILOT_EXPLAIN\n\nAlways use <?php opening tags in PHP code blocks.',
+        },
+    },
     system_prompt =  [[
+        Always start PHP code blocks with ```php and include the opening <?php tag for syntax highlighting; never remove it.
+        When optimizing snippets that lack <?php, add it. You may omit the closing tag.
         After starting the block with ```php, Always inclue php outputs with the opening <?php 
         tag for syntax highlighting. No matter what, never remove the opening php tag from your responses.
+        If you are outputting a method of a class in PHP, put it inside a class structure with the opening <?php tag.
         Even when I ask you to optimize snippets that don't have the opening tag, always add it.
         You may exclude the closing tag before the ending ```.
-
 
         When generating PHP and/or python code, always make your variables snake_cased. 
     ]],
@@ -20,6 +28,9 @@ copilot_chat.setup {
         width = 0.5,              -- 50% of screen width
     },
     auto_insert_mode = false,     -- Enter insert mode when opening
+    keymaps = {
+        accept = '<C-a>',         -- Use Ctrl-A to accept diffs (instead of Ctrl-Y)
+    },
     highlight = {
         enable = true,
         chat_hl_group = 'Normal', -- Highlight group for chat text
@@ -31,5 +42,8 @@ copilot_chat.setup {
         code_block = {
             enable = true,
         },
+    },
+    mappings = {
+      accept_diff = { normal = '<C-a>', insert = '<C-a>' },
     },
 }

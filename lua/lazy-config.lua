@@ -48,25 +48,29 @@ local plugins = {
 	'nvimtools/none-ls.nvim',
 	'MunifTanjim/prettier.nvim',
    	'tpope/vim-fugitive',
-	'ggandor/leap.nvim',
+    'https://codeberg.org/andyg/leap.nvim',
     'sindrets/diffview.nvim',
 	'mg979/vim-visual-multi',
 	'lewis6991/gitsigns.nvim',
     'ThePrimeagen/harpoon',
     'norcalli/nvim-colorizer.lua',
     'vimwiki/vimwiki',
-    'protex/better-digraphs.nvim',
+    'jidn/vim-dbml',
+    -- 'protex/better-digraphs.nvim',
+    -- { 'maxmx03/solarized.nvim', lazy = true,},
 
-    -- 'akinsho/git-conflict.nvim',
+    {'akinsho/git-conflict.nvim', version = "*", config = true},
     -- 'zacanger/angr.vim',
-    'navarasu/onedark.nvim',
+    -- 'navarasu/onedark.nvim',
     -- 'mofiqul/vscode.nvim',
     -- 'folke/tokyonight.nvim',
     'rose-pine/neovim',
+    -- 'jwalton512/vim-blade',
     -- 'EdenEast/nightfox.nvim',
     -- 'Pocco81/auto-save.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
-    -- "ibhagwan/fzf-lua",
+    -- 'rebelot/kanagawa.nvim',
+    "ibhagwan/fzf-lua",
     {
         'kristijanhusak/vim-dadbod-ui',
         dependencies = {
@@ -104,8 +108,9 @@ local plugins = {
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
     { 'nvim-treesitter/nvim-treesitter-context' },
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
-	{ 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
-    'kiyoon/telescope-insert-path.nvim',
+	-- { 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
+	'vague-theme/vague.nvim',
+    -- 'kiyoon/telescope-insert-path.nvim',
     {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
@@ -117,7 +122,7 @@ local plugins = {
             require("copilot_cmp").setup()
         end
     },
-    {
+    --[[ {
         "CopilotC-Nvim/CopilotChat.nvim",
         dependencies = {
             { "nvim-lua/plenary.nvim", branch = "master" },
@@ -126,7 +131,7 @@ local plugins = {
         opts = {
             -- See Configuration section for options
         },
-    }
+    } ]]
 }
 
 if ENABLE_ICONS() then
