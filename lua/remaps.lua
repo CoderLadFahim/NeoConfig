@@ -21,6 +21,12 @@ function SEARCH_GIT_FILES()
   	end
 end
 
+function OPEN_TERMINAL(n)
+	vim.cmd('sv')
+    require('harpoon.term').gotoTerminal(n)
+    vim.api.nvim_feedkeys('i', 'n', false)
+end
+
 function SOURCE_FILE()
 	if vim.bo.filetype == "lua" then
   		vim.cmd('so %')
@@ -107,15 +113,15 @@ local keymaps = {
     { 'n', "<M-8>", ":lua require('harpoon.ui').nav_file(8)<CR>"},
     { 'n', "<M-9>", ":lua require('harpoon.ui').nav_file(9)<CR>"},
 
-    { 'n', "1<space>", ":lua require('harpoon.term').gotoTerminal(1)<CR>"},
-    { 'n', "2<space>", ":lua require('harpoon.term').gotoTerminal(2)<CR>"},
-    { 'n', "3<space>", ":lua require('harpoon.term').gotoTerminal(3)<CR>"},
-    { 'n', "4<space>", ":lua require('harpoon.term').gotoTerminal(4)<CR>"},
-    { 'n', "5<space>", ":lua require('harpoon.term').gotoTerminal(5)<CR>"},
-    { 'n', "6<space>", ":lua require('harpoon.term').gotoTerminal(6)<CR>"},
-    { 'n', "7<space>", ":lua require('harpoon.term').gotoTerminal(7)<CR>"},
-    { 'n', "8<space>", ":lua require('harpoon.term').gotoTerminal(8)<CR>"},
-    { 'n', "9<space>", ":lua require('harpoon.term').gotoTerminal(9)<CR>"},
+    { 'n', "1<space>", ":lua OPEN_TERMINAL(1)<CR>"},
+    { 'n', "2<space>", ":lua OPEN_TERMINAL(2)<CR>"},
+    { 'n', "3<space>", ":lua OPEN_TERMINAL(3)<CR>"},
+    { 'n', "4<space>", ":lua OPEN_TERMINAL(4)<CR>"},
+    { 'n', "5<space>", ":lua OPEN_TERMINAL(5)<CR>"},
+    { 'n', "6<space>", ":lua OPEN_TERMINAL(6)<CR>"},
+    { 'n', "7<space>", ":lua OPEN_TERMINAL(7)<CR>"},
+    { 'n', "8<space>", ":lua OPEN_TERMINAL(8)<CR>"},
+    { 'n', "9<space>", ":lua OPEN_TERMINAL(9)<CR>"},
 
     -- Misc
     { 't', '<esc>', [[<C-\><C-n>]] },
