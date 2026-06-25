@@ -14,6 +14,7 @@ vague.setup({
         hl.DiffviewDiffText = { bg = colors.visual }
         hl.DiffChange = { bg = colors.alt_visual }
         hl.IndentBlanklineChar = { fg = colors.comment }
+        hl.IncSearch = { fg = colors.inactiveBg, bg=colors.error }
     end,
     colors = {
         bg = '#141415',

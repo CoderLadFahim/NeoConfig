@@ -4,7 +4,7 @@ if not fzf_status_ok then
 end
 
 fzf.setup({
-    "telescope",
+    "ivy",
     winopts = {
         preview = {
             layout = 'vertical',
@@ -18,7 +18,6 @@ fzf.setup({
             'package/installer',
             'vendor',
             'public/illumine-admin',
-            'public/js',
             'public/css',
             'public/vendor',
             'public/install',
