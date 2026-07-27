@@ -27,6 +27,25 @@ function OPEN_TERMINAL(n)
     vim.api.nvim_feedkeys('i', 'n', false)
 end
 
+function HARPOON_TOGGLE_TABLINE()
+    local gs = require('harpoon').get_global_settings()
+    if gs.tabline then
+        gs.tabline = false
+        vim.o.tabline = ''
+        vim.opt.showtabline = 0
+        vim.notify("Harpoon tabline OFF")
+    else
+        gs.tabline = true
+        require("harpoon.tabline").setup({
+            tabline_prefix = "  ",
+            tabline_suffix = "  ",
+        })
+        vim.notify("Harpoon tabline ON")
+    end
+end
+
+vim.api.nvim_create_user_command("HarpoonTabline", HARPOON_TOGGLE_TABLINE, {})
+
 function SOURCE_FILE()
 	if vim.bo.filetype == "lua" then
   		vim.cmd('so %')
@@ -112,6 +131,7 @@ local keymaps = {
     { 'n', "<M-7>", ":lua require('harpoon.ui').nav_file(7)<CR>"},
     { 'n', "<M-8>", ":lua require('harpoon.ui').nav_file(8)<CR>"},
     { 'n', "<M-9>", ":lua require('harpoon.ui').nav_file(9)<CR>"},
+    { 'n', "<M-w>", ":HarpoonTabline<CR>"},
 
     { 'n', "1<space>", ":lua OPEN_TERMINAL(1)<CR>"},
     { 'n', "2<space>", ":lua OPEN_TERMINAL(2)<CR>"},
@@ -180,7 +200,7 @@ local keymaps = {
     { 'n', "<M-l>", "mmyyP`mk" },
     { 'n', "<leader><space>", ":<C-f>i!" },
     { 'n', "<leader>op", ":e!<CR>" },
-    { 'n', "<M-t>", "df<space>ea <C-[>px2B" },
+    -- { 'n', "<M-t>", "df<space>ea <C-[>px2B" },
     { 'n', "<C-M-j>", "mmo`m" },
     { 'n', "<C-M-k>", "mmO`m" },
     { 'n', "<leader>x", "*``cgn" },

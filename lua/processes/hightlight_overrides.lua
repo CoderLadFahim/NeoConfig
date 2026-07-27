@@ -7,7 +7,6 @@
 -- vim.cmd("hi CursorLineNr guifg=red")
 -- vim.cmd("hi OilDir guifg='#708090'")
 -- vim.cmd("hi @markup.heading guifg='#ffffff'")
--- vim.cmd("hi Visual guibg='#686868'")
 
 
 -- Default colorscheme highlight overrides

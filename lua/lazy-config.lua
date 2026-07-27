@@ -56,21 +56,41 @@ local plugins = {
     'norcalli/nvim-colorizer.lua',
     'vimwiki/vimwiki',
     'jidn/vim-dbml',
+    --[[ {
+        "zongben/dbout.nvim",
+        build = "npm install",
+        lazy = "VeryLazy",
+        cmd = { "Dbout" },
+        config = function()
+            require("dbout").setup({})
+        end,
+    }, ]]
     -- 'protex/better-digraphs.nvim',
     -- { 'maxmx03/solarized.nvim', lazy = true,},
-
+    -- 'vossenwout/guts.nvim',
     {'akinsho/git-conflict.nvim', version = "*", config = true},
     -- 'zacanger/angr.vim',
     -- 'navarasu/onedark.nvim',
     -- 'mofiqul/vscode.nvim',
     -- 'folke/tokyonight.nvim',
-    'rose-pine/neovim',
+    -- 'rose-pine/neovim',
     -- 'jwalton512/vim-blade',
     -- 'EdenEast/nightfox.nvim',
     -- 'Pocco81/auto-save.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
-    -- 'rebelot/kanagawa.nvim',
+    'rebelot/kanagawa.nvim',
     "ibhagwan/fzf-lua",
+    --[[ {
+        'zeybek/camouflage.nvim',
+        event = { 'BufReadPre', 'BufNewFile' },
+        opts = {},
+        keys = {
+            { '<leader>ct', '<cmd>CamouflageToggle<cr>', desc = 'Toggle Camouflage' },
+            { '<leader>cr', '<cmd>CamouflageReveal<cr>', desc = 'Reveal Line' },
+            { '<leader>cy', '<cmd>CamouflageYank<cr>', desc = 'Yank Value' },
+            { '<leader>cf', '<cmd>CamouflageFollowCursor<cr>', desc = 'Follow Cursor' },
+        },
+    }, ]]
     {
         'kristijanhusak/vim-dadbod-ui',
         dependencies = {
@@ -109,29 +129,8 @@ local plugins = {
     { 'nvim-treesitter/nvim-treesitter-context' },
    	{ 'lukas-reineke/indent-blankline.nvim', commit = '9637670'},
 	-- { 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
-	'vague-theme/vague.nvim',
+	-- 'vague-theme/vague.nvim',
     -- 'kiyoon/telescope-insert-path.nvim',
-    {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-    },
-    {
-        "zbirenbaum/copilot-cmp",
-        config = function ()
-            require("copilot_cmp").setup()
-        end
-    },
-    --[[ {
-        "CopilotC-Nvim/CopilotChat.nvim",
-        dependencies = {
-            { "nvim-lua/plenary.nvim", branch = "master" },
-        },
-        build = "make tiktoken",
-        opts = {
-            -- See Configuration section for options
-        },
-    } ]]
 }
 
 if ENABLE_ICONS() then

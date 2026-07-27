@@ -1,5 +1,5 @@
 function GET_GLOBAL_COLOR_SCHEME(theme)
-	return 'vague'
+	return 'kanagawa-dragon'
 end
 
 function ENABLE_ICONS()

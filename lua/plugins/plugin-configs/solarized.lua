@@ -26,8 +26,8 @@ solarized.setup({
             CursorLineNr = { fg = colors.green, bg = colors.base02 },
             CursorLineNr = { fg = colors.green, bg = colors.base02 },
 
-            ["HarpoonActive"] = { bg = colors.base1, fg=colors.base04 },
-            ["HarpoonNumberActive"] = { bg = colors.base1, fg=colors.base04 },
+            ["HarpoonActive"] = { bg = '#268bd2', fg = '#fdf6e3' },
+            ["HarpoonNumberActive"] = { bg = '#268bd2', fg = '#fdf6e3' },
         }
 
         return groups
